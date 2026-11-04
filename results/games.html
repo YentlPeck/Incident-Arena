@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixelforge Arena · All games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Inter:wght@400;500;600&family=Silkscreen&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+    :root {
+      --page: #0B0B0B; --panel: #141414; --panel-2: #1B1B1B; --ink: #F2F2F2; --ink-2: #A6A6A6; --ink-3: #5E5E5E;
+      --hair: #2A2A2A; --salmon: #FFA59A; --brick: #A83018; --leaf: #5FA85F;
+      --t1: #FFA59A; --t2: #E06F5C; --t3: #A83018;
+      --head: 'Archivo', 'Inter', system-ui, sans-serif; --body: 'Inter', system-ui, sans-serif; --pixel: 'Silkscreen', ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 var(--body); }
+    a { color: inherit; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    section { border-top: 1px solid var(--hair); padding: 88px 0; }
+    .label { font-family: var(--pixel); font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; margin: 0 0 18px; }
+    h1, h2 { font-family: var(--head); font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; margin: 0; }
+    h1 { font-size: clamp(40px, 4.6vw, 62px); color: var(--salmon); }
+    h2 { font-size: clamp(32px, 4vw, 52px); }
+    .sub { color: var(--ink-2); font-size: 18px; margin: 16px 0 0; max-width: 640px; }
+    .chip { display: inline-block; font-family: var(--pixel); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; background: var(--salmon); color: #1a0d09; white-space: nowrap; }
+    .chip.ghost { background: transparent; color: var(--ink-2); border: 1px solid var(--hair); }
+    .chip.leaf { background: transparent; color: var(--leaf); border: 1px solid #2f4f2f; }
+    .chip.hint { background: transparent; color: var(--salmon); border: 1px solid #6b3a33; }
+    .framed { position: relative; background: var(--panel); border: 2px solid #262626; box-shadow: 8px 8px 0 var(--brick); }
+    .muted { color: var(--ink-2); }
+    .small { font-size: 13px; }
+
+    /* nav */
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(11, 11, 11, 0.92); backdrop-filter: blur(6px); }
+    nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+    .brand { font-family: var(--head); font-weight: 800; letter-spacing: 0.02em; font-size: 15px; text-decoration: none; }
+    .brand span { color: var(--salmon); }
+    nav .links a { font-size: 13px; font-weight: 600; text-decoration: none; margin-left: 24px; color: var(--ink-2); }
+    nav .links a:hover { color: var(--ink); }
+
+    /* hero */
+    .hero { border-top: 0; padding: 72px 0 96px; }
+    .hero .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: center; }
+    .hero .chip { margin-bottom: 18px; }
+    
+    .shot img { display: block; width: 100%; height: auto; }
+    .shot figcaption { font-family: var(--pixel); font-size: 11px; color: var(--ink-2); padding: 10px 14px; border-top: 2px solid #262626; }
+
+    /* numbers */
+    .numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin: 48px 0 56px; }
+    .num b { display: block; font-family: var(--head); font-weight: 400; font-size: clamp(56px, 7vw, 96px); letter-spacing: -0.04em; line-height: 1; }
+    .num > span:not(.chip) { display: block; color: var(--ink-2); font-size: 14px; margin-top: 10px; }
+    .num .chip { margin-top: 10px; }
+
+    /* chart */
+    .chart { padding: 28px 28px 22px; margin-right: 8px; }
+    .chart-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--hair); padding-bottom: 14px; margin-bottom: 18px; }
+    .legend { display: flex; gap: 16px; font-size: 13px; color: var(--ink-2); }
+    .legend i { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px; }
+    .row { display: grid; grid-template-columns: 210px minmax(0, 1fr) 150px; gap: 18px; align-items: center; padding: 12px 0; }
+    .row > * { min-width: 0; }
+    .row + .row { border-top: 1px dashed #222; }
+    .who b { display: block; overflow-wrap: anywhere; font-family: var(--head); font-size: 19px; letter-spacing: -0.01em; }
+    .who .chip { margin-top: 4px; margin-right: 4px; }
+    .plot { position: relative; height: 34px; }
+    .segs { display: flex; height: 100%; }
+    .dnf { font-family: var(--pixel); font-size: 11px; color: var(--salmon); }
+    .seg { height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--pixel); font-size: 11px; color: #1a0d09; overflow: hidden; transform-origin: left; animation: grow 0.9s ease-out both; }
+    .seg.dark { color: #ffd9d2; }
+    .total-col { font-family: var(--head); font-size: 26px; font-weight: 600; white-space: nowrap; }
+    .total-col small { font-family: var(--body); font-size: 13px; color: var(--ink-2); font-weight: 400; margin-left: 6px; }
+    .foot { margin-top: 18px; font-size: 13px; color: var(--ink-2); max-width: 760px; }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    /* table */
+    .table-wrap { overflow-x: auto; margin-top: 36px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { font-family: var(--pixel); font-weight: 400; font-size: 11px; text-transform: uppercase; color: var(--ink-2); text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+    td { padding: 14px 12px; border-bottom: 1px solid #1d1d1d; vertical-align: top; }
+    td.n { font-variant-numeric: tabular-nums; }
+    td.total { font-family: var(--head); font-weight: 800; font-size: 18px; }
+    td .note { display: block; color: #8f8f8f; overflow-wrap: anywhere; font-size: 12.5px; margin-top: 4px; max-width: 360px; }
+    .ok { color: var(--leaf); }
+    .bad { color: var(--salmon); }
+
+    /* next */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+    .step { padding: 24px; }
+    .step .label { margin-bottom: 10px; color: var(--ink-2); }
+    .step h3 { font-family: var(--head); font-weight: 800; font-size: 24px; letter-spacing: -0.02em; margin: 0 0 8px; }
+    .step p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+    .step.now { border-color: #5a2a22; }
+    .step:not(.now) { box-shadow: 8px 8px 0 #2a2a2a; }
+
+    footer { border-top: 1px solid var(--hair); padding: 36px 0 48px; font-size: 13px; color: var(--ink-2); }
+    footer .wrap { display: flex; gap: 24px; flex-wrap: wrap; }
+
+    /* cost chart */
+    .tabs { display: flex; gap: 8px; margin: 28px 0 18px; }
+    .tab { font-family: var(--pixel); font-size: 12px; text-transform: uppercase; padding: 8px 14px; background: transparent; color: var(--ink-2); border: 1px solid var(--hair); cursor: pointer; }
+    .tab[aria-selected="true"] { background: var(--salmon); color: #1a0d09; border-color: var(--salmon); }
+    #cost-svg { overflow-x: auto; }
+    #cost-svg > svg { display: block; width: 100%; min-width: 720px; height: auto; }
+    .cost-legend svg { display: inline-block; }
+    .cost-chart text { font-family: var(--body); fill: var(--ink-2); font-size: 13px; }
+    .cost-chart .lbl { fill: var(--ink); font-size: 14px; font-weight: 600; }
+    .cost-chart .lbl2 { fill: var(--ink-2); font-size: 12px; }
+    .cost-legend { flex-wrap: wrap; margin-top: 12px; }
+    .cost-legend svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; }
+
+    @media (max-width: 860px) {
+      .wrap { padding: 0 20px; }
+      .hero .wrap { grid-template-columns: 1fr; }
+      .row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; }
+      .row .who { grid-column: 1 / -1; }
+      .total-col { font-size: 20px; }
+      .steps { grid-template-columns: 1fr; }
+      nav .links a { margin-left: 12px; font-size: 12px; }
+      .brand { white-space: nowrap; font-size: 13px; }
+      .numbers { grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0 40px; }
+      .num b { font-size: 44px; }
+      .num .chip { font-size: 9px; padding: 2px 5px; }
+      section { padding: 64px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <nav><div class="wrap">
+    <a class="brand" href="index.html">PIXELFORGE <span>ARENA</span></a>
+    <div class="links"><a href="index.html">← Overview</a><a href="#round">Results</a><a href="#cost">Cost</a><a href="#games">Every game</a><a href="#next">Next</a></div>
+  </div></nav>
+
+  <header class="hero" id="top"><div class="wrap">
+    <div>
+      <span class="chip" id="hero-chip">AI Hacker Coach</span>
+      <h1 id="hero-title">Pixelforge Arena</h1>
+      <p class="sub" id="hero-sub">A click-only hacking game. AIs and humans solve the same case; fewer clicks is better.</p>
+    </div>
+    <figure class="framed shot" style="margin:0">
+      <img src="assets/game.png" alt="The Pixelforge game: a dark desktop with a mail window and a case file">
+      <figcaption>Pixelforge · Incident #0412 · the game every player solves</figcaption>
+    </figure>
+  </div></header>
+
+  <section id="round"><div class="wrap">
+    <p class="label" id="round-label">Round 1</p>
+    <h2>Who closed the case in the fewest clicks?</h2>
+    <div class="numbers" id="numbers"></div>
+    <div class="framed chart">
+      <div class="chart-head">
+        <span>Clicks per task. <b>Shorter is better.</b></span>
+        <span class="legend" id="legend"></span>
+      </div>
+      <div id="bars"></div>
+    </div>
+    <p class="foot" id="round-note"></p>
+  </div></section>
+
+  <section id="cost"><div class="wrap">
+    <p class="label">Time and cost</p>
+    <h2>With the teacher, or without?</h2>
+    <p class="sub">One dot per game. Left is faster, lower is cheaper. A filled dot played with a teacher, an empty dot without.</p>
+    <div class="tabs" id="level-tabs" role="tablist"></div>
+    <div class="framed chart cost-chart"><div id="cost-svg"></div><div class="legend cost-legend" id="cost-legend"></div></div>
+    <p class="foot">We played on subscriptions, so every game really cost $0. AI cost is an estimate at API list prices
+      (Claude's own cost report; GPT-6-Luna at $0.10 / $0.01 cached / $0.50 per million tokens). Humans cost nothing and sit on the "free" line.
+      The teacher is rule-based, so asking it costs nothing extra.</p>
+  </div></section>
+
+  <section id="games"><div class="wrap">
+    <p class="label">Every game</p>
+    <h2>The full log.</h2>
+    <p class="sub">Every game ever played, newest round first. AI games are checked afterwards: they may only use the game controller.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Round</th><th>Player</th><th>Coach</th><th>Clicks per task</th><th>Total</th><th>Time</th><th>Case</th><th>Check</th></tr></thead>
+      <tbody id="log"></tbody>
+    </table></div>
+  </div></section>
+
+  <section id="next"><div class="wrap">
+    <p class="label">What comes next</p>
+    <h2>Make it harder, then bring in the coach.</h2>
+    <div class="steps">
+      <div class="framed step now"><p class="label">Step 1 · now</p><h3>Find where AIs struggle</h3><p>Harder levels and screen-only play didn't slow the AIs down: about 20 clicks each time. A coach needs a game where they actually struggle.</p></div>
+      <div class="framed step"><p class="label">Step 2</p><h3>Build the coach</h3><p>An expert helper the AI players can ask, like the Pokémon teacher.</p></div>
+      <div class="framed step"><p class="label">Step 3</p><h3>Coach vs no coach</h3><p>The same AIs play with and without the coach. One answer: does it help?</p></div>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <span>Made by Yentl Peck</span>
+    <span id="updated"></span>
+    <span>Built by Claude, reviewed by Codex</span>
+  </div></footer>
+
+  <script src="data.js"></script>
+  <script>
+  (() => {
+    const D = window.PF_RESULTS;
+    const $ = (s) => document.querySelector(s);
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const fmt = (sec) => { const s = Math.round(sec); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
+    const COLORS = ['#FFA59A', '#E06F5C', '#A83018', '#D9B28C', '#8C8C8C', '#6B2A1C'];
+    const DARK = new Set(['#A83018', '#6B2A1C', '#8C8C8C']);
+    const coachChip = (c) => c === 'none' ? '<span class="chip ghost">No coach</span>'
+      : c === 'hints' ? '<span class="chip hint">Hints</span>' : '<span class="chip">Coach</span>';
+    const kindChip = (g) => g.kind === 'human' ? '<span class="chip leaf">Human</span>' : `<span class="chip ghost">${esc(g.maker)}</span>`;
+    // finished games rank first (fewest clicks wins); unfinished games always come after them
+    const rank = (a, b) => ((b.progress ?? 0) - (a.progress ?? 0)) || (b.done - a.done) || (a.total - b.total) || a.total_seconds - b.total_seconds;
+
+    const R = D.latest_round, round = D.rounds[R];
+    const games = D.games.filter((g) => g.round === R).sort(rank);
+    const ai = games.filter((g) => g.kind === 'ai' && g.done);
+    const humans = games.filter((g) => g.kind === 'human' && g.done);
+
+    $('#hero-chip').textContent = `AI Hacker Coach · ${round.name}`;
+    if (ai.length && humans.length) {
+      $('#hero-title').textContent = `An AI solved it in ${ai[0].total} clicks. A human needed ${humans[0].total}.`;
+    }
+    $('#hero-sub').textContent = 'Pixelforge is a click-only hacking game. AIs and humans solve the same case, and fewer clicks is better.';
+    $('#round-label').textContent = `${round.name} · case ${round.case} · ${round.tasks.length} tasks · ${round.date}`;
+    $('#round-note').textContent = round.note;
+    $('#updated').textContent = `Data updated ${D.updated}`;
+    $('#legend').innerHTML = round.tasks.map((t, i) => `<span><i style="background:${COLORS[i % COLORS.length]}"></i>Task ${i + 1} · ${esc(t)}</span>`).join('');
+
+    $('#numbers').innerHTML = games.map((g) => `<div class="num"><b>${g.total}</b>
+      <span>${esc(g.player)}${g.done ? '' : ' · did not finish'}</span>${coachChip(g.coach)}</div>`).join('');
+
+    const max = Math.max(1, ...games.map((g) => g.total));
+    $('#bars').innerHTML = games.map((g, i) => `<div class="row">
+      <div class="who"><b>${esc(g.player)}</b>${kindChip(g)}${coachChip(g.coach)}</div>
+      <div class="plot"><div class="segs" style="width:${(g.total / max) * 100}%">
+        ${g.clicks.map((c, t) => { const col = COLORS[t % COLORS.length]; return `<div class="seg ${DARK.has(col) ? 'dark' : ''}" title="Task ${t + 1} (${esc(round.tasks[t])}): ${c} clicks" style="width:${g.total ? (c / g.total) * 100 : 0}%;background:${col};animation-delay:${i * 0.12}s">${(c / max) > 0.06 ? c : ''}</div>`; }).join('')}
+      </div></div>
+      <div class="total-col">${g.total}<small>clicks · ${fmt(g.total_seconds)}</small>${g.done ? '' : '<div class="dnf">Did not finish</div>'}</div></div>`).join('');
+
+    $('#log').innerHTML = [...D.round_order].reverse().flatMap((r) => D.games.filter((g) => g.round === r).sort(rank).map((g) => `<tr>
+      <td>${esc(D.rounds[r].name)}</td>
+      <td><b>${esc(g.player)}</b> ${kindChip(g)}<span class="note">${esc(g.note || '')}</span></td>
+      <td>${coachChip(g.coach)}</td>
+      <td class="n">${g.clicks.join(' · ')}</td>
+      <td class="n total">${g.total}</td><td class="n">${fmt(g.total_seconds)}</td>
+      <td>${g.progress != null ? `<span class="${g.progress >= g.progress_max ? 'ok' : 'bad'}">${g.progress}/${g.progress_max} found</span>` : g.done ? '<span class="ok">Closed</span>' : '<span class="bad">Not closed</span>'}</td>
+      <td>${g.check === 'ok' ? '<span class="ok">Clean</span>' : `<span class="bad">${esc(g.check)}</span>`}</td></tr>`)).join('');
+
+    /* ---------- time vs cost chart ---------- */
+    const PLAYER_COLORS = { 'Haiku 5.5': '#FFA59A', 'GPT-6-Luna': '#7FB3E8' };
+    const colorOf = (g) => g.kind === 'human' ? '#F2F2F2' : (PLAYER_COLORS[g.player] || '#D9B28C');
+    const withTeacher = (g) => g.coach !== 'none';
+    const how = (g) => [g.kind === 'human' ? 'human' : g.view === 'screen' ? 'screen only' : 'text view',
+      g.coach === 'hints' ? 'hints from Claude' : g.coach === 'coach' ? (g.asks ? `teacher, asked ${g.asks}×` : 'teacher, never asked') : 'no teacher'].join(' · ');
+    const levels = [...new Set(D.round_order.map((r) => D.rounds[r].level))].sort();
+    let shownLevel = D.rounds[D.latest_round].level;
+
+    function drawCost() {
+      $('#level-tabs').innerHTML = levels.map((l) => `<button class="tab" role="tab" aria-selected="${l === shownLevel}" data-level="${l}">Level ${l}</button>`).join('');
+      const pts = D.games.filter((g) => D.rounds[g.round].level === shownLevel);
+      const W = 1000, H = 440, L = 78, R = 230, T = 24, B = 96;
+      const pw = W - L - R, ph = H - T - B, freeY = H - 34;
+      const maxMin = Math.max(1, ...pts.map((g) => g.total_seconds / 60));
+      const xMax = Math.ceil(maxMin * 1.12);
+      const x = (g) => L + (g.total_seconds / 60 / xMax) * pw;
+      const paid = pts.filter((g) => g.cost_usd > 0).map((g) => g.cost_usd);
+      const lo = Math.min(0.005, ...paid), hi = Math.max(0.1, ...paid);
+      const ly = (c) => T + ph - ((Math.log10(c) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * ph;
+      const y = (g) => g.cost_usd > 0 ? ly(g.cost_usd) : freeY;
+      let svg = '';
+      [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1].filter((c) => c >= lo && c <= hi).forEach((c) => {
+        svg += `<line x1="${L}" x2="${L + pw}" y1="${ly(c)}" y2="${ly(c)}" stroke="#222"/><text x="${L - 10}" y="${ly(c) + 4}" text-anchor="end">$${c}</text>`;
+      });
+      svg += `<line x1="${L}" x2="${L + pw}" y1="${freeY}" y2="${freeY}" stroke="#2f4f2f" stroke-dasharray="4 4"/><text x="${L - 10}" y="${freeY + 4}" text-anchor="end" style="fill:var(--leaf)">free</text>`;
+      const step = xMax <= 6 ? 1 : xMax <= 15 ? 2 : 5;
+      for (let m = 0; m <= xMax; m += step) svg += `<text x="${L + (m / xMax) * pw}" y="${T + ph + 22}" text-anchor="middle">${m}</text>`;
+      svg += `<text x="${L + pw / 2}" y="${T + ph + 46}" text-anchor="middle">Minutes to close the case</text>`;
+      svg += `<text x="${L}" y="${T - 8}">API cost per game (USD, log scale)</text>`;
+      // labels: push them apart vertically so they never overlap
+      const items = pts.map((g) => ({ g, px: x(g), py: y(g) })).sort((a, b) => a.py - b.py);
+      items.forEach((it, i) => {
+        it.ly = it.py;
+        for (let j = 0; j < i; j++) {
+          const o = items[j];
+          if (Math.abs(o.px - it.px) < 200 && Math.abs(o.ly - it.ly) < 34) it.ly = o.ly + 34;
+        }
+      });
+      items.forEach(({ g, px, py, ly: lyy }) => {
+        const c = colorOf(g), filled = withTeacher(g);
+        const tx = Math.min(px + 16, L + pw + R - 170);
+        if (Math.abs(lyy - py) > 2) svg += `<line x1="${px}" y1="${py}" x2="${tx - 4}" y2="${lyy - 4}" stroke="#444"/>`;
+        svg += `<circle cx="${px}" cy="${py}" r="8" fill="${filled ? c : 'var(--panel)'}" stroke="${c}" stroke-width="2.5">
+          <title>${esc(g.player)} (${esc(how(g))}): ${fmt(g.total_seconds)}, ${g.cost_usd > 0 ? '$' + (g.cost_usd < 0.001 ? g.cost_usd.toPrecision(2) : g.cost_usd.toFixed(3)) : 'free'}, ${g.total} clicks${g.done ? '' : ', did not finish'}</title></circle>`;
+        svg += `<text class="lbl" x="${tx}" y="${lyy - 2}">${esc(g.player)}</text><text class="lbl2" x="${tx}" y="${lyy + 13}">${esc(how(g))}</text>`;
+      });
+      const lowest = Math.max(H, ...items.map((it) => it.ly + 24));
+      $('#cost-svg').innerHTML = `<svg viewBox="0 0 ${W} ${lowest}" role="img" aria-label="Time and cost of every Level ${shownLevel} game">${svg}</svg>`;
+      const dot = (c, f) => `<svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="${f ? c : 'none'}" stroke="${c}" stroke-width="2"/></svg>`;
+      const players = [...new Map(pts.map((g) => [g.player, g])).values()];
+      $('#cost-legend').innerHTML = players.map((g) => `<span>${dot(colorOf(g), true)}${esc(g.player)}</span>`).join('')
+        + `<span>${dot('#A6A6A6', true)}with teacher</span><span>${dot('#A6A6A6', false)}without teacher</span>`;
+    }
+    $('#level-tabs').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-level]');
+      if (b) { shownLevel = +b.dataset.level; drawCost(); }
+    });
+    drawCost();
+  })();
+  </script>
+</body>
+</html>

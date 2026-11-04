@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixelforge · The fake invoice</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cases/case.css">
+  <script src="data.js"></script>
+  <script src="cases/icons.js"></script>
+  <link rel="stylesheet" href="cases/case2.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="tb-left"><span class="logo" data-icon="spark"></span><span class="tb-title">PixelforgeOS</span></div>
+      <div class="tb-mid" id="tb-task"></div>
+      <div class="tb-right"><span class="tb-clicks" id="tb-clicks">Clicks: 0</span><span class="tb-clock" id="tb-clock"></span></div>
+    </header>
+    <main id="desktop">
+      <nav id="icons" aria-label="Applications"></nav>
+      <div id="windows"></div>
+      <div id="toasts" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="overlay" hidden></div>
+  <script src="cases/gen2.js" onerror="this.dataset.unavailable='true'"></script>
+  <!-- Hand-written development fallback; never replaces an available generator. -->
+  <script src="cases/fixture2-hand.js"></script>
+  <script src="cases/gameR2.js"></script>
+</body>
+</html>

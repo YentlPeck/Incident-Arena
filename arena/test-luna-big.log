@@ -1,0 +1,171 @@
+{"condition": "alone", "versions": {"playbook_sha256": "none", "gen_sha256": "0a1b1249384cbeff95bdb324c404190946b800cd75063d73f54fe07aa09b0f2e", "gameR_sha256": "b74fbaad0b3a36f096f28baca0c9dfe0de463bda69113f992b58937cdd387278", "case_html_sha256": "a1c96bb1529238693f23e47411333fab252c4771edc8abf4fa7744cfcc3cfb92", "prompts_sha256": "5ef9967e15c83f18353c80b8f9caa108ea7a2ecac9bf05d94fa896fe1d04e328", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "gpt-6-luna", "command_budget": 60, "view": "screen"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:playbook-frozen-79f7540b.md", "versions": {"playbook_sha256": "79f7540bcb709aec9e3854bf8016b1ddcbb07e8480f945444e6ed27cb7729576", "gen_sha256": "0a1b1249384cbeff95bdb324c404190946b800cd75063d73f54fe07aa09b0f2e", "gameR_sha256": "b74fbaad0b3a36f096f28baca0c9dfe0de463bda69113f992b58937cdd387278", "case_html_sha256": "a1c96bb1529238693f23e47411333fab252c4771edc8abf4fa7744cfcc3cfb92", "prompts_sha256": "5ef9967e15c83f18353c80b8f9caa108ea7a2ecac9bf05d94fa896fe1d04e328", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "gpt-6-luna", "command_budget": 60, "view": "screen"}, "note": "Declare these versions in the case round registry before collecting."}
+{"id": "case-1006-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1006-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1007-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1008-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1007-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1009-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1008-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1010-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1009-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1010-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1011-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1012-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1011-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1012-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1013-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1013-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1014-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1014-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+case-1015-luna-playbook-2920b69258: player/audit failed; see run.json and audit.txt
+{"id": "case-1015-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1016-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1016-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1017-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1018-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1018-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1017-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1019-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1019-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1020-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1020-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1021-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1021-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1022-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1022-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1023-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1023-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1024-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1024-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1025-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1026-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1025-luna-alone", "status": "completed", "audit_ok": true}
+case-1026-luna-playbook-2920b69258: player/audit failed; see run.json and audit.txt
+{"id": "case-1027-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1027-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1028-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1028-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1029-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1029-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1030-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1030-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1031-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1031-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1032-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1032-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1033-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1033-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1034-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1034-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1035-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1035-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1036-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1036-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1037-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1038-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1037-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1038-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"condition": "alone", "versions": {"playbook_sha256": "none", "gen_sha256": "0a1b1249384cbeff95bdb324c404190946b800cd75063d73f54fe07aa09b0f2e", "gameR_sha256": "b74fbaad0b3a36f096f28baca0c9dfe0de463bda69113f992b58937cdd387278", "case_html_sha256": "a1c96bb1529238693f23e47411333fab252c4771edc8abf4fa7744cfcc3cfb92", "prompts_sha256": "5ef9967e15c83f18353c80b8f9caa108ea7a2ecac9bf05d94fa896fe1d04e328", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "gpt-6-luna", "command_budget": 60, "view": "screen"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:playbook-frozen-79f7540b.md", "versions": {"playbook_sha256": "79f7540bcb709aec9e3854bf8016b1ddcbb07e8480f945444e6ed27cb7729576", "gen_sha256": "0a1b1249384cbeff95bdb324c404190946b800cd75063d73f54fe07aa09b0f2e", "gameR_sha256": "b74fbaad0b3a36f096f28baca0c9dfe0de463bda69113f992b58937cdd387278", "case_html_sha256": "a1c96bb1529238693f23e47411333fab252c4771edc8abf4fa7744cfcc3cfb92", "prompts_sha256": "5ef9967e15c83f18353c80b8f9caa108ea7a2ecac9bf05d94fa896fe1d04e328", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "gpt-6-luna", "command_budget": 60, "view": "screen"}, "note": "Declare these versions in the case round registry before collecting."}
+{"id": "case-1006-luna-alone", "status": "skipped"}
+{"id": "case-1007-luna-alone", "status": "skipped"}
+{"id": "case-1007-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1006-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1008-luna-alone", "status": "skipped"}
+{"id": "case-1008-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1009-luna-alone", "status": "skipped"}
+{"id": "case-1009-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1010-luna-alone", "status": "skipped"}
+{"id": "case-1011-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1011-luna-alone", "status": "skipped"}
+{"id": "case-1010-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1012-luna-alone", "status": "skipped"}
+{"id": "case-1013-luna-alone", "status": "skipped"}
+{"id": "case-1012-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1013-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1014-luna-alone", "status": "skipped"}
+{"id": "case-1015-luna-alone", "status": "skipped"}
+{"id": "case-1015-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1014-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1016-luna-alone", "status": "skipped"}
+{"id": "case-1017-luna-alone", "status": "skipped"}
+{"id": "case-1016-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1017-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1018-luna-alone", "status": "skipped"}
+{"id": "case-1018-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1019-luna-alone", "status": "skipped"}
+{"id": "case-1019-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1020-luna-alone", "status": "skipped"}
+{"id": "case-1020-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1021-luna-alone", "status": "skipped"}
+{"id": "case-1021-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1022-luna-alone", "status": "skipped"}
+{"id": "case-1022-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1023-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1023-luna-alone", "status": "skipped"}
+{"id": "case-1024-luna-alone", "status": "skipped"}
+{"id": "case-1025-luna-alone", "status": "skipped"}
+{"id": "case-1024-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1025-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1026-luna-alone", "status": "skipped"}
+{"id": "case-1026-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1027-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1027-luna-alone", "status": "skipped"}
+{"id": "case-1028-luna-alone", "status": "skipped"}
+{"id": "case-1029-luna-alone", "status": "skipped"}
+{"id": "case-1028-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1029-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1030-luna-alone", "status": "skipped"}
+{"id": "case-1030-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1031-luna-alone", "status": "skipped"}
+{"id": "case-1031-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1032-luna-alone", "status": "skipped"}
+{"id": "case-1033-luna-alone", "status": "skipped"}
+{"id": "case-1032-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1033-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1034-luna-alone", "status": "skipped"}
+{"id": "case-1034-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1035-luna-alone", "status": "skipped"}
+{"id": "case-1035-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1036-luna-alone", "status": "skipped"}
+{"id": "case-1036-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1037-luna-alone", "status": "skipped"}
+{"id": "case-1037-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1038-luna-alone", "status": "skipped"}
+{"id": "case-1038-luna-playbook-2920b69258", "status": "skipped"}
+{"id": "case-1040-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1039-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1039-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1041-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1041-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1040-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1042-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1043-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+case-1042-luna-playbook-2920b69258: player/audit failed; see run.json and audit.txt
+{"id": "case-1043-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1044-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1045-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1044-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1045-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1046-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1046-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1047-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1048-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1048-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1047-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1049-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1049-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1050-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1050-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1051-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1051-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1052-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1052-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1053-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1053-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1054-luna-alone", "status": "completed", "audit_ok": true}
+{"id": "case-1054-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1055-luna-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "case-1055-luna-alone", "status": "completed", "audit_ok": true}
+exit 1

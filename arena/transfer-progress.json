@@ -1,0 +1,16 @@
+{
+  "supervisor_pid": 53076,
+  "players": {
+    "luna": {
+      "status": "complete",
+      "batch_pid": 21884,
+      "exitcode": 0,
+      "checked": 275
+    },
+    "haiku": {
+      "status": "complete",
+      "checked": 275
+    }
+  },
+  "updated": "2026-11-04T10:55:23.071180+00:00"
+}

@@ -1,0 +1,32 @@
+/* Family 3 ("The missing prototype") additions on top of style.css / case.css / case2.css / guard.css */
+.c3-app { display: flex; flex-direction: column; gap: 0; }
+.c3-app > .log-wrap { flex: 1; min-height: 0; overflow: auto; }
+.c3-app .tabs { margin: 0 0 8px; }
+.c3-app .tab { padding: 4px 9px; font-size: 12px; }
+.c3-note { margin: 0 0 6px; }
+.c3-log th, .c3-log td { padding: 5px 8px; font-size: 12.5px; }
+.c3-log td:nth-child(3) { font-family: inherit; }
+.c3-log td.c3-wrap { white-space: normal; min-width: 260px; max-width: 460px; }
+.c3-log tr.c3-pinned td { background: rgba(244, 210, 122, 0.07); }
+.c3-tools { white-space: nowrap; text-align: right; }
+.c3-tools .btn.small { padding: 2px 8px; font-size: 11.5px; margin: 0 0 0 4px; }
+.c3-pin.on { border-color: var(--yellow); color: var(--yellow); }
+.c3-flag { color: var(--rose); border-color: rgba(232, 138, 154, 0.35); }
+.c3-flagged { font-size: 11.5px; margin-right: 4px; }
+.c3-flagged.ok { color: var(--mint); }
+.c3-flagged.bad { color: var(--rose); }
+.c3-mail .g-body { margin-top: 12px; }
+.c3-inline { border-collapse: collapse; }
+.c3-inline td { padding: 0; text-align: left; }
+#win-mail .mail { grid-template-columns: 330px minmax(0, 1fr); height: 100%; }
+#win-mail .mail-item { padding: 7px 12px; }
+#win-casefile .report .ropt { padding: 4px 8px; font-size: 12px; }
+#win-casefile .report .rq { margin: 10px 0 5px; }
+#win-casefile .disc li { font-size: 12.5px; padding: 4px 8px; }
+.c3-results td { vertical-align: top; font-size: 12.5px; }
+.c3-results td:nth-child(2), .c3-results td:nth-child(3) { font-family: inherit !important; color: var(--text) !important; }
+.modal:has(.c3-results) { width: min(820px, calc(100vw - 40px)); }
+.c3-cal { width: 100%; }
+.c3-cal td.c3-wrap { min-width: 0; max-width: none; }
+.c3-cal td.c3-people { min-width: 180px; max-width: 280px; }
+.c3-route { font-size: 12px; color: var(--muted); margin-top: 3px; white-space: normal; }

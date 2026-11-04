@@ -1,0 +1,833 @@
+CASE FAMILY 2 V4 — EXCHANGEABLE EPISODES
+
+One shared builder generates 12 or 15 banking episodes (4 or 5 suppliers); per-user/per-supplier blocked randomization gives one of every route. An independent stream uniformly selects the incident after every episode exists. Only its genuine-supplier confirmation identifies the unpaid invoice. All other invoices have independently confirmed settlement mandates. All lookup links, requests, sessions, timing and table surfaces are generated before selection.
+
+Promoted generator SHA256: 8027273b67510dba2179f4bf3dae9ca1c93c9d9157e6f1f23e2e804018c60f04
+Solver and engine unchanged. All original checker assertions retained.
+Independent construction training: 100001..104000. Original rendered classifiers retain their 1..4000 / 4001..6000 split.
+Commands: node cases/check2.js 1 5000; node cases/check2.js 5001 10000.
+Both complete integrated checks ran with GEN2=cases/gen2_dev.js; promotion verified byte-identical.
+
+Final-page UI: 100/100 correct, 0 page errors, 1280x800.
+All 300 Finance table measurements fit horizontally and have >=12px text. Report fits without scrolling.
+Screenshots: C:\Users\yentl\AppData\Local\Temp\pf-case2-shots\v4
+
+Command-cost estimate (evidence investigation, not the mechanical answer replay):
+insider: ~12 opened records / ~40 commands; lookalike: ~12 / ~40; MFA: ~13 / ~43.
+Includes corroboration of alternative routes, search/navigation, flags and report submission.
+
+ALL CHECKER NUMBERS (complete unabridged console output):
+
+RANGE [1, 5000]
+ADVERSARIAL: collecting visible aggregates and actual engine-rendered text, train 1..4000 / holdout 4001..6000
+  rendered seed 2000
+  rendered seed 4000
+  rendered seed 6000
+  baseline layout / constant insider: 1639/5000 32.78%; prior 33.33%, limit 43.33%
+  baseline layout / reviewer two-count threshold: 1657/5000 33.14%; prior 33.33%, limit 43.33%
+  baseline payment / display nth 1: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 1: 401/5000 8.02%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 2: 109/5000 2.18%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 2: 277/5000 5.54%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 3: 135/5000 2.70%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 3: 241/5000 4.82%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 4: 248/5000 4.96%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 4: 147/5000 2.94%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 5: 132/5000 2.64%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 5: 221/5000 4.42%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 6: 211/5000 4.22%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 6: 149/5000 2.98%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 7: 210/5000 4.20%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 7: 165/5000 3.30%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 8: 330/5000 6.60%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 8: 75/5000 1.50%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 9: 130/5000 2.60%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 9: 211/5000 4.22%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 10: 235/5000 4.70%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 10: 148/5000 2.96%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 11: 71/5000 1.42%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 11: 310/5000 6.20%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 12: 180/5000 3.60%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 12: 194/5000 3.88%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 13: 131/5000 2.62%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 13: 224/5000 4.48%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 14: 230/5000 4.60%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 14: 138/5000 2.76%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 15: 221/5000 4.42%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 15: 179/5000 3.58%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 16: 269/5000 5.38%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 16: 72/5000 1.44%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 17: 64/5000 1.28%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 17: 321/5000 6.42%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 18: 146/5000 2.92%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 18: 193/5000 3.86%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 19: 191/5000 3.82%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 19: 163/5000 3.26%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 20: 313/5000 6.26%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 20: 72/5000 1.44%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 21: 69/5000 1.38%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 21: 283/5000 5.66%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 22: 176/5000 3.52%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 22: 217/5000 4.34%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 23: 207/5000 4.14%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 23: 168/5000 3.36%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 24: 338/5000 6.76%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 24: 70/5000 1.40%; prior 3.75%, limit 13.75%
+  baseline payment / last displayed: 400/5000 8.00%; prior 3.75%, limit 13.75%
+  baseline payment / largest amount: 169/5000 3.38%; prior 3.75%, limit 13.75%
+  baseline payment / first supplier first payment: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  baseline change / display nth 1: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 1: 404/5000 8.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth 2: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 2: 10/5000 0.20%; prior 2.50%, limit 12.50%
+  baseline change / display nth 3: 85/5000 1.70%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 3: 280/5000 5.60%; prior 2.50%, limit 12.50%
+  baseline change / display nth 4: 125/5000 2.50%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 4: 95/5000 1.90%; prior 2.50%, limit 12.50%
+  baseline change / display nth 5: 108/5000 2.16%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 5: 165/5000 3.30%; prior 2.50%, limit 12.50%
+  baseline change / display nth 6: 184/5000 3.68%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 6: 97/5000 1.94%; prior 2.50%, limit 12.50%
+  baseline change / display nth 7: 102/5000 2.04%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 7: 179/5000 3.58%; prior 2.50%, limit 12.50%
+  baseline change / display nth 8: 101/5000 2.02%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 8: 92/5000 1.84%; prior 2.50%, limit 12.50%
+  baseline change / display nth 9: 128/5000 2.56%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 9: 120/5000 2.40%; prior 2.50%, limit 12.50%
+  baseline change / display nth 10: 184/5000 3.68%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 10: 126/5000 2.52%; prior 2.50%, limit 12.50%
+  baseline change / display nth 11: 91/5000 1.82%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 11: 59/5000 1.18%; prior 2.50%, limit 12.50%
+  baseline change / display nth 12: 257/5000 5.14%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 12: 60/5000 1.20%; prior 2.50%, limit 12.50%
+  baseline change / display nth 13: 126/5000 2.52%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 13: 203/5000 4.06%; prior 2.50%, limit 12.50%
+  baseline change / display nth 14: 6/5000 0.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 14: 4/5000 0.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth 15: 223/5000 4.46%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 15: 163/5000 3.26%; prior 2.50%, limit 12.50%
+  baseline change / display nth 16: 79/5000 1.58%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 16: 246/5000 4.92%; prior 2.50%, limit 12.50%
+  baseline change / display nth 17: 46/5000 0.92%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 17: 64/5000 1.28%; prior 2.50%, limit 12.50%
+  baseline change / display nth 18: 118/5000 2.36%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 18: 189/5000 3.78%; prior 2.50%, limit 12.50%
+  baseline change / display nth 19: 121/5000 2.42%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 19: 116/5000 2.32%; prior 2.50%, limit 12.50%
+  baseline change / display nth 20: 94/5000 1.88%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 20: 131/5000 2.62%; prior 2.50%, limit 12.50%
+  baseline change / display nth 21: 165/5000 3.30%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 21: 109/5000 2.18%; prior 2.50%, limit 12.50%
+  baseline change / display nth 22: 206/5000 4.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 22: 144/5000 2.88%; prior 2.50%, limit 12.50%
+  baseline change / display nth 23: 45/5000 0.90%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 23: 38/5000 0.76%; prior 2.50%, limit 12.50%
+  baseline change / display nth 24: 256/5000 5.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 24: 46/5000 0.92%; prior 2.50%, limit 12.50%
+  baseline change / display nth 25: 29/5000 0.58%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 25: 320/5000 6.40%; prior 2.50%, limit 12.50%
+  baseline change / display nth 26: 85/5000 1.70%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 26: 42/5000 0.84%; prior 2.50%, limit 12.50%
+  baseline change / display nth 27: 69/5000 1.38%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 27: 198/5000 3.96%; prior 2.50%, limit 12.50%
+  baseline change / display nth 28: 189/5000 3.78%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 28: 90/5000 1.80%; prior 2.50%, limit 12.50%
+  baseline change / display nth 29: 59/5000 1.18%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 29: 61/5000 1.22%; prior 2.50%, limit 12.50%
+  baseline change / display nth 30: 270/5000 5.40%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 30: 51/5000 1.02%; prior 2.50%, limit 12.50%
+  baseline change / display nth 31: 64/5000 1.28%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 31: 257/5000 5.14%; prior 2.50%, limit 12.50%
+  baseline change / display nth 32: 74/5000 1.48%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 32: 56/5000 1.12%; prior 2.50%, limit 12.50%
+  baseline change / display nth 33: 90/5000 1.80%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 33: 213/5000 4.26%; prior 2.50%, limit 12.50%
+  baseline change / display nth 34: 197/5000 3.94%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 34: 75/5000 1.50%; prior 2.50%, limit 12.50%
+  baseline change / display nth 35: 64/5000 1.28%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 35: 84/5000 1.68%; prior 2.50%, limit 12.50%
+  baseline change / display nth 36: 314/5000 6.28%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 36: 38/5000 0.76%; prior 2.50%, limit 12.50%
+  baseline change / last displayed: 405/5000 8.10%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 1: 404/5000 8.08%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 2: 290/5000 5.80%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 3: 256/5000 5.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 4: 155/5000 3.10%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 5: 219/5000 4.38%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 6: 141/5000 2.82%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 7: 161/5000 3.22%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 8: 61/5000 1.22%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 9: 203/5000 4.06%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 10: 167/5000 3.34%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 11: 301/5000 6.02%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 12: 211/5000 4.22%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 13: 229/5000 4.58%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 14: 143/5000 2.86%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 15: 156/5000 3.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 16: 69/5000 1.38%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 17: 332/5000 6.64%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 18: 202/5000 4.04%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 19: 149/5000 2.98%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 20: 71/5000 1.42%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 21: 288/5000 5.76%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 22: 220/5000 4.40%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 23: 157/5000 3.14%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 24: 74/5000 1.48%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 1: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 2: 85/5000 1.70%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 3: 128/5000 2.56%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 4: 247/5000 4.94%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 5: 146/5000 2.92%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 6: 193/5000 3.86%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 7: 227/5000 4.54%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 8: 339/5000 6.78%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 9: 132/5000 2.64%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 10: 223/5000 4.46%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 11: 81/5000 1.62%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 12: 149/5000 2.98%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 13: 136/5000 2.72%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 14: 231/5000 4.62%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 15: 235/5000 4.70%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 16: 270/5000 5.40%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 17: 60/5000 1.20%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 18: 151/5000 3.02%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 19: 198/5000 3.96%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 20: 302/5000 6.04%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 21: 82/5000 1.64%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 22: 164/5000 3.28%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 23: 204/5000 4.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 24: 349/5000 6.98%; prior 2.50%, limit 12.50%
+  baseline change / latest night change: 6/5000 0.12%; prior 2.50%, limit 12.50%
+  baseline change / change matching largest payment: 169/5000 3.38%; prior 2.50%, limit 12.50%
+  baseline identity / first finance: 381/1639 23.25%; prior 22.53%, limit 32.53%
+  baseline identity / last finance: 371/1639 22.64%; prior 22.53%, limit 32.53%
+  baseline identity / most mail mentions: 394/1639 24.04%; prior 22.53%, limit 32.53%
+  baseline identity / least mail mentions: 382/1639 23.31%; prior 22.53%, limit 32.53%
+  baseline identity / most chat mentions: 374/1639 22.82%; prior 22.53%, limit 32.53%
+  baseline identity / most doc mentions: 368/1639 22.45%; prior 22.53%, limit 32.53%
+  baseline identity / most total mentions: 361/1639 22.03%; prior 22.53%, limit 32.53%
+  baseline identity / Quarter-end cover recipient: 387/1639 23.61%; prior 22.53%, limit 32.53%
+  baseline identity / clock chat speaker: 370/1639 22.57%; prior 22.53%, limit 32.53%
+  baseline identity / latest request recipient: 357/1639 21.78%; prior 22.53%, limit 32.53%
+  baseline payment / display nth 25: 75/2490 3.01%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 25: 93/2490 3.73%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 26: 82/2490 3.29%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 26: 58/2490 2.33%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 27: 79/2490 3.17%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 27: 120/2490 4.82%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 28: 103/2490 4.14%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 28: 49/2490 1.97%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 29: 146/2490 5.86%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 29: 41/2490 1.65%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 30: 169/2490 6.79%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 30: 0/2490 0.00%; prior 3.33%, limit 13.33%
+  baseline change / display nth 37: 51/2490 2.05%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 37: 66/2490 2.65%; prior 2.22%, limit 12.22%
+  baseline change / display nth 38: 39/2490 1.57%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 38: 40/2490 1.61%; prior 2.22%, limit 12.22%
+  baseline change / display nth 39: 79/2490 3.17%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 39: 49/2490 1.97%; prior 2.22%, limit 12.22%
+  baseline change / display nth 40: 33/2490 1.33%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 40: 89/2490 3.57%; prior 2.22%, limit 12.22%
+  baseline change / display nth 41: 91/2490 3.65%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 41: 60/2490 2.41%; prior 2.22%, limit 12.22%
+  baseline change / display nth 42: 33/2490 1.33%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 42: 38/2490 1.53%; prior 2.22%, limit 12.22%
+  baseline change / display nth 43: 139/2490 5.58%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 43: 33/2490 1.33%; prior 2.22%, limit 12.22%
+  baseline change / display nth 44: 8/2490 0.32%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 44: 0/2490 0.00%; prior 2.22%, limit 12.22%
+  baseline change / display nth 45: 173/2490 6.95%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 45: 0/2490 0.00%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 25: 72/2490 2.89%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 26: 75/2490 3.01%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 27: 122/2490 4.90%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 28: 39/2490 1.57%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 29: 33/2490 1.33%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 30: 0/2490 0.00%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 25: 67/2490 2.69%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 26: 90/2490 3.61%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 27: 71/2490 2.85%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 28: 120/2490 4.82%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 29: 147/2490 5.90%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 30: 173/2490 6.95%; prior 2.22%, limit 12.22%
+  depth3-tree layout: 663/2000 33.15%; prior 33.33%, limit 43.33%
+  aggregate-NB layout: 688/2000 34.40%; prior 33.33%, limit 43.33%
+  rendered-raw-NB layout: 657/2000 32.85%; prior 33.33%, limit 43.33%
+  rendered-lexical-NB layout: 644/2000 32.20%; prior 33.33%, limit 43.33%
+  rendered-normalized-NB layout: 667/2000 33.35%; prior 33.33%, limit 43.33%
+  depth3-tree who: 144/677 21.27%; prior 22.52%, limit 32.52%
+  aggregate-NB who: 140/677 20.68%; prior 22.52%, limit 32.52%
+  global-depth3-tree who: 147/677 21.71%; prior 22.52%, limit 32.52%
+  global-aggregate-NB who: 159/677 23.49%; prior 22.52%, limit 32.52%
+  rendered-raw-NB who: 149/677 22.01%; prior 22.52%, limit 32.52%
+  rendered-lexical-NB who: 145/677 21.42%; prior 22.52%, limit 32.52%
+  rendered-normalized-NB who: 164/677 24.22%; prior 22.52%, limit 32.52%
+  depth3-tree payment: 140/2000 7.00%; prior 3.76%, limit 13.76%
+  aggregate-NB payment: 148/2000 7.40%; prior 3.76%, limit 13.76%
+  global-depth3-tree payment: 171/2000 8.55%; prior 3.76%, limit 13.76%
+  global-aggregate-NB payment: 112/2000 5.60%; prior 3.76%, limit 13.76%
+  rendered-raw-NB payment: 121/2000 6.05%; prior 3.76%, limit 13.76%
+  rendered-lexical-NB payment: 92/2000 4.60%; prior 3.76%, limit 13.76%
+  rendered-normalized-NB payment: 114/2000 5.70%; prior 3.76%, limit 13.76%
+  depth3-tree change: 167/2000 8.35%; prior 2.51%, limit 12.51%
+  aggregate-NB change: 163/2000 8.15%; prior 2.51%, limit 12.51%
+  global-depth3-tree change: 132/2000 6.60%; prior 2.51%, limit 12.51%
+  global-aggregate-NB change: 149/2000 7.45%; prior 2.51%, limit 12.51%
+  rendered-raw-NB change: 93/2000 4.65%; prior 2.51%, limit 12.51%
+  rendered-lexical-NB change: 66/2000 3.30%; prior 2.51%, limit 12.51%
+  rendered-normalized-NB change: 102/2000 5.10%; prior 2.51%, limit 12.51%
+  rendered-all-person-only-NB who: 154/677 22.75%; prior 20.00%, limit 30.00%
+  rendered-mail-person-only-NB who: 148/677 21.86%; prior 20.00%, limit 30.00%
+ADVERSARIAL: 256 separately scored tests, 2219 aggregate features; only multi-source evidence joins excluded
+CONSTRUCTION: train 100001..104000; holdout ranges [[1,5000]]
+  1..5000 v3 change / early sign-in row: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  1..5000 v3 payment / early-session change then next: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  1..5000 v3 change / common sign-in plus 10 or 80: 6/5000 0.12%; prior 2.50%, limit 12.50%
+  1..5000 v3 payment / common late sign-in minus 5 or 82: 3/5000 0.06%; prior 3.75%, limit 13.75%
+  1..5000 v3 change / orphan then next: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  1..5000 v3 layout / singleton current master: 1639/5000 32.78%; prior 33.33%, limit 43.33%
+  1..5000 v3 layout / bank homes threshold: 1639/5000 32.78%; prior 33.33%, limit 43.33%
+  1..5000 v3 layout / bank homes plus singleton: 1639/5000 32.78%; prior 33.33%, limit 43.33%
+  1..5000 v3 layout / exact director-home plus singleton: 1639/5000 32.78%; prior 33.33%, limit 43.33%
+  1..5000 v3 whole / composed shortcuts: 0/5000 0.00%; prior 0.00%, limit 10.00%
+  1..5000 v3 chat / change plus 7 or 77: 11/5000 0.22%; prior 2.50%, limit 12.50%
+  1..5000 v3 chat / change then next payment: 11/5000 0.22%; prior 3.75%, limit 13.75%
+  1..5000 v3 identity / singleton request recipient: 357/1639 21.78%; prior 22.53%, limit 32.53%
+  1..5000 v3 identity / orphan trailing sign-in: 0/1639 0.00%; prior 22.53%, limit 32.53%
+  1..5000 construction depth4-tree / episode (43 features): 369/5000 7.38%; prior 7.50%, limit 17.50%
+  1..5000 construction NB / episode (43 features): 392/5000 7.84%; prior 7.50%, limit 17.50%
+  1..5000 construction depth4-tree / layout (374 features): 1704/5000 34.08%; prior 33.33%, limit 43.33%
+  1..5000 construction NB / layout (374 features): 1616/5000 32.32%; prior 33.33%, limit 43.33%
+  1..5000 construction depth4-tree / identity (48 features): 357/1639 21.78%; prior 22.53%, limit 32.53%
+  1..5000 construction NB / identity (48 features): 357/1639 21.78%; prior 22.53%, limit 32.53%
+seeds 1..5000: 5000 cases, 0 problems
+layouts: insider=1639 | lookalike=1704 | mfa=1657
+visible ambiguity: 5000 cases each support exactly one branch; decisive-link mutations: 6
+SHAPE: 166 field/token distributions, 372 bins; max gap=3.92pp (limit 10pp); visible chain checks=5000; intended linked-session/challenge contrasts=33 (only exact joined Device/Location/MFA challenge and linked challenge existence)
+single-field oracles: 86 tests, train seeds 1..2500, holdout 2501..5000; best=changes.Note:shape 35.24% (limit 45%)
+  oracle changes.When:value: 33.48% (837/2500)
+  oracle changes.When:shape: 33.60% (840/2500)
+  oracle changes.When:tokens: 32.56% (814/2500)
+  oracle changes.When:office hour: 32.44% (811/2500)
+  oracle changes.When:office minute: 31.68% (792/2500)
+  oracle changes.When:night: 33.60% (840/2500)
+  oracle changes.Change ID:value: 33.60% (840/2500)
+  oracle changes.Change ID:shape: 33.60% (840/2500)
+  oracle changes.Change ID:tokens: 33.60% (840/2500)
+  oracle changes.Supplier:value: 33.56% (839/2500)
+  oracle changes.Supplier:shape: 33.60% (840/2500)
+  oracle changes.Supplier:tokens: 33.60% (840/2500)
+  oracle changes.Field:value: 33.60% (840/2500)
+  oracle changes.Field:shape: 33.60% (840/2500)
+  oracle changes.Field:tokens: 33.60% (840/2500)
+  oracle changes.Old value:value: 33.60% (840/2500)
+  oracle changes.Old value:shape: 33.08% (827/2500)
+  oracle changes.Old value:tokens: 33.08% (827/2500)
+  oracle changes.New value:value: 33.60% (840/2500)
+  oracle changes.New value:shape: 32.88% (822/2500)
+  oracle changes.New value:tokens: 32.88% (822/2500)
+  oracle changes.By account:value: 33.36% (834/2500)
+  oracle changes.By account:shape: 33.60% (840/2500)
+  oracle changes.By account:tokens: 33.36% (834/2500)
+  oracle changes.Session:value: 33.60% (840/2500)
+  oracle changes.Session:shape: 33.60% (840/2500)
+  oracle changes.Session:tokens: 33.60% (840/2500)
+  oracle changes.Note:value: 33.80% (845/2500)
+  oracle changes.Note:shape: 35.24% (881/2500)
+  oracle changes.Note:tokens: 34.00% (850/2500)
+  oracle payments.Executed:value: 33.16% (829/2500)
+  oracle payments.Executed:shape: 33.60% (840/2500)
+  oracle payments.Executed:tokens: 34.52% (863/2500)
+  oracle payments.Executed:office hour: 32.08% (802/2500)
+  oracle payments.Executed:office minute: 33.48% (837/2500)
+  oracle payments.Executed:night: 33.60% (840/2500)
+  oracle payments.Payment ID:value: 33.60% (840/2500)
+  oracle payments.Payment ID:shape: 33.60% (840/2500)
+  oracle payments.Payment ID:tokens: 33.60% (840/2500)
+  oracle payments.Invoice:value: 33.92% (848/2500)
+  oracle payments.Invoice:shape: 33.60% (840/2500)
+  oracle payments.Invoice:tokens: 33.60% (840/2500)
+  oracle payments.Supplier:value: 33.56% (839/2500)
+  oracle payments.Supplier:shape: 33.60% (840/2500)
+  oracle payments.Supplier:tokens: 33.60% (840/2500)
+  oracle payments.Amount:value: 33.68% (842/2500)
+  oracle payments.Amount:shape: 33.60% (840/2500)
+  oracle payments.Amount:tokens: 33.60% (840/2500)
+  oracle payments.Status:value: 33.60% (840/2500)
+  oracle payments.Status:shape: 33.60% (840/2500)
+  oracle payments.Status:tokens: 33.60% (840/2500)
+  oracle payments.To IBAN:value: 33.60% (840/2500)
+  oracle payments.To IBAN:shape: 32.88% (822/2500)
+  oracle payments.To IBAN:tokens: 32.88% (822/2500)
+  oracle nearby signins.Device:value: 33.36% (834/2500)
+  oracle nearby signins.Device:shape: 34.76% (869/2500)
+  oracle nearby signins[0].Device:value: 32.80% (820/2500)
+  oracle nearby signins[0].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[1].Device:value: 34.20% (855/2500)
+  oracle nearby signins[1].Device:shape: 34.00% (850/2500)
+  oracle nearby signins[2].Device:value: 33.28% (832/2500)
+  oracle nearby signins[2].Device:shape: 33.48% (837/2500)
+  oracle nearby signins[3].Device:value: 33.72% (843/2500)
+  oracle nearby signins[3].Device:shape: 33.80% (845/2500)
+  oracle nearby signins.Location / IP:value: 32.24% (806/2500)
+  oracle nearby signins.Location / IP:shape: 34.76% (869/2500)
+  oracle nearby signins[0].Location / IP:value: 33.40% (835/2500)
+  oracle nearby signins[0].Location / IP:shape: 33.60% (840/2500)
+  oracle nearby signins[1].Location / IP:value: 32.52% (813/2500)
+  oracle nearby signins[1].Location / IP:shape: 34.00% (850/2500)
+  oracle nearby signins[2].Location / IP:value: 33.76% (844/2500)
+  oracle nearby signins[2].Location / IP:shape: 33.48% (837/2500)
+  oracle nearby signins[3].Location / IP:value: 33.92% (848/2500)
+  oracle nearby signins[3].Location / IP:shape: 33.80% (845/2500)
+  oracle nearby signins[4].Device:value: 33.44% (836/2500)
+  oracle nearby signins[4].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[5].Device:value: 33.60% (840/2500)
+  oracle nearby signins[5].Device:shape: 33.64% (841/2500)
+  oracle nearby signins[4].Location / IP:value: 33.64% (841/2500)
+  oracle nearby signins[4].Location / IP:shape: 33.60% (840/2500)
+  oracle nearby signins[5].Location / IP:value: 33.64% (841/2500)
+  oracle nearby signins[5].Location / IP:shape: 33.64% (841/2500)
+  oracle nearby signins[6].Device:value: 33.56% (839/2500)
+  oracle nearby signins[6].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[6].Location / IP:value: 33.60% (840/2500)
+  oracle nearby signins[6].Location / IP:shape: 33.60% (840/2500)
+frequency histograms: 585 comparisons (all, each twist present/absent, exact twist pair); max count TV=19.99pp, position TV=15.01pp, max bin z=3.51; sparse skipped=0
+record-count frequency histograms by layout (value:frequency):
+  emails: insider {"38":136,"39":293,"41":254,"42":146,"47":150,"48":285,"50":245,"51":130} | lookalike {"38":162,"39":280,"41":283,"42":129,"47":131,"48":282,"50":286,"51":151} | mfa {"38":136,"39":292,"41":261,"42":138,"47":133,"48":281,"50":279,"51":137}
+  chats: insider {"3":864,"4":775} | lookalike {"3":855,"4":849} | mfa {"3":842,"4":815}
+  files: insider {"3":1639} | lookalike {"3":1704} | mfa {"3":1657}
+  payments: insider {"24":829,"30":810} | lookalike {"24":854,"30":850} | mfa {"24":827,"30":830}
+  changes: insider {"36":829,"45":810} | lookalike {"36":854,"45":850} | mfa {"36":827,"45":830}
+  mfa: insider {"52":5,"53":13,"54":24,"55":44,"56":65,"57":87,"58":110,"59":114,"60":115,"61":84,"62":77,"63":53,"64":30,"65":29,"66":27,"67":53,"68":68,"69":82,"70":100,"71":107,"72":89,"73":83,"74":70,"75":49,"76":24,"77":25,"78":7,"79":4,"80":1} | lookalike {"50":2,"51":1,"52":3,"53":13,"54":35,"55":37,"56":55,"57":97,"58":104,"59":115,"60":109,"61":101,"62":74,"63":58,"64":35,"65":41,"66":41,"67":50,"68":77,"69":112,"70":84,"71":106,"72":86,"73":77,"74":67,"75":58,"76":28,"77":25,"78":4,"79":6,"80":1,"81":2} | mfa {"50":1,"51":2,"52":7,"53":17,"54":24,"55":41,"56":75,"57":94,"58":103,"59":120,"60":100,"61":99,"62":65,"63":54,"64":29,"65":18,"66":44,"67":57,"68":60,"69":82,"70":114,"71":100,"72":105,"73":74,"74":66,"75":44,"76":29,"77":23,"78":5,"79":4,"80":1}
+  signins: insider {"47":429,"56":435,"58":400,"67":375} | lookalike {"47":442,"56":413,"58":412,"67":437} | mfa {"47":428,"56":414,"58":399,"67":416}
+  registry: insider {"29":829,"36":810} | lookalike {"29":854,"36":850} | mfa {"29":827,"36":830}
+  whois: insider {"8":415,"10":802,"12":422} | lookalike {"8":417,"10":875,"12":412} | mfa {"8":416,"10":830,"12":411}
+  lookalikeRequests: insider {"12":829,"15":810} | lookalike {"12":854,"15":850} | mfa {"12":827,"15":830}
+  nightApprovals: insider {"12":829,"15":810} | lookalike {"12":854,"15":850} | mfa {"12":827,"15":830}
+shortcuts who+how: prior=33.33%, limit=43.33% (overall | insider / lookalike / mfa):
+  changer: 32.78% | 100.00% / 0.00% / 0.00%
+  moneyWorries: 3.16% | 9.64% / 0.00% / 0.00%
+  latestLookRecipient: 7.14% | 21.78% / 0.00% / 0.00%
+  nightApprovalPerson: 7.62% | 23.25% / 0.00% / 0.00%
+  receivingDirectorName: 32.78% | 100.00% / 0.00% / 0.00%
+  directorAbroad: 33.32% | 25.44% / 0.00% / 75.38%
+  directorSmallUnit: 33.36% | 49.66% / 0.00% / 51.54%
+  firstFinance: 7.62% | 23.25% / 0.00% / 0.00%
+  lastFinance: 7.42% | 22.64% / 0.00% / 0.00%
+  lookalikePresent: 34.08% | 0.00% / 100.00% / 0.00%
+  nightApprovalPresent: 33.14% | 0.00% / 0.00% / 100.00%
+  trapAccusation: 5.36% | 16.35% / 0.00% / 0.00%
+best shortcut: lookalikePresent 34.08%
+insider: naive clocks FAIL 423/813 (52.03%), session-only 52.03%; plain FAIL 0/826; mean staff position=4.97/10; careful path ~12 opened records / ~40 commands (estimate, not UI replay)
+lookalike: naive clocks FAIL 423/868 (48.73%), session-only 48.73%; plain FAIL 0/836; mean staff position=4.88/10; careful path ~12 opened records / ~40 commands (estimate, not UI replay)
+mfa: naive clocks FAIL 416/829 (50.18%), session-only 50.18%; plain FAIL 0/828; mean staff position=4.91/10; careful path ~13 opened records / ~43 commands (estimate, not UI replay)
+
+
+RANGE [5001, 10000]
+ADVERSARIAL: collecting visible aggregates and actual engine-rendered text, train 1..4000 / holdout 4001..6000
+  rendered seed 2000
+  rendered seed 4000
+  rendered seed 6000
+  rendered seed 8000
+  rendered seed 10000
+  baseline layout / constant insider: 1708/5000 34.16%; prior 33.33%, limit 43.33%
+  baseline layout / reviewer two-count threshold: 1656/5000 33.12%; prior 33.33%, limit 43.33%
+  baseline identity / first finance: 386/1708 22.60%; prior 22.44%, limit 32.44%
+  baseline identity / last finance: 373/1708 21.84%; prior 22.44%, limit 32.44%
+  baseline identity / most mail mentions: 390/1708 22.83%; prior 22.44%, limit 32.44%
+  baseline identity / least mail mentions: 383/1708 22.42%; prior 22.44%, limit 32.44%
+  baseline identity / most chat mentions: 380/1708 22.25%; prior 22.44%, limit 32.44%
+  baseline identity / most doc mentions: 386/1708 22.60%; prior 22.44%, limit 32.44%
+  baseline identity / most total mentions: 399/1708 23.36%; prior 22.44%, limit 32.44%
+  baseline identity / Quarter-end cover recipient: 391/1708 22.89%; prior 22.44%, limit 32.44%
+  baseline identity / clock chat speaker: 373/1708 21.84%; prior 22.44%, limit 32.44%
+  baseline identity / latest request recipient: 381/1708 22.31%; prior 22.44%, limit 32.44%
+  baseline payment / display nth 1: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 1: 339/5000 6.78%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 2: 114/5000 2.28%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 2: 275/5000 5.50%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 3: 158/5000 3.16%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 3: 252/5000 5.04%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 4: 230/5000 4.60%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 4: 165/5000 3.30%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 5: 144/5000 2.88%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 5: 239/5000 4.78%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 6: 206/5000 4.12%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 6: 164/5000 3.28%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 7: 212/5000 4.24%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 7: 150/5000 3.00%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 8: 302/5000 6.04%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 8: 59/5000 1.18%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 9: 143/5000 2.86%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 9: 226/5000 4.52%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 10: 223/5000 4.46%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 10: 154/5000 3.08%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 11: 79/5000 1.58%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 11: 283/5000 5.66%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 12: 171/5000 3.42%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 12: 213/5000 4.26%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 13: 132/5000 2.64%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 13: 235/5000 4.70%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 14: 214/5000 4.28%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 14: 138/5000 2.76%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 15: 244/5000 4.88%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 15: 160/5000 3.20%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 16: 287/5000 5.74%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 16: 88/5000 1.76%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 17: 57/5000 1.14%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 17: 298/5000 5.96%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 18: 161/5000 3.22%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 18: 207/5000 4.14%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 19: 237/5000 4.74%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 19: 160/5000 3.20%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 20: 301/5000 6.02%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 20: 79/5000 1.58%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 21: 89/5000 1.78%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 21: 292/5000 5.84%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 22: 158/5000 3.16%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 22: 227/5000 4.54%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 23: 208/5000 4.16%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 23: 169/5000 3.38%; prior 3.75%, limit 13.75%
+  baseline payment / display nth 24: 289/5000 5.78%; prior 3.75%, limit 13.75%
+  baseline payment / chronological nth 24: 69/5000 1.38%; prior 3.75%, limit 13.75%
+  baseline payment / last displayed: 340/5000 6.80%; prior 3.75%, limit 13.75%
+  baseline payment / largest amount: 182/5000 3.64%; prior 3.75%, limit 13.75%
+  baseline payment / first supplier first payment: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  baseline change / display nth 1: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 1: 346/5000 6.92%; prior 2.50%, limit 12.50%
+  baseline change / display nth 2: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 2: 7/5000 0.14%; prior 2.50%, limit 12.50%
+  baseline change / display nth 3: 91/5000 1.82%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 3: 308/5000 6.16%; prior 2.50%, limit 12.50%
+  baseline change / display nth 4: 146/5000 2.92%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 4: 91/5000 1.82%; prior 2.50%, limit 12.50%
+  baseline change / display nth 5: 106/5000 2.12%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 5: 172/5000 3.44%; prior 2.50%, limit 12.50%
+  baseline change / display nth 6: 176/5000 3.52%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 6: 87/5000 1.74%; prior 2.50%, limit 12.50%
+  baseline change / display nth 7: 103/5000 2.06%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 7: 193/5000 3.86%; prior 2.50%, limit 12.50%
+  baseline change / display nth 8: 101/5000 2.02%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 8: 94/5000 1.88%; prior 2.50%, limit 12.50%
+  baseline change / display nth 9: 133/5000 2.66%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 9: 128/5000 2.56%; prior 2.50%, limit 12.50%
+  baseline change / display nth 10: 178/5000 3.56%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 10: 124/5000 2.48%; prior 2.50%, limit 12.50%
+  baseline change / display nth 11: 82/5000 1.64%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 11: 54/5000 1.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth 12: 238/5000 4.76%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 12: 48/5000 0.96%; prior 2.50%, limit 12.50%
+  baseline change / display nth 13: 140/5000 2.80%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 13: 217/5000 4.34%; prior 2.50%, limit 12.50%
+  baseline change / display nth 14: 9/5000 0.18%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 14: 7/5000 0.14%; prior 2.50%, limit 12.50%
+  baseline change / display nth 15: 222/5000 4.44%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 15: 163/5000 3.26%; prior 2.50%, limit 12.50%
+  baseline change / display nth 16: 72/5000 1.44%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 16: 217/5000 4.34%; prior 2.50%, limit 12.50%
+  baseline change / display nth 17: 35/5000 0.70%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 17: 78/5000 1.56%; prior 2.50%, limit 12.50%
+  baseline change / display nth 18: 148/5000 2.96%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 18: 196/5000 3.92%; prior 2.50%, limit 12.50%
+  baseline change / display nth 19: 104/5000 2.08%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 19: 138/5000 2.76%; prior 2.50%, limit 12.50%
+  baseline change / display nth 20: 117/5000 2.34%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 20: 112/5000 2.24%; prior 2.50%, limit 12.50%
+  baseline change / display nth 21: 121/5000 2.42%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 21: 98/5000 1.96%; prior 2.50%, limit 12.50%
+  baseline change / display nth 22: 225/5000 4.50%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 22: 154/5000 3.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth 23: 38/5000 0.76%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 23: 35/5000 0.70%; prior 2.50%, limit 12.50%
+  baseline change / display nth 24: 297/5000 5.94%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 24: 65/5000 1.30%; prior 2.50%, limit 12.50%
+  baseline change / display nth 25: 25/5000 0.50%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 25: 283/5000 5.66%; prior 2.50%, limit 12.50%
+  baseline change / display nth 26: 75/5000 1.50%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 26: 53/5000 1.06%; prior 2.50%, limit 12.50%
+  baseline change / display nth 27: 74/5000 1.48%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 27: 195/5000 3.90%; prior 2.50%, limit 12.50%
+  baseline change / display nth 28: 219/5000 4.38%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 28: 86/5000 1.72%; prior 2.50%, limit 12.50%
+  baseline change / display nth 29: 64/5000 1.28%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 29: 70/5000 1.40%; prior 2.50%, limit 12.50%
+  baseline change / display nth 30: 276/5000 5.52%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 30: 50/5000 1.00%; prior 2.50%, limit 12.50%
+  baseline change / display nth 31: 60/5000 1.20%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 31: 258/5000 5.16%; prior 2.50%, limit 12.50%
+  baseline change / display nth 32: 81/5000 1.62%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 32: 65/5000 1.30%; prior 2.50%, limit 12.50%
+  baseline change / display nth 33: 76/5000 1.52%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 33: 236/5000 4.72%; prior 2.50%, limit 12.50%
+  baseline change / display nth 34: 208/5000 4.16%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 34: 88/5000 1.76%; prior 2.50%, limit 12.50%
+  baseline change / display nth 35: 60/5000 1.20%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 35: 79/5000 1.58%; prior 2.50%, limit 12.50%
+  baseline change / display nth 36: 271/5000 5.42%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth 36: 30/5000 0.60%; prior 2.50%, limit 12.50%
+  baseline change / last displayed: 348/5000 6.96%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 1: 346/5000 6.92%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 2: 315/5000 6.30%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 3: 257/5000 5.14%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 4: 149/5000 2.98%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 5: 236/5000 4.72%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 6: 140/5000 2.80%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 7: 161/5000 3.22%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 8: 48/5000 0.96%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 9: 217/5000 4.34%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 10: 169/5000 3.38%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 11: 285/5000 5.70%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 12: 231/5000 4.62%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 13: 221/5000 4.42%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 14: 142/5000 2.84%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 15: 157/5000 3.14%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 16: 84/5000 1.68%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 17: 302/5000 6.04%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 18: 203/5000 4.06%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 19: 153/5000 3.06%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 20: 74/5000 1.48%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 21: 295/5000 5.90%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 22: 243/5000 4.86%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 23: 166/5000 3.32%; prior 2.50%, limit 12.50%
+  baseline change / chronological nth IBAN 24: 64/5000 1.28%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 1: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 2: 91/5000 1.82%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 3: 149/5000 2.98%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 4: 236/5000 4.72%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 5: 142/5000 2.84%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 6: 204/5000 4.08%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 7: 219/5000 4.38%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 8: 313/5000 6.26%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 9: 149/5000 2.98%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 10: 222/5000 4.44%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 11: 73/5000 1.46%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 12: 158/5000 3.16%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 13: 134/5000 2.68%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 14: 206/5000 4.12%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 15: 253/5000 5.06%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 16: 292/5000 5.84%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 17: 70/5000 1.40%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 18: 145/5000 2.90%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 19: 232/5000 4.64%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 20: 302/5000 6.04%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 21: 89/5000 1.78%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 22: 153/5000 3.06%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 23: 214/5000 4.28%; prior 2.50%, limit 12.50%
+  baseline change / display nth IBAN 24: 308/5000 6.16%; prior 2.50%, limit 12.50%
+  baseline change / latest night change: 7/5000 0.14%; prior 2.50%, limit 12.50%
+  baseline change / change matching largest payment: 182/5000 3.64%; prior 2.50%, limit 12.50%
+  baseline payment / display nth 25: 65/2493 2.61%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 25: 83/2493 3.33%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 26: 101/2493 4.05%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 26: 64/2493 2.57%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 27: 78/2493 3.13%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 27: 100/2493 4.01%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 28: 123/2493 4.93%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 28: 71/2493 2.85%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 29: 127/2493 5.09%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 29: 41/2493 1.64%; prior 3.33%, limit 13.33%
+  baseline payment / display nth 30: 147/2493 5.90%; prior 3.33%, limit 13.33%
+  baseline payment / chronological nth 30: 0/2493 0.00%; prior 3.33%, limit 13.33%
+  baseline change / display nth 37: 45/2493 1.81%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 37: 77/2493 3.09%; prior 2.22%, limit 12.22%
+  baseline change / display nth 38: 39/2493 1.56%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 38: 33/2493 1.32%; prior 2.22%, limit 12.22%
+  baseline change / display nth 39: 89/2493 3.57%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 39: 52/2493 2.09%; prior 2.22%, limit 12.22%
+  baseline change / display nth 40: 31/2493 1.24%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 40: 80/2493 3.21%; prior 2.22%, limit 12.22%
+  baseline change / display nth 41: 86/2493 3.45%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 41: 46/2493 1.85%; prior 2.22%, limit 12.22%
+  baseline change / display nth 42: 41/2493 1.64%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 42: 55/2493 2.21%; prior 2.22%, limit 12.22%
+  baseline change / display nth 43: 144/2493 5.78%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 43: 32/2493 1.28%; prior 2.22%, limit 12.22%
+  baseline change / display nth 44: 3/2493 0.12%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 44: 0/2493 0.00%; prior 2.22%, limit 12.22%
+  baseline change / display nth 45: 151/2493 6.06%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth 45: 0/2493 0.00%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 25: 84/2493 3.37%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 26: 69/2493 2.77%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 27: 101/2493 4.05%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 28: 56/2493 2.25%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 29: 32/2493 1.28%; prior 2.22%, limit 12.22%
+  baseline change / chronological nth IBAN 30: 0/2493 0.00%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 25: 56/2493 2.25%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 26: 103/2493 4.13%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 27: 64/2493 2.57%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 28: 125/2493 5.01%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 29: 147/2493 5.90%; prior 2.22%, limit 12.22%
+  baseline change / display nth IBAN 30: 151/2493 6.06%; prior 2.22%, limit 12.22%
+  depth3-tree layout: 663/2000 33.15%; prior 33.33%, limit 43.33%
+  aggregate-NB layout: 688/2000 34.40%; prior 33.33%, limit 43.33%
+  rendered-raw-NB layout: 657/2000 32.85%; prior 33.33%, limit 43.33%
+  rendered-lexical-NB layout: 644/2000 32.20%; prior 33.33%, limit 43.33%
+  rendered-normalized-NB layout: 667/2000 33.35%; prior 33.33%, limit 43.33%
+  depth3-tree who: 144/677 21.27%; prior 22.52%, limit 32.52%
+  aggregate-NB who: 140/677 20.68%; prior 22.52%, limit 32.52%
+  global-depth3-tree who: 147/677 21.71%; prior 22.52%, limit 32.52%
+  global-aggregate-NB who: 159/677 23.49%; prior 22.52%, limit 32.52%
+  rendered-raw-NB who: 149/677 22.01%; prior 22.52%, limit 32.52%
+  rendered-lexical-NB who: 145/677 21.42%; prior 22.52%, limit 32.52%
+  rendered-normalized-NB who: 164/677 24.22%; prior 22.52%, limit 32.52%
+  depth3-tree payment: 140/2000 7.00%; prior 3.76%, limit 13.76%
+  aggregate-NB payment: 148/2000 7.40%; prior 3.76%, limit 13.76%
+  global-depth3-tree payment: 171/2000 8.55%; prior 3.76%, limit 13.76%
+  global-aggregate-NB payment: 112/2000 5.60%; prior 3.76%, limit 13.76%
+  rendered-raw-NB payment: 121/2000 6.05%; prior 3.76%, limit 13.76%
+  rendered-lexical-NB payment: 92/2000 4.60%; prior 3.76%, limit 13.76%
+  rendered-normalized-NB payment: 114/2000 5.70%; prior 3.76%, limit 13.76%
+  depth3-tree change: 167/2000 8.35%; prior 2.51%, limit 12.51%
+  aggregate-NB change: 163/2000 8.15%; prior 2.51%, limit 12.51%
+  global-depth3-tree change: 132/2000 6.60%; prior 2.51%, limit 12.51%
+  global-aggregate-NB change: 149/2000 7.45%; prior 2.51%, limit 12.51%
+  rendered-raw-NB change: 93/2000 4.65%; prior 2.51%, limit 12.51%
+  rendered-lexical-NB change: 66/2000 3.30%; prior 2.51%, limit 12.51%
+  rendered-normalized-NB change: 102/2000 5.10%; prior 2.51%, limit 12.51%
+  rendered-all-person-only-NB who: 154/677 22.75%; prior 20.00%, limit 30.00%
+  rendered-mail-person-only-NB who: 148/677 21.86%; prior 20.00%, limit 30.00%
+ADVERSARIAL: 256 separately scored tests, 2219 aggregate features; only multi-source evidence joins excluded
+CONSTRUCTION: train 100001..104000; holdout ranges [[5001,10000]]
+  5001..10000 v3 change / early sign-in row: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  5001..10000 v3 payment / early-session change then next: 0/5000 0.00%; prior 3.75%, limit 13.75%
+  5001..10000 v3 change / common sign-in plus 10 or 80: 8/5000 0.16%; prior 2.50%, limit 12.50%
+  5001..10000 v3 payment / common late sign-in minus 5 or 82: 2/5000 0.04%; prior 3.75%, limit 13.75%
+  5001..10000 v3 change / orphan then next: 0/5000 0.00%; prior 2.50%, limit 12.50%
+  5001..10000 v3 identity / singleton request recipient: 381/1708 22.31%; prior 22.44%, limit 32.44%
+  5001..10000 v3 identity / orphan trailing sign-in: 0/1708 0.00%; prior 22.44%, limit 32.44%
+  5001..10000 v3 layout / singleton current master: 1708/5000 34.16%; prior 33.33%, limit 43.33%
+  5001..10000 v3 layout / bank homes threshold: 1708/5000 34.16%; prior 33.33%, limit 43.33%
+  5001..10000 v3 layout / bank homes plus singleton: 1708/5000 34.16%; prior 33.33%, limit 43.33%
+  5001..10000 v3 layout / exact director-home plus singleton: 1708/5000 34.16%; prior 33.33%, limit 43.33%
+  5001..10000 v3 whole / composed shortcuts: 1/5000 0.02%; prior 0.00%, limit 10.00%
+  5001..10000 v3 chat / change plus 7 or 77: 12/5000 0.24%; prior 2.50%, limit 12.50%
+  5001..10000 v3 chat / change then next payment: 12/5000 0.24%; prior 3.75%, limit 13.75%
+  5001..10000 construction depth4-tree / episode (43 features): 374/5000 7.48%; prior 7.50%, limit 17.50%
+  5001..10000 construction NB / episode (43 features): 374/5000 7.48%; prior 7.50%, limit 17.50%
+  5001..10000 construction depth4-tree / layout (374 features): 1654/5000 33.08%; prior 33.33%, limit 43.33%
+  5001..10000 construction NB / layout (374 features): 1719/5000 34.38%; prior 33.33%, limit 43.33%
+  5001..10000 construction depth4-tree / identity (48 features): 373/1708 21.84%; prior 22.44%, limit 32.44%
+  5001..10000 construction NB / identity (48 features): 391/1708 22.89%; prior 22.44%, limit 32.44%
+seeds 5001..10000: 5000 cases, 0 problems
+layouts: insider=1708 | lookalike=1636 | mfa=1656
+visible ambiguity: 5000 cases each support exactly one branch; decisive-link mutations: 6
+SHAPE: 166 field/token distributions, 372 bins; max gap=4.27pp (limit 10pp); visible chain checks=5000; intended linked-session/challenge contrasts=33 (only exact joined Device/Location/MFA challenge and linked challenge existence)
+single-field oracles: 86 tests, train seeds 1..2500, holdout 2501..5000; best=changes.Note:shape 35.24% (limit 45%)
+  oracle changes.When:value: 33.48% (837/2500)
+  oracle changes.When:shape: 33.60% (840/2500)
+  oracle changes.When:tokens: 32.56% (814/2500)
+  oracle changes.When:office hour: 32.44% (811/2500)
+  oracle changes.When:office minute: 31.68% (792/2500)
+  oracle changes.When:night: 33.60% (840/2500)
+  oracle changes.Change ID:value: 33.60% (840/2500)
+  oracle changes.Change ID:shape: 33.60% (840/2500)
+  oracle changes.Change ID:tokens: 33.60% (840/2500)
+  oracle changes.Supplier:value: 33.56% (839/2500)
+  oracle changes.Supplier:shape: 33.60% (840/2500)
+  oracle changes.Supplier:tokens: 33.60% (840/2500)
+  oracle changes.Field:value: 33.60% (840/2500)
+  oracle changes.Field:shape: 33.60% (840/2500)
+  oracle changes.Field:tokens: 33.60% (840/2500)
+  oracle changes.Old value:value: 33.60% (840/2500)
+  oracle changes.Old value:shape: 33.08% (827/2500)
+  oracle changes.Old value:tokens: 33.08% (827/2500)
+  oracle changes.New value:value: 33.60% (840/2500)
+  oracle changes.New value:shape: 32.88% (822/2500)
+  oracle changes.New value:tokens: 32.88% (822/2500)
+  oracle changes.By account:value: 33.36% (834/2500)
+  oracle changes.By account:shape: 33.60% (840/2500)
+  oracle changes.By account:tokens: 33.36% (834/2500)
+  oracle changes.Session:value: 33.60% (840/2500)
+  oracle changes.Session:shape: 33.60% (840/2500)
+  oracle changes.Session:tokens: 33.60% (840/2500)
+  oracle changes.Note:value: 33.80% (845/2500)
+  oracle changes.Note:shape: 35.24% (881/2500)
+  oracle changes.Note:tokens: 34.00% (850/2500)
+  oracle payments.Executed:value: 33.16% (829/2500)
+  oracle payments.Executed:shape: 33.60% (840/2500)
+  oracle payments.Executed:tokens: 34.52% (863/2500)
+  oracle payments.Executed:office hour: 32.08% (802/2500)
+  oracle payments.Executed:office minute: 33.48% (837/2500)
+  oracle payments.Executed:night: 33.60% (840/2500)
+  oracle payments.Payment ID:value: 33.60% (840/2500)
+  oracle payments.Payment ID:shape: 33.60% (840/2500)
+  oracle payments.Payment ID:tokens: 33.60% (840/2500)
+  oracle payments.Invoice:value: 33.92% (848/2500)
+  oracle payments.Invoice:shape: 33.60% (840/2500)
+  oracle payments.Invoice:tokens: 33.60% (840/2500)
+  oracle payments.Supplier:value: 33.56% (839/2500)
+  oracle payments.Supplier:shape: 33.60% (840/2500)
+  oracle payments.Supplier:tokens: 33.60% (840/2500)
+  oracle payments.Amount:value: 33.68% (842/2500)
+  oracle payments.Amount:shape: 33.60% (840/2500)
+  oracle payments.Amount:tokens: 33.60% (840/2500)
+  oracle payments.Status:value: 33.60% (840/2500)
+  oracle payments.Status:shape: 33.60% (840/2500)
+  oracle payments.Status:tokens: 33.60% (840/2500)
+  oracle payments.To IBAN:value: 33.60% (840/2500)
+  oracle payments.To IBAN:shape: 32.88% (822/2500)
+  oracle payments.To IBAN:tokens: 32.88% (822/2500)
+  oracle nearby signins.Device:value: 33.36% (834/2500)
+  oracle nearby signins.Device:shape: 34.76% (869/2500)
+  oracle nearby signins[0].Device:value: 32.80% (820/2500)
+  oracle nearby signins[0].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[1].Device:value: 34.20% (855/2500)
+  oracle nearby signins[1].Device:shape: 34.00% (850/2500)
+  oracle nearby signins[2].Device:value: 33.28% (832/2500)
+  oracle nearby signins[2].Device:shape: 33.48% (837/2500)
+  oracle nearby signins[3].Device:value: 33.72% (843/2500)
+  oracle nearby signins[3].Device:shape: 33.80% (845/2500)
+  oracle nearby signins.Location / IP:value: 32.24% (806/2500)
+  oracle nearby signins.Location / IP:shape: 34.76% (869/2500)
+  oracle nearby signins[0].Location / IP:value: 33.40% (835/2500)
+  oracle nearby signins[0].Location / IP:shape: 33.60% (840/2500)
+  oracle nearby signins[1].Location / IP:value: 32.52% (813/2500)
+  oracle nearby signins[1].Location / IP:shape: 34.00% (850/2500)
+  oracle nearby signins[2].Location / IP:value: 33.76% (844/2500)
+  oracle nearby signins[2].Location / IP:shape: 33.48% (837/2500)
+  oracle nearby signins[3].Location / IP:value: 33.92% (848/2500)
+  oracle nearby signins[3].Location / IP:shape: 33.80% (845/2500)
+  oracle nearby signins[4].Device:value: 33.44% (836/2500)
+  oracle nearby signins[4].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[5].Device:value: 33.60% (840/2500)
+  oracle nearby signins[5].Device:shape: 33.64% (841/2500)
+  oracle nearby signins[4].Location / IP:value: 33.64% (841/2500)
+  oracle nearby signins[4].Location / IP:shape: 33.60% (840/2500)
+  oracle nearby signins[5].Location / IP:value: 33.64% (841/2500)
+  oracle nearby signins[5].Location / IP:shape: 33.64% (841/2500)
+  oracle nearby signins[6].Device:value: 33.56% (839/2500)
+  oracle nearby signins[6].Device:shape: 33.60% (840/2500)
+  oracle nearby signins[6].Location / IP:value: 33.60% (840/2500)
+  oracle nearby signins[6].Location / IP:shape: 33.60% (840/2500)
+frequency histograms: 585 comparisons (all, each twist present/absent, exact twist pair); max count TV=20.56pp, position TV=14.33pp, max bin z=3.07; sparse skipped=0
+record-count frequency histograms by layout (value:frequency):
+  emails: insider {"38":126,"39":313,"41":245,"42":150,"47":125,"48":304,"50":281,"51":164} | lookalike {"38":139,"39":292,"41":260,"42":128,"47":133,"48":288,"50":270,"51":126} | mfa {"38":143,"39":277,"41":300,"42":134,"47":126,"48":265,"50":282,"51":129}
+  chats: insider {"3":868,"4":840} | lookalike {"3":852,"4":784} | mfa {"3":811,"4":845}
+  files: insider {"3":1708} | lookalike {"3":1636} | mfa {"3":1656}
+  payments: insider {"24":834,"30":874} | lookalike {"24":819,"30":817} | mfa {"24":854,"30":802}
+  changes: insider {"36":834,"45":874} | lookalike {"36":819,"45":817} | mfa {"36":854,"45":802}
+  mfa: insider {"51":2,"52":2,"53":10,"54":36,"55":33,"56":76,"57":89,"58":107,"59":105,"60":109,"61":86,"62":75,"63":56,"64":39,"65":31,"66":42,"67":56,"68":59,"69":95,"70":84,"71":126,"72":116,"73":88,"74":64,"75":50,"76":34,"77":13,"78":14,"79":7,"80":2,"81":1,"82":1} | lookalike {"50":1,"51":3,"52":6,"53":10,"54":25,"55":33,"56":68,"57":100,"58":99,"59":118,"60":120,"61":83,"62":69,"63":51,"64":31,"65":31,"66":30,"67":45,"68":56,"69":90,"70":85,"71":105,"72":110,"73":85,"74":67,"75":48,"76":29,"77":20,"78":12,"79":4,"80":2} | mfa {"50":2,"51":5,"52":3,"53":13,"54":27,"55":49,"56":74,"57":108,"58":93,"59":114,"60":100,"61":101,"62":75,"63":47,"64":31,"65":31,"66":33,"67":50,"68":50,"69":77,"70":97,"71":103,"72":111,"73":86,"74":66,"75":44,"76":30,"77":22,"78":6,"79":7,"83":1}
+  signins: insider {"47":439,"56":429,"58":395,"67":445} | lookalike {"47":431,"56":421,"58":388,"67":396} | mfa {"47":420,"56":391,"58":434,"67":411}
+  registry: insider {"29":834,"36":874} | lookalike {"29":819,"36":817} | mfa {"29":854,"36":802}
+  whois: insider {"8":441,"10":857,"12":410} | lookalike {"8":403,"10":838,"12":395} | mfa {"8":426,"10":815,"12":415}
+  lookalikeRequests: insider {"12":834,"15":874} | lookalike {"12":819,"15":817} | mfa {"12":854,"15":802}
+  nightApprovals: insider {"12":834,"15":874} | lookalike {"12":819,"15":817} | mfa {"12":854,"15":802}
+shortcuts who+how: prior=33.33%, limit=43.33% (overall | insider / lookalike / mfa):
+  changer: 34.16% | 100.00% / 0.00% / 0.00%
+  moneyWorries: 3.00% | 8.78% / 0.00% / 0.00%
+  latestLookRecipient: 7.62% | 22.31% / 0.00% / 0.00%
+  nightApprovalPerson: 7.72% | 22.60% / 0.00% / 0.00%
+  receivingDirectorName: 34.16% | 100.00% / 0.00% / 0.00%
+  directorAbroad: 33.12% | 24.65% / 0.00% / 74.58%
+  directorSmallUnit: 33.78% | 50.88% / 0.00% / 49.52%
+  firstFinance: 7.72% | 22.60% / 0.00% / 0.00%
+  lastFinance: 7.46% | 21.84% / 0.00% / 0.00%
+  lookalikePresent: 32.72% | 0.00% / 100.00% / 0.00%
+  nightApprovalPresent: 33.12% | 0.00% / 0.00% / 100.00%
+  trapAccusation: 5.38% | 15.75% / 0.00% / 0.00%
+best shortcut: changer 34.16%
+insider: naive clocks FAIL 418/842 (49.64%), session-only 49.64%; plain FAIL 0/866; mean staff position=5.01/10; careful path ~12 opened records / ~40 commands (estimate, not UI replay)
+lookalike: naive clocks FAIL 407/843 (48.28%), session-only 48.28%; plain FAIL 0/793; mean staff position=4.98/10; careful path ~12 opened records / ~40 commands (estimate, not UI replay)
+mfa: naive clocks FAIL 404/819 (49.33%), session-only 49.33%; plain FAIL 0/837; mean staff position=5.11/10; careful path ~13 opened records / ~43 commands (estimate, not UI replay)
+

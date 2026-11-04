@@ -1,0 +1,34 @@
+/* Guard duty additions on top of style.css / case.css / case2.css */
+.win-body .mail { display: grid; grid-template-columns: 330px minmax(0, 1fr); height: 100%; }
+.ml-head { padding: 8px 12px; font-size: 12px; color: var(--muted); }
+.win-body .mail-item { padding: 6px 12px; }
+.win-body .mail-item .mi-subj { font-size: 12px; }
+.mi-meta { display: flex; gap: 8px; align-items: center; font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+.g-badge { margin-left: auto; font-size: 11px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+.g-do { color: #9fd69f; border-color: rgba(159, 214, 159, .4); }
+.g-stop { color: var(--rose); border-color: rgba(232, 138, 154, .4); }
+.g-kicker { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.g-from { margin: 10px 0 0; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.g-to { margin: 2px 0 12px; }
+.g-addr { font-family: ui-monospace, Consolas, monospace; font-size: 13px; color: var(--ink); background: rgba(255, 255, 255, .05); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+.g-body { font-size: 15px; line-height: 1.6; margin: 0 0 14px; }
+.g-box { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 0 0 12px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.g-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.g-final { margin-top: 18px; color: var(--muted); }
+.pad { padding: 14px 18px; overflow: auto; height: 100%; }
+.g-dir { padding: 8px 14px; }
+.g-dir .sec-dev { margin: 4px 0 4px; font-size: 13px; }
+.g-dir .log { font-size: 11.5px; }
+.g-dir .log th, .g-dir .log td { padding: 3px 8px; }
+.g-phone { display: grid; grid-template-columns: 260px minmax(0, 1fr); height: 100%; }
+.g-people { border-right: 1px solid var(--line); overflow: auto; padding: 8px; display: grid; gap: 6px; align-content: start; }
+.g-people { gap: 4px; padding: 6px; }
+.g-people .file { display: block; text-align: left; width: 100%; padding: 4px 8px; line-height: 1.25; }
+.g-people .file b { font-size: 13px; }
+.g-people .file span { display: block; font-size: 11px; }
+.g-log { margin-top: 16px; }
+.g-call { border-left: 3px solid var(--lav); padding: 4px 0 4px 12px; margin: 0 0 10px; font-size: 14px; }
+.pad .btn.small { margin: 0 6px 6px 0; }
+.br-bar { display: flex; gap: 6px; flex-wrap: wrap; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.browser { display: flex; flex-direction: column; height: 100%; }
+.br-page { overflow: auto; flex: 1; }

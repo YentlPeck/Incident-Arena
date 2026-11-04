@@ -1,0 +1,2912 @@
+{
+  "generator": "./cases/gen2.js",
+  "viewport": [
+    1280,
+    800
+  ],
+  "replays": [
+    {
+      "seed": 1,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 2,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 3,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 4,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 5,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 6,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 7,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 8,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 9,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 10,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 11,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 12,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 13,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 14,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 15,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 16,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 17,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 18,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 19,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 20,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 21,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 22,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 23,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 24,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 25,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 26,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 27,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 28,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 29,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 30,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 31,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 32,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 33,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 34,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 35,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 36,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 37,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 38,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 39,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 40,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 41,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 42,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 43,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 44,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 45,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 46,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 47,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 48,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 49,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 50,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 51,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 52,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 53,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 54,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 55,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 56,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 57,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 58,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 59,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 60,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 61,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 62,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 63,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 64,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 65,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 66,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 67,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 68,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 69,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 70,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 71,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 72,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 73,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 74,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 75,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 76,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 77,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 78,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 79,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 80,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 81,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 82,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 83,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 84,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 85,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 86,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 87,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 88,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 89,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 90,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 91,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 92,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 93,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 94,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 95,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 96,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 97,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 98,
+      "layout": "insider",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 99,
+      "layout": "mfa",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    },
+    {
+      "seed": 100,
+      "layout": "lookalike",
+      "correct": true,
+      "clicks": [
+        14
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "seed": 1,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 1,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 1,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 2,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 2,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 2,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 3,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 3,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 3,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 4,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 4,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 4,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 5,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 5,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 5,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 6,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 6,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 6,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 7,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 7,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 7,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 8,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 8,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 8,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 9,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 9,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 9,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 10,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 10,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 10,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 11,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 11,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 11,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 12,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 12,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 12,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 13,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 13,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 13,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 14,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 14,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 14,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 15,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 15,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 15,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 16,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 16,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 16,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 17,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 17,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 17,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 18,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 18,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 18,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 19,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 19,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 19,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 20,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 20,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 20,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 21,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 21,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 21,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 22,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 22,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 22,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 23,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 23,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 23,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 24,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 24,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 24,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 25,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 25,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 25,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 26,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 26,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 26,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 27,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 27,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 27,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 28,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 28,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 28,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 29,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 29,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 29,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 30,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 30,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 30,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 31,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 31,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 31,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 32,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 32,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 32,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 33,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 33,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 33,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 34,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 34,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 34,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 35,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 35,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 35,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 36,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 36,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 36,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 37,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 37,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 37,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 38,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 38,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 38,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 39,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 39,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 39,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 40,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 40,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 40,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 41,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 41,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 41,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 42,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 42,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 42,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 43,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 43,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 43,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 44,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 44,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 44,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 45,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 45,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 45,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 46,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 46,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 46,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 47,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 47,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 47,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 48,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 48,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 48,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 49,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 49,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 49,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 50,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 50,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 50,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 51,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 51,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 51,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 52,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 52,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 52,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 53,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 53,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 53,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 54,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 54,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 54,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 55,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 55,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 55,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 56,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 56,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 56,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 57,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 57,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 57,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 58,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 58,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 58,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 59,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 59,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 59,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 60,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 60,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 60,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 61,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 61,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 61,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 62,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 62,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 62,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 63,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 63,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 63,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 64,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 64,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 64,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 65,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 65,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 65,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 66,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 66,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 66,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 67,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 67,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 67,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 68,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 68,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 68,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 69,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 69,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 69,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 70,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 70,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 70,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 71,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 71,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 71,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 72,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 72,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 72,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 73,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 73,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 73,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 74,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 74,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 74,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 75,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 75,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 75,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 76,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 76,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 76,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 77,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 77,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 77,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 78,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 78,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 78,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 79,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 79,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 79,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 80,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 80,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 80,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 81,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 81,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 81,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 82,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 82,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 82,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 83,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 83,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 83,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 84,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 84,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 84,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 85,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 85,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 85,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 86,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 86,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 86,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 87,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 87,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 87,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 88,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 88,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 88,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 89,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 89,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 89,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 90,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 90,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 90,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 91,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 91,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 91,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 92,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 92,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 92,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 93,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 93,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 93,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 94,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 94,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 94,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 95,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 95,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 95,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 96,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 96,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 96,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 97,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 97,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 97,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 98,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 98,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 98,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 99,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 99,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 99,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 100,
+      "tab": "suppliers",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 100,
+      "tab": "payments",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    },
+    {
+      "seed": 100,
+      "tab": "changes",
+      "w": 1126,
+      "sw": 1126,
+      "minFont": 12
+    }
+  ],
+  "pageErrors": []
+}

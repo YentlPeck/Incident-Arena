@@ -1,0 +1,36 @@
+/* Additions to the shared Pixelforge desktop. */
+.mr-from { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.mr-to { margin-left: 0; overflow-wrap: anywhere; }
+.mr-meta { align-items: flex-start; }
+.mail-read, .pg, .cf { overflow-wrap: anywhere; }
+.source { padding: 12px 0; }
+.log-wrap { overflow-x: auto; }
+.log td { vertical-align: top; }
+.log .flagbtn { white-space: nowrap; }
+.br-marks { flex-wrap: wrap; flex: none; }
+.br-tools { flex: none; }
+.forum-thread { border: 1px solid var(--line); border-radius: var(--r); padding: 14px; margin: 12px 0; }
+.forum-thread h2 { font-size: 17px; margin: 0 0 6px; }
+.forum-body { line-height: 1.65; }
+.pg a, .mr-body a { color: var(--lav); text-underline-offset: 3px; }
+.lookup-results { margin-top: 18px; }
+.report-results td:nth-child(2), .discovery-results td:nth-child(2) { font: inherit; color: var(--text); }
+.report-results td.res-ok, .discovery-results td.res-ok { color: var(--mint); }
+.report-results td.res-fail, .discovery-results td.res-fail { color: var(--rose); }
+.report-results td:last-child { white-space: nowrap; }
+.modal-actions { flex-wrap: wrap; }
+.end-story { line-height: 1.65; }
+.tb-mid { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 16px; }
+.file-row .file { min-width: 0; }
+.file-row .file b { overflow-wrap: anywhere; }
+@media (max-width: 750px) {
+  .tb-left, .tb-right { min-width: 0; }
+  .tb-title, .tb-clock { display: none; }
+  .mail { grid-template-columns: 170px minmax(0, 1fr); }
+  .mail-read { padding: 14px; }
+  .acct-grid { grid-template-columns: 160px minmax(0, 1fr); }
+  .pg { padding: 18px; }
+}
+/* logs: keep each cell on one line (scroll sideways if needed) instead of breaking words */
+.log th, .log td { overflow-wrap: normal; white-space: nowrap; }
+#win-files .mail { grid-template-columns: 130px minmax(0, 1fr); }

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixelforge · Guard duty</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cases/case.css">
+  <link rel="stylesheet" href="cases/case2.css">
+  <link rel="stylesheet" href="cases/guard.css">
+  <script src="data.js"></script>
+  <script src="cases/icons.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="tb-left"><span class="logo" data-icon="spark"></span><span class="tb-title">PixelforgeOS</span></div>
+      <div class="tb-mid" id="tb-task"></div>
+      <div class="tb-right"><span class="tb-clicks" id="tb-clicks">Clicks: 0</span><span class="tb-clock" id="tb-clock"></span></div>
+    </header>
+    <main id="desktop">
+      <nav id="icons" aria-label="Applications"></nav>
+      <div id="windows"></div>
+      <div id="toasts" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="overlay" hidden></div>
+  <script src="cases/gen-guard.js"></script>
+  <script src="cases/gameG.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Family 2 additions; shared desktop, windows and controls stay in case.css/style.css. */
+.mail { grid-template-columns: 280px minmax(0, 1fr); }
+.mail-read, .acct-grid > div, .finance { min-width: 0; }
+.tabs { flex-wrap: wrap; }
+#win-security .sec { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+#win-security .sec > :not(.acct-grid):not(.log-wrap) { flex: none; }
+#win-security .sec > .log-wrap { min-height: 0; overflow: auto; }
+#win-security .acct-grid { flex: 1; min-height: 0; overflow: hidden; grid-template-columns: 230px minmax(0, 1fr); align-items: stretch; }
+#win-security .acct-grid > div { overflow: auto; }
+.log-wrap { max-width: 100%; overflow-x: auto; }
+.log { width: max-content; min-width: 100%; }
+.log th, .log td, .long-value, .addr, .tcard small, .pg code, .mr-body code, .document code {
+  white-space: nowrap; overflow-wrap: normal; word-break: normal;
+}
+/* Shared log cells have a compact ellipsis cap. Audit evidence must be fully
+   readable in the table; wide records scroll inside the app window. */
+.log th, .log td { max-width: none; overflow: visible; text-overflow: clip; }
+.log td.audit-note { width: 260px; min-width: 240px; max-width: 280px; white-space: normal; }
+.finance .log th, .finance .log td { padding: 7px 8px; }
+.finance .log td:nth-child(3) { font-family: inherit; }
+.row-actions { display: flex; align-items: center; gap: 10px; }
+.finance .log:has(.row-actions) th:last-child,
+.finance .log:has(.row-actions) td:last-child:not([colspan]) { position: sticky; right: 0; background: var(--win); box-shadow: -6px 0 8px -8px #13141f; }
+.entry-detail { margin: 12px 0 16px; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--r); background: #202334; overflow-x: auto; }
+.entry-detail h3 { font-size: 14px; margin: 0; }
+.entry-detail dl { margin: 10px 0 0; }
+.entry-detail dl > div { display: grid; grid-template-columns: 140px max-content; gap: 16px; margin: 4px 0; }
+.entry-detail dt { color: var(--muted); }
+.entry-detail dd { margin: 0; white-space: nowrap; font: 12.5px/1.7 ui-monospace, Consolas, monospace; }
+.document { font: inherit; white-space: normal; }
+.document p { margin: 0 0 12px; }
+.document pre { white-space: pre; overflow-x: auto; }
+.team { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.tcard { min-width: 0; overflow-x: auto; }
+.mr-to, .mr-from .addr { white-space: nowrap; }
+.mr-meta { flex-wrap: wrap; }
+.pf-hero h1 { font-size: 38px; }
+@media (max-width: 750px) {
+  .mail { grid-template-columns: 170px minmax(0, 1fr); }
+  .entry-detail dl > div { grid-template-columns: 110px max-content; }
+}
+
+/* Family 2 audit tables fit the standard 1280?800 desktop without panning. */
+.finance .log { width: 100%; min-width: 0; table-layout: auto; }
+.finance .log th, .finance .log td { font-size: 12px; padding: 6px; }
+.finance .log th:last-child, .finance .log td:last-child { position: static !important; box-shadow: none !important; }
+.finance .row-actions { gap: 6px; }
+.finance .finance-secondary td { padding-top: 0; padding-bottom: 7px; border-top: 0; white-space: normal; color: var(--muted); }
+.finance-secondary span { display: inline-block; margin-right: 20px; white-space: nowrap; }
+.finance .finance-secondary + tr td { border-top: 1px solid var(--line); }
+.finance .log td:nth-child(3) { font-family: ui-monospace, Consolas, monospace; }
+#win-casefile .cf { padding: 16px 20px; }
+#win-casefile .cf-head { margin-bottom: 8px; }
+#win-casefile .cf-task, #win-casefile .cf-task p { margin: 0 0 8px; }
+#win-casefile .case-discoveries { font-size: 12px; margin: 6px 0; }
+#win-casefile .case-discoveries summary { cursor: pointer; color: var(--muted); }
+#win-casefile h3 { margin: 10px 0; }
+.report-columns { display: grid; grid-template-columns: .92fr 1.15fr 1.3fr; gap: 18px; }
+.report-columns section { min-width: 0; }
+.report-columns .rq { margin: 0 0 8px; min-height: 38px; font-size: 12px; }
+.report-columns .ropts { gap: 4px; }
+.report-columns .ropt { padding: 5px 8px; font-size: 12px; line-height: 1.3; min-height: 27px; }
+#file-report { margin-top: 12px; }
+.mail-copies { color: var(--muted); font-size: 11px; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 10px; }
+@media (max-width: 900px) { .report-columns { grid-template-columns: 1fr; } }
+#win-casefile .report-columns section:first-child .ropts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Search submits on Enter, like Security; filters retain original flag row IDs. */
+.mail-shell { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+.mail-shell > .mail { flex: 1; min-height: 0; height: auto; }
+.mail-search { flex: none; padding: 10px 14px; margin: 0; border-bottom: 1px solid var(--line); }
+.mail-search .br-addr, .finance-search .br-addr { min-width: 0; flex: 1; }
+.mail-search input, .finance-search input { width: 100%; }
+.mail-search > span { white-space: nowrap; }
+.mail-shell .mail { grid-template-columns: 350px minmax(0, 1fr); }
+.mail-item .mi-top { flex-wrap: wrap; }
+.mail-item .mi-time { font-size: 11px; }
+.no-results { padding: 12px; }
+.finance { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+.finance > :not(.log-wrap) { flex: none; }
+.finance > .log-wrap { flex: 1; min-height: 0; overflow-y: auto; }
+.finance-search { margin: 8px 0; }
+@media (max-width: 900px) { .mail-shell .mail { grid-template-columns: 250px minmax(0, 1fr); } }

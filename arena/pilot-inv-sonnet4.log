@@ -1,0 +1,7 @@
+{"id": "inv-2921-sonnet-alone", "layout": "lookalike", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 60}
+{"id": "inv-2922-sonnet-alone", "layout": "insider", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 58}
+{"id": "inv-2923-sonnet-alone", "layout": "insider", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 59}
+{"id": "inv-2924-sonnet-alone", "layout": "insider", "report": {"filed": true, "who_ok": false, "how_ok": true, "evidence_ok": true, "correct": false}, "found": ["how", "evidence"], "commands": 32}
+{"id": "inv-2925-sonnet-alone", "layout": "lookalike", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 46}
+{"id": "inv-2926-sonnet-alone", "layout": "mfa", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 49}
+exit 0

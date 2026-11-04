@@ -1,0 +1,2065 @@
+{
+  "range": [
+    5001,
+    10000
+  ],
+  "training": [
+    1,
+    4000
+  ],
+  "holdout": [
+    4001,
+    6000
+  ],
+  "features": 2219,
+  "results": [
+    {
+      "name": "baseline layout / constant insider",
+      "hits": 1708,
+      "n": 5000,
+      "prior": 0.3333333333333134,
+      "accuracy": 0.3416,
+      "limit": 0.43333333333331336
+    },
+    {
+      "name": "baseline layout / reviewer two-count threshold",
+      "hits": 1656,
+      "n": 5000,
+      "prior": 0.3333333333333134,
+      "accuracy": 0.3312,
+      "limit": 0.43333333333331336
+    },
+    {
+      "name": "baseline identity / first finance",
+      "hits": 386,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.2259953161592506,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / last finance",
+      "hits": 373,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.21838407494145198,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / most mail mentions",
+      "hits": 390,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.22833723653395785,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / least mail mentions",
+      "hits": 383,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.22423887587822014,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / most chat mentions",
+      "hits": 380,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.2224824355971897,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / most doc mentions",
+      "hits": 386,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.2259953161592506,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / most total mentions",
+      "hits": 399,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.2336065573770492,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / Quarter-end cover recipient",
+      "hits": 391,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.22892271662763466,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / clock chat speaker",
+      "hits": 373,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.21838407494145198,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline identity / latest request recipient",
+      "hits": 381,
+      "n": 1708,
+      "prior": 0.22441451990631964,
+      "accuracy": 0.2230679156908665,
+      "limit": 0.32441451990631964
+    },
+    {
+      "name": "baseline payment / display nth 1",
+      "hits": 0,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 1",
+      "hits": 339,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0678,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 2",
+      "hits": 114,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0228,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 2",
+      "hits": 275,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.055,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 3",
+      "hits": 158,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0316,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 3",
+      "hits": 252,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0504,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 4",
+      "hits": 230,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.046,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 4",
+      "hits": 165,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.033,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 5",
+      "hits": 144,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0288,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 5",
+      "hits": 239,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0478,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 6",
+      "hits": 206,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0412,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 6",
+      "hits": 164,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0328,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 7",
+      "hits": 212,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0424,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 7",
+      "hits": 150,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.03,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 8",
+      "hits": 302,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0604,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 8",
+      "hits": 59,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0118,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 9",
+      "hits": 143,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0286,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 9",
+      "hits": 226,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0452,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 10",
+      "hits": 223,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0446,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 10",
+      "hits": 154,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0308,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 11",
+      "hits": 79,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0158,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 11",
+      "hits": 283,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0566,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 12",
+      "hits": 171,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0342,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 12",
+      "hits": 213,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0426,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 13",
+      "hits": 132,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0264,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 13",
+      "hits": 235,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.047,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 14",
+      "hits": 214,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0428,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 14",
+      "hits": 138,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0276,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 15",
+      "hits": 244,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0488,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 15",
+      "hits": 160,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.032,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 16",
+      "hits": 287,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0574,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 16",
+      "hits": 88,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0176,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 17",
+      "hits": 57,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0114,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 17",
+      "hits": 298,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0596,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 18",
+      "hits": 161,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0322,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 18",
+      "hits": 207,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0414,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 19",
+      "hits": 237,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0474,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 19",
+      "hits": 160,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.032,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 20",
+      "hits": 301,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0602,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 20",
+      "hits": 79,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0158,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 21",
+      "hits": 89,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0178,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 21",
+      "hits": 292,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0584,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 22",
+      "hits": 158,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0316,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 22",
+      "hits": 227,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0454,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 23",
+      "hits": 208,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0416,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 23",
+      "hits": 169,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0338,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / display nth 24",
+      "hits": 289,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0578,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / chronological nth 24",
+      "hits": 69,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0138,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / last displayed",
+      "hits": 340,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.068,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / largest amount",
+      "hits": 182,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0.0364,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline payment / first supplier first payment",
+      "hits": 0,
+      "n": 5000,
+      "prior": 0.03751166666666508,
+      "accuracy": 0,
+      "limit": 0.1375116666666651
+    },
+    {
+      "name": "baseline change / display nth 1",
+      "hits": 0,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 1",
+      "hits": 346,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0692,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 2",
+      "hits": 0,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 2",
+      "hits": 7,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0014,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 3",
+      "hits": 91,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0182,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 3",
+      "hits": 308,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0616,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 4",
+      "hits": 146,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0292,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 4",
+      "hits": 91,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0182,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 5",
+      "hits": 106,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0212,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 5",
+      "hits": 172,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0344,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 6",
+      "hits": 176,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0352,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 6",
+      "hits": 87,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0174,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 7",
+      "hits": 103,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0206,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 7",
+      "hits": 193,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0386,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 8",
+      "hits": 101,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0202,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 8",
+      "hits": 94,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0188,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 9",
+      "hits": 133,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0266,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 9",
+      "hits": 128,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0256,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 10",
+      "hits": 178,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0356,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 10",
+      "hits": 124,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0248,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 11",
+      "hits": 82,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0164,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 11",
+      "hits": 54,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0108,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 12",
+      "hits": 238,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0476,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 12",
+      "hits": 48,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0096,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 13",
+      "hits": 140,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.028,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 13",
+      "hits": 217,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0434,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 14",
+      "hits": 9,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0018,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 14",
+      "hits": 7,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0014,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 15",
+      "hits": 222,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0444,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 15",
+      "hits": 163,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0326,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 16",
+      "hits": 72,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0144,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 16",
+      "hits": 217,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0434,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 17",
+      "hits": 35,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.007,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 17",
+      "hits": 78,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0156,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 18",
+      "hits": 148,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0296,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 18",
+      "hits": 196,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0392,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 19",
+      "hits": 104,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0208,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 19",
+      "hits": 138,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0276,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 20",
+      "hits": 117,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0234,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 20",
+      "hits": 112,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0224,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 21",
+      "hits": 121,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0242,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 21",
+      "hits": 98,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0196,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 22",
+      "hits": 225,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.045,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 22",
+      "hits": 154,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0308,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 23",
+      "hits": 38,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0076,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 23",
+      "hits": 35,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.007,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 24",
+      "hits": 297,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0594,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 24",
+      "hits": 65,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.013,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 25",
+      "hits": 25,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.005,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 25",
+      "hits": 283,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0566,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 26",
+      "hits": 75,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.015,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 26",
+      "hits": 53,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0106,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 27",
+      "hits": 74,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0148,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 27",
+      "hits": 195,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.039,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 28",
+      "hits": 219,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0438,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 28",
+      "hits": 86,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0172,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 29",
+      "hits": 64,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0128,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 29",
+      "hits": 70,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.014,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 30",
+      "hits": 276,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0552,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 30",
+      "hits": 50,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.01,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 31",
+      "hits": 60,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.012,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 31",
+      "hits": 258,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0516,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 32",
+      "hits": 81,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0162,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 32",
+      "hits": 65,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.013,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 33",
+      "hits": 76,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0152,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 33",
+      "hits": 236,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0472,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 34",
+      "hits": 208,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0416,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 34",
+      "hits": 88,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0176,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 35",
+      "hits": 60,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.012,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 35",
+      "hits": 79,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0158,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth 36",
+      "hits": 271,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0542,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth 36",
+      "hits": 30,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.006,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / last displayed",
+      "hits": 348,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0696,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 1",
+      "hits": 346,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0692,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 2",
+      "hits": 315,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.063,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 3",
+      "hits": 257,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0514,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 4",
+      "hits": 149,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0298,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 5",
+      "hits": 236,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0472,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 6",
+      "hits": 140,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.028,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 7",
+      "hits": 161,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0322,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 8",
+      "hits": 48,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0096,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 9",
+      "hits": 217,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0434,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 10",
+      "hits": 169,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0338,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 11",
+      "hits": 285,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.057,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 12",
+      "hits": 231,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0462,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 13",
+      "hits": 221,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0442,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 14",
+      "hits": 142,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0284,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 15",
+      "hits": 157,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0314,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 16",
+      "hits": 84,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0168,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 17",
+      "hits": 302,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0604,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 18",
+      "hits": 203,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0406,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 19",
+      "hits": 153,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0306,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 20",
+      "hits": 74,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0148,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 21",
+      "hits": 295,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.059,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 22",
+      "hits": 243,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0486,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 23",
+      "hits": 166,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0332,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 24",
+      "hits": 64,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0128,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 1",
+      "hits": 0,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 2",
+      "hits": 91,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0182,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 3",
+      "hits": 149,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0298,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 4",
+      "hits": 236,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0472,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 5",
+      "hits": 142,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0284,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 6",
+      "hits": 204,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0408,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 7",
+      "hits": 219,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0438,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 8",
+      "hits": 313,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0626,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 9",
+      "hits": 149,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0298,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 10",
+      "hits": 222,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0444,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 11",
+      "hits": 73,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0146,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 12",
+      "hits": 158,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0316,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 13",
+      "hits": 134,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0268,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 14",
+      "hits": 206,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0412,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 15",
+      "hits": 253,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0506,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 16",
+      "hits": 292,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0584,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 17",
+      "hits": 70,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.014,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 18",
+      "hits": 145,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.029,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 19",
+      "hits": 232,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0464,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 20",
+      "hits": 302,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0604,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 21",
+      "hits": 89,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0178,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 22",
+      "hits": 153,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0306,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 23",
+      "hits": 214,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0428,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / display nth IBAN 24",
+      "hits": 308,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0616,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / latest night change",
+      "hits": 7,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0014,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline change / change matching largest payment",
+      "hits": 182,
+      "n": 5000,
+      "prior": 0.025007777777777664,
+      "accuracy": 0.0364,
+      "limit": 0.12500777777777766
+    },
+    {
+      "name": "baseline payment / display nth 25",
+      "hits": 65,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.026073004412354592,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 25",
+      "hits": 83,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.033293221018852785,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / display nth 26",
+      "hits": 101,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.040513437625350986,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 26",
+      "hits": 64,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.025671881267549136,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / display nth 27",
+      "hits": 78,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.031287605294825514,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 27",
+      "hits": 100,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.04011231448054553,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / display nth 28",
+      "hits": 123,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.049338146811071,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 28",
+      "hits": 71,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.028479743281187325,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / display nth 29",
+      "hits": 127,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.05094263939029282,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 29",
+      "hits": 41,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.016446048937023665,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / display nth 30",
+      "hits": 147,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0.05896510228640193,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline payment / chronological nth 30",
+      "hits": 0,
+      "n": 2493,
+      "prior": 0.03333333333333247,
+      "accuracy": 0,
+      "limit": 0.13333333333333247
+    },
+    {
+      "name": "baseline change / display nth 37",
+      "hits": 45,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.018050541516245487,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 37",
+      "hits": 77,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.030886482150020055,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 38",
+      "hits": 39,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.015643802647412757,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 38",
+      "hits": 33,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.013237063778580024,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 39",
+      "hits": 89,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.03569995988768552,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 39",
+      "hits": 52,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.020858403529883673,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 40",
+      "hits": 31,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.012434817488969114,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 40",
+      "hits": 80,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.032089851584436425,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 41",
+      "hits": 86,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.03449659045326915,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 41",
+      "hits": 46,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.018451664661050943,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 42",
+      "hits": 41,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.016446048937023665,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 42",
+      "hits": 55,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.02206177296430004,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 43",
+      "hits": 144,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.05776173285198556,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 43",
+      "hits": 32,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.012835940633774568,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 44",
+      "hits": 3,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.0012033694344163659,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 44",
+      "hits": 0,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth 45",
+      "hits": 151,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.060569594865623744,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth 45",
+      "hits": 0,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 25",
+      "hits": 84,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.03369434416365824,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 26",
+      "hits": 69,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.027677496991576414,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 27",
+      "hits": 101,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.040513437625350986,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 28",
+      "hits": 56,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.022462896109105495,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 29",
+      "hits": 32,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.012835940633774568,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / chronological nth IBAN 30",
+      "hits": 0,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 25",
+      "hits": 56,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.022462896109105495,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 26",
+      "hits": 103,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.04131568391496189,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 27",
+      "hits": 64,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.025671881267549136,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 28",
+      "hits": 125,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.05014039310068191,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 29",
+      "hits": 147,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.05896510228640193,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "baseline change / display nth IBAN 30",
+      "hits": 151,
+      "n": 2493,
+      "prior": 0.022222222222223646,
+      "accuracy": 0.060569594865623744,
+      "limit": 0.12222222222222365
+    },
+    {
+      "name": "depth3-tree layout",
+      "hits": 663,
+      "n": 2000,
+      "prior": 0.3333333333333333,
+      "accuracy": 0.3315,
+      "limit": 0.43333333333333335
+    },
+    {
+      "name": "aggregate-NB layout",
+      "hits": 688,
+      "n": 2000,
+      "prior": 0.3333333333333333,
+      "accuracy": 0.344,
+      "limit": 0.43333333333333335
+    },
+    {
+      "name": "rendered-raw-NB layout",
+      "hits": 657,
+      "n": 2000,
+      "prior": 0.3333333333333333,
+      "accuracy": 0.3285,
+      "limit": 0.43333333333333335
+    },
+    {
+      "name": "rendered-lexical-NB layout",
+      "hits": 644,
+      "n": 2000,
+      "prior": 0.3333333333333333,
+      "accuracy": 0.322,
+      "limit": 0.43333333333333335
+    },
+    {
+      "name": "rendered-normalized-NB layout",
+      "hits": 667,
+      "n": 2000,
+      "prior": 0.3333333333333333,
+      "accuracy": 0.3335,
+      "limit": 0.43333333333333335
+    },
+    {
+      "name": "depth3-tree who",
+      "hits": 144,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.21270310192023634,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "aggregate-NB who",
+      "hits": 140,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.206794682422452,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "global-depth3-tree who",
+      "hits": 147,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.2171344165435746,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "global-aggregate-NB who",
+      "hits": 159,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.23485967503692762,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "rendered-raw-NB who",
+      "hits": 149,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.22008862629246675,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "rendered-lexical-NB who",
+      "hits": 145,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.21418020679468242,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "rendered-normalized-NB who",
+      "hits": 164,
+      "n": 677,
+      "prior": 0.2251846381093055,
+      "accuracy": 0.24224519940915806,
+      "limit": 0.32518463810930553
+    },
+    {
+      "name": "depth3-tree payment",
+      "hits": 140,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.07,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "aggregate-NB payment",
+      "hits": 148,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.074,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "global-depth3-tree payment",
+      "hits": 171,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.0855,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "global-aggregate-NB payment",
+      "hits": 112,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.056,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "rendered-raw-NB payment",
+      "hits": 121,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.0605,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "rendered-lexical-NB payment",
+      "hits": 92,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.046,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "rendered-normalized-NB payment",
+      "hits": 114,
+      "n": 2000,
+      "prior": 0.03758333333333291,
+      "accuracy": 0.057,
+      "limit": 0.13758333333333292
+    },
+    {
+      "name": "depth3-tree change",
+      "hits": 167,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.0835,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "aggregate-NB change",
+      "hits": 163,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.0815,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "global-depth3-tree change",
+      "hits": 132,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.066,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "global-aggregate-NB change",
+      "hits": 149,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.0745,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "rendered-raw-NB change",
+      "hits": 93,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.0465,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "rendered-lexical-NB change",
+      "hits": 66,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.033,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "rendered-normalized-NB change",
+      "hits": 102,
+      "n": 2000,
+      "prior": 0.025055555555556514,
+      "accuracy": 0.051,
+      "limit": 0.12505555555555653
+    },
+    {
+      "name": "rendered-all-person-only-NB who",
+      "hits": 154,
+      "n": 677,
+      "prior": 0.2,
+      "accuracy": 0.2274741506646972,
+      "limit": 0.30000000000000004
+    },
+    {
+      "name": "rendered-mail-person-only-NB who",
+      "hits": 148,
+      "n": 677,
+      "prior": 0.2,
+      "accuracy": 0.21861152141802068,
+      "limit": 0.30000000000000004
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "rounds": {
+    "cases-haiku-alone": {
+      "kind": "cases",
+      "seeds": [1001, 1002],
+      "player": "haiku",
+      "condition": "alone"
+    },
+    "cases-haiku-playbook": {
+      "kind": "cases",
+      "seeds": [1001, 1002],
+      "player": "haiku",
+      "condition": "playbook:arena/playbook.md"
+    },
+    "cases-luna-alone": {
+      "kind": "cases",
+      "seeds": [1001, 1002],
+      "player": "luna",
+      "condition": "alone"
+    },
+    "cases-luna-playbook": {
+      "kind": "cases",
+      "seeds": [1001, 1002],
+      "player": "luna",
+      "condition": "playbook:arena/playbook.md"
+    }
+  },
+  "games": []
+}

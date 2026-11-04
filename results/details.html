@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixelforge Arena · Can a big AI teach small AIs?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Inter:wght@400;500;600&family=Silkscreen&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+    :root {
+      --page: #0B0B0B; --panel: #141414; --ink: #F2F2F2; --ink-2: #A6A6A6; --hair: #2A2A2A;
+      --salmon: #FFA59A; --brick: #A83018; --bar: #D9685B;
+      --haiku: #D9685B; --luna: #3E8EE0;
+      --head: 'Archivo', 'Inter', system-ui, sans-serif; --body: 'Inter', system-ui, sans-serif; --pixel: 'Silkscreen', ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 17px/1.6 var(--body); }
+    a { color: inherit; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+    nav .wrap { display: flex; align-items: center; height: 64px; }
+    .brand { font-family: var(--head); font-weight: 800; font-size: 15px; letter-spacing: 0.02em; text-decoration: none; }
+    .brand span { color: var(--salmon); }
+    .chip { display: inline-block; font-family: var(--pixel); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; background: var(--salmon); color: #1a0d09; }
+    header { padding: 48px 0 24px; }
+    h1 { font-family: var(--head); font-weight: 800; letter-spacing: -0.035em; line-height: 1.04; font-size: clamp(36px, 5vw, 58px); margin: 18px 0 0; }
+    .answer { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; margin: 30px 0 0; }
+    .answer b { font-family: var(--head); font-weight: 400; font-size: clamp(60px, 9vw, 112px); letter-spacing: -0.045em; line-height: 0.9; color: var(--salmon); }
+    .answer p { margin: 0; max-width: 460px; color: var(--ink-2); font-size: 18px; }
+    .answer p strong, section p strong { color: var(--ink); font-weight: 600; }
+    section { padding: 64px 0 8px; }
+    .step-no { font-family: var(--pixel); font-size: 12px; letter-spacing: 0.5px; color: var(--salmon); text-transform: uppercase; }
+    h2 { font-family: var(--head); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; font-size: clamp(28px, 3.4vw, 38px); margin: 8px 0 14px; }
+    section > p { color: var(--ink-2); max-width: 680px; margin: 0 0 24px; }
+    .framed { background: var(--panel); border: 2px solid #262626; box-shadow: 8px 8px 0 var(--brick); padding: 22px 24px 18px; margin: 8px 8px 0 0; }
+    .chart-title { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+    .chart-sub { font-size: 13px; color: var(--ink-2); margin: 0 0 12px; }
+    .chart { overflow-x: auto; }
+    .chart svg { display: block; width: 100%; min-width: 620px; height: auto; }
+    .chart text { font-family: var(--body); fill: var(--ink-2); font-size: 13px; }
+    .chart .lbl { fill: var(--ink); font-size: 14px; font-weight: 600; }
+    .chart .val { fill: var(--ink); font-size: 14px; font-weight: 600; }
+    .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+    .chart .legend svg { width: 14px; min-width: 0; height: 14px; vertical-align: -2px; margin-right: 6px; display: inline-block; }
+    .takeaway { margin: 22px 0 0; font-size: 17px; color: var(--ink); max-width: 680px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 28px; }
+    .steps div { background: var(--panel); border: 1px solid var(--hair); padding: 16px 18px; }
+    .steps b { display: block; font-family: var(--head); font-size: 18px; margin-bottom: 6px; }
+    .steps span { font-size: 14px; color: var(--ink-2); }
+    .squares { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+    .squares i { width: 30px; height: 30px; display: block; border: 2px solid var(--bar); }
+    .squares i.ok { background: var(--bar); }
+    .squares i.pending { border-color: #555; border-style: dotted; }
+    .practice-row + .practice-row { margin-top: 22px; }
+    .practice-label { margin: 0; font-size: 15px; font-weight: 600; }
+    .practice-detail { margin: 0; font-size: 13px; color: var(--ink-2); }
+    #practice .squares { min-width: 714px; }
+    #practice .squares i { flex: 0 0 30px; }
+    .lessons { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; max-width: 680px; }
+    .lessons li { border-left: 3px solid var(--salmon); padding: 4px 0 4px 14px; color: var(--ink); }
+    .more { font-size: 14px; color: var(--ink-2); }
+    .note { font-size: 13px; color: var(--ink-2); margin: 14px 0 0; max-width: 680px; }
+    .next { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .next div { background: var(--panel); border: 1px solid var(--hair); padding: 18px 20px; }
+    .next b { display: block; font-family: var(--head); font-size: 19px; margin-bottom: 6px; }
+    .next span { font-size: 15px; color: var(--ink-2); }
+    footer { border-top: 1px solid var(--hair); margin-top: 72px; padding: 28px 0 40px; font-size: 13px; color: var(--ink-2); }
+    footer .wrap { display: flex; gap: 24px; flex-wrap: wrap; }
+    @media (max-width: 760px) { .wrap { padding: 0 20px; } .steps, .next { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav><div class="wrap"><a class="brand" href="index.html">PIXELFORGE <span>ARENA</span></a></div></nav>
+
+  <main><div class="wrap">
+    <header>
+      <span class="chip">An AI experiment</span>
+      <h1>Can a big AI teach small AIs to solve hacking cases?</h1>
+      <div class="answer"><b id="answer">…</b><p id="answer-line"></p></div>
+    </header>
+
+    <section>
+      <div class="step-no">01 · The game</div>
+      <h2>We built a hacking game for AIs.</h2>
+      <p>A click-only detective game: someone leaked secrets from a fictional game studio, and the player finds out who and how.
+        Two small, cheap AIs play it, <strong>Claude Haiku</strong> and <strong>GPT-6-Luna</strong>. They only see screenshots and click, like a person.
+        After every game we check its recorded commands: only games that used nothing but the game's own controls count.</p>
+      <div class="framed chart">
+        <p class="chart-title">How far the small AIs got in each level on their own</p>
+        <p class="chart-sub">Levels 1–2: finished the case or not. Levels 3–4: steps found out of 10. Average of their games without help.</p>
+        <div id="levels"></div>
+      </div>
+      <p class="takeaway" id="levels-take"></p>
+    </section>
+
+    <section>
+      <div class="step-no">02 · Try 1</div>
+      <h2>A teacher who knows the answers.</h2>
+      <p>On Level 4 they could ask a teacher for help. It barely helped. And it wasn't a fair test: we wrote that teacher, so it already knew the answers.</p>
+      <div class="framed chart">
+        <p class="chart-title">Level 4: steps found, without and with the teacher</p>
+        <p class="chart-sub">Steps found out of 10, average. Further right is better.</p>
+        <div id="teacher"></div>
+        <div class="legend" id="teacher-legend"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="step-no">03 · Try 2</div>
+      <h2>Learning by playing.</h2>
+      <p>So we took the answers away from the teachers, Pokémon-style: Sonnet, Opus and Sol each learn from the same 20 practice cases, then pass their lessons on.</p>
+      <div class="steps">
+        <div><b>Random cases</b><span>A computer program makes a new leak every time, with new people and clues. Nobody wrote the answers by hand.</span></div>
+        <div><b>Practice</b><span id="practice-step">A bigger AI plays practice cases. After each one it is told what really happened, and writes down general lessons.</span></div>
+        <div><b>Playbook</b><span id="playbook-step">The lessons become a playbook: methods only, no names or answers.</span></div>
+      </div>
+      <div class="framed chart">
+        <p class="chart-title" id="practice-title">Practice: each square is one case</p>
+        <p class="chart-sub">Each teacher gets the same cases. Solved = right culprit, method and evidence.</p>
+        <div id="practice"></div>
+        <div class="legend"><span>■ Solved</span><span>□ Not solved</span><span>┄ Awaiting a checked game and lesson update</span></div>
+      </div>
+      <ul class="lessons">
+        <li>Follow the leaked copy's watermark back to the exact download.</li>
+        <li>Put every clock in one time zone before comparing times.</li>
+        <li>A fake login page alone doesn't prove phishing: check that a password was actually sent.</li>
+      </ul>
+      <p class="note">Three lessons from Sonnet's playbook. <a id="playbook-link" class="more" href="#">Read the whole playbook →</a></p>
+    </section>
+
+    <section>
+      <div class="step-no">04 · The test</div>
+      <h2>Do the small AIs get better?</h2>
+      <p>Haiku and Luna play new cases they have never seen, each one twice: once on their own, once with Sonnet's playbook. Nobody tells them the answers. This is the test we planned in advance.</p>
+      <p class="note">Five Luna games broke the rules (a mistyped command, or a hidden helper tool) and were played again. Counting them as failures instead, Luna still goes from 5 to 24 solved cases.</p>
+      <div class="framed chart">
+        <p class="chart-title">New cases solved</p>
+        <p class="chart-sub" id="test-sub"></p>
+        <div id="test"></div>
+        <div class="legend" id="test-legend"></div>
+      </div>
+      <p class="takeaway" id="test-take"></p>
+    </section>
+
+    <section>
+      <div class="step-no">04b · A side comparison</div>
+      <h2>Which teacher writes the best lessons?</h2>
+      <p>We also try the other teachers' playbooks, plus a <strong>fake playbook</strong>: just as long, but only game-making tips and no investigation lessons. If longer instructions alone helped, the fake one would help too. Every bar uses exactly the same cases.</p>
+      <div class="framed chart">
+        <p class="chart-title">Cases solved with each teacher's lessons</p>
+        <p class="chart-sub" id="best-sub">Solved out of the same number of cases within each AI.</p>
+        <div id="best-teacher"></div>
+        <div class="legend" id="best-legend"></div>
+      </div>
+      <p class="note">This is a side comparison. Only the Sonnet test was planned in advance; these bars do not change the answer at the top.</p>
+    </section>
+
+    <section>
+      <div class="step-no">05 · A different case</div>
+      <h2>Do the lessons travel?</h2>
+      <p>The teachers practised investigating a leak. Now the same frozen playbooks go into <strong>a fake-invoice investigation</strong>: new evidence, new rules, no extra training. Haiku and Luna each play 55 cases, alone and with every playbook.</p>
+      <div id="transfer"><p class="note">Waiting for checked transfer-test data.</p></div>
+      <p><strong>In short: the lessons did not travel.</strong> On the leak case the playbooks turned a few solved cases into many. On the invoice case every playbook, including the fake one with no investigation lessons, moved the small AIs by only a few cases, and the fake playbook helped about as much as the real ones. So the leak-case gain came from lessons about that one game, not from general investigation skill.</p>
+      <p class="note">Ten games broke the rules and were played again. Counting those as failures instead does not change the answer (Luna with Sonnet's playbook: 9 cases better, 6 worse instead of 10 and 6).</p>
+      <p class="note">This asks whether the playbooks help on <strong>one</strong> other kind of case, not on every kind. It does not measure real-world security skill. The answer uses the same rule as the leak case and only Sonnet's playbook, fixed before the results were in. The completed leak-case result at the top stays separate.</p>
+    </section>
+
+    <section>
+      <div class="step-no">Fine print</div>
+      <h2>What to keep in mind.</h2>
+      <ul class="lessons">
+        <li><b>One kind of case.</b> All cases are variations of one leak with three possible causes. The playbooks contain methods for exactly this kind of case. On one other kind of case (the fake invoice) they did not help.</li>
+        <li><b>Longer instructions.</b> With a playbook the instructions are about five times longer. A fake playbook without investigation lessons scored 12 versus 8 for Haiku and 3 versus 5 for Luna. Sonnet's advantage over the fake playbook is clear for Luna; the Haiku comparison is less conclusive (paired p = 0.07).</li>
+        <li><b>Luna's settings.</b> Luna ran with the owner's own Codex settings (high reasoning effort) in every game, alone and with a playbook alike.</li>
+        <li><b>Checked by a second AI.</b> An independent review by GPT-6.1-Sol recomputed every number from the raw game records; they match.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="step-no">06 · Next</div>
+      <h2>What comes next.</h2>
+      <div class="next">
+        <div><b>Teach for more than one case</b><span>Let the teachers practise on both the leak and the invoice case and write lessons that work for both. Then test on a third, brand-new kind of case.</span></div>
+        <div><b>A human score</b><span>Yentl plays a few random cases, so we can compare the AIs with a person.</span></div>
+      </div>
+    </section>
+  </div></main>
+
+  <footer><div class="wrap">
+    <span>Made by Yentl Peck</span><span id="updated"></span><span>Built by Claude, reviewed by Codex</span><span>All AI games ran on subscriptions</span>
+  </div></footer>
+
+  <script src="data.js"></script>
+  <script src="story.js"></script>
+  <script src="story2.js"></script>
+  <script src="transfer.js"></script>
+  <script>
+  (() => {
+    const D = window.PF_RESULTS || { games: [], rounds: {} }, S = window.PF_STORY || {};
+    const $ = (s) => document.querySelector(s);
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const num = (v, fallback = 0) => Number.isFinite(Number(v)) ? Number(v) : fallback;
+    const avg = (xs) => xs.reduce((a, b) => a + b, 0) / xs.length;
+    const pct = (v) => `${Math.round(v * 100)}%`;
+    const colorOf = (p) => /haiku/i.test(p) ? 'var(--haiku)' : /luna/i.test(p) ? 'var(--luna)' : 'var(--ink-2)';
+    const short = (p) => /haiku/i.test(p) ? 'Haiku' : /luna/i.test(p) ? 'Luna' : /sonnet/i.test(p) ? 'Sonnet' : /opus/i.test(p) ? 'Opus' : /sol/i.test(p) ? 'Sol' : p;
+    const dot = (c, f) => `<svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="5" fill="${f ? c : 'none'}" stroke="${c}" stroke-width="2"/></svg>`;
+    const box = (c, f) => `<svg viewBox="0 0 14 14"><rect x="2" y="2" width="10" height="10" rx="2" fill="${f ? c : 'none'}" stroke="${c}" stroke-width="2"/></svg>`;
+    $('#updated').textContent = D.updated ? `Data updated ${D.updated}` : 'Data not yet available';
+
+    // 01: share of each level solved, AI games without help
+    const levels = [1, 2, 3, 4].map((lv) => {
+      const gs = (D.games || []).filter((g) => g.kind === 'ai' && g.coach === 'none' && D.rounds?.[g.round]?.level === lv);
+      const share = gs.map((g) => g.progress != null ? g.progress / g.progress_max : (g.done ? 1 : 0));
+      return { lv, n: gs.length, v: gs.length ? avg(share) : null };
+    }).filter((l) => l.v != null);
+    {
+      const W = 900, L = 90, R = 70, rowH = 46, H = levels.length * rowH + 8, pw = W - L - R;
+      let svg = '';
+      levels.forEach((l, i) => {
+        const y = i * rowH + 8, w = Math.max(4, l.v * pw);
+        svg += `<text class="lbl" x="0" y="${y + 20}">Level ${l.lv}</text>`
+          + `<rect x="${L}" y="${y + 4}" width="${pw}" height="22" rx="4" fill="#1d1d1d"/>`
+          + `<g><title>Level ${l.lv}: ${pct(l.v)} solved on average over ${l.n} AI games without help</title>`
+          + `<rect x="${L}" y="${y + 4}" width="${w}" height="22" rx="4" fill="var(--bar)"/></g>`
+          + `<text class="val" x="${L + pw + 12}" y="${y + 20}">${pct(l.v)}</text>`;
+      });
+      $('#levels').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Share of each level solved without help">${svg}</svg>`;
+      const l4 = levels.find((l) => l.lv === 4);
+      $('#levels-take').innerHTML = l4 ? `Levels 1 to 3 were too easy: they solved almost everything. <strong>Level 4 finally made them struggle</strong>, at ${pct(l4.v)}. That gives a helper something to improve.` : '';
+    }
+
+    // 02: Level 4, average steps found per AI, without (ring) vs with the teacher (dot)
+    {
+      const ai = (D.games || []).filter((g) => g.kind === 'ai' && D.rounds?.[g.round]?.level === 4 && g.progress != null);
+      const players = [...new Set(ai.map((g) => g.player))];
+      const max = ai.length ? ai[0].progress_max : 10;
+      const W = 900, L = 120, R = 40, T = 10, rowH = 92, pw = W - L - R, H = T + players.length * rowH + 40;
+      const x = (v) => L + (v / max) * pw;
+      let svg = '';
+      for (let v = 0; v <= max; v += max <= 10 ? 1 : 5) svg += `<line x1="${x(v)}" x2="${x(v)}" y1="${T}" y2="${T + players.length * rowH}" stroke="#222"/><text x="${x(v)}" y="${T + players.length * rowH + 22}" text-anchor="middle">${v}</text>`;
+      players.forEach((p, i) => {
+        const cy = T + i * rowH + rowH / 2, c = colorOf(p);
+        const a = ai.filter((g) => g.player === p && g.coach === 'none'), b = ai.filter((g) => g.player === p && g.coach === 'coach');
+        const va = a.length ? avg(a.map((g) => g.progress)) : null, vb = b.length ? avg(b.map((g) => g.progress)) : null;
+        svg += `<text class="lbl" x="0" y="${cy + 5}">${esc(short(p))}</text>`;
+        if (va != null && vb != null) svg += `<line x1="${x(va)}" x2="${x(vb)}" y1="${cy}" y2="${cy}" stroke="${c}" stroke-width="2"/>`;
+        const close = va != null && vb != null && Math.abs(x(va) - x(vb)) < 140;
+        [[va, a, false, 'without', cy - 18], [vb, b, true, 'with teacher', close ? cy + 32 : cy - 18]].forEach(([v, gs, filled, name, ty]) => {
+          if (v == null) return;
+          svg += `<g><title>${esc(short(p))} ${name}: ${v.toFixed(1)} of ${esc(max)} on average (${gs.length} game${gs.length === 1 ? '' : 's'}: ${esc(gs.map((g) => g.progress).join(', '))})</title>`
+            + `<circle cx="${x(v)}" cy="${cy}" r="18" fill="transparent"/><circle cx="${x(v)}" cy="${cy}" r="9" fill="${filled ? c : 'var(--panel)'}" stroke="${filled ? 'var(--panel)' : c}" stroke-width="${filled ? 2 : 2.5}"/></g>`
+            + `<text x="${x(v)}" y="${ty}" text-anchor="middle">${name} ${v.toFixed(1)}</text>`;
+        });
+      });
+      $('#teacher').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Level 4 steps found without and with the teacher">${svg}</svg>`;
+      $('#teacher-legend').innerHTML = players.map((p) => `<span>${dot(colorOf(p), true)}${esc(short(p))}</span>`).join('')
+        + `<span>${dot('var(--ink-2)', false)}without teacher</span><span>${dot('var(--ink-2)', true)}with teacher</span>`;
+    }
+
+    // 03: the same practice cases, one row per teacher; unchecked games stay pending.
+    {
+      const teachers = S.teachers || {};
+      const rows = ['sonnet', 'opus', 'sol'].map((key) => {
+        const who = short(key), t = teachers[key] || {};
+        const P = Array.isArray(t.practice) ? t.practice : [];
+        const solved = P.filter((g) => g.correct === true).length;
+        const status = t.frozen ? 'playbook frozen' : key === 'sol' ? 'still practising' : 'frozen playbook unavailable';
+        const tips = t.playbook?.lessons == null ? '' : ` · ${num(t.playbook.lessons)} lessons${t.frozen ? '' : ' in the draft'}`;
+        const squares = Array.from({ length: 20 }, (_, i) => {
+          const g = P.find((game) => game.seed === i + 1);
+          const label = `${who}, practice case ${i + 1}: ${g ? g.correct ? 'solved' : `not solved (${num(g.parts)} of 3 report parts right)` : 'awaiting a checked game and lesson update'}`;
+          return `<i class="${g ? g.correct ? 'ok' : '' : 'pending'}" role="img" aria-label="${esc(label)}" title="${esc(label)}"></i>`;
+        }).join('');
+        return `<div class="practice-row"><p class="practice-label">${esc(who)} ${solved} of ${P.length} solved${key === 'sol' && !t.frozen ? ' · still practising' : ''}</p>`
+          + `<div class="squares">${squares}</div><p class="practice-detail">${P.length} of 20 practised · ${esc(status + tips)}</p></div>`;
+      });
+      $('#practice').innerHTML = rows.join('');
+      // (the Next section no longer depends on which playbooks are frozen)
+      $('#practice-step').textContent = 'Three bigger AIs each play the same 20 practice cases. After each one they are told what really happened, and write down general lessons.';
+      if (S.playbook?.lessons) $('#playbook-step').textContent = `Sonnet's frozen playbook has ${num(S.playbook.lessons)} tips: methods only, no names or answers. Each teacher writes its own.`;
+      if (/^\.\.\/arena\/playbook-frozen-[0-9a-f]{8}\.md$/.test(S.playbook?.file || '')) $('#playbook-link').href = S.playbook.file; else $('#playbook-link').remove();
+    }
+
+    // 04 + answer: paired new cases per AI, alone vs with the playbook
+    {
+      const T = S.test || {}, players = Object.keys(T).filter((p) => Array.isArray(T[p]?.pairs));
+      const planned = num(S.planned, 55);
+      const solvedN = (pairs, k) => pairs.filter((p) => p[k]?.correct === true).length;
+      const counts = players.map((p) => T[p].pairs.length);
+      $('#test-sub').textContent = `Each case is played twice by the same AI. Solved = right culprit, method and evidence. Planned: ${planned} cases per AI, with Sonnet's playbook.`;
+      if (!counts.some((c) => c > 0)) {
+        $('#test').innerHTML = '<p class="chart-sub">Waiting for the first paired results.</p>';
+      } else {
+        const W = 900, L = 130, R = 90, barH = 22, rowH = 100, H = players.length * rowH, pw = W - L - R;
+        let svg = '';
+        players.forEach((p, i) => {
+          const y = i * rowH + 10, c = colorOf(p), pairs = T[p].pairs, n = pairs.length;
+          svg += `<text class="lbl" x="0" y="${y + 24}">${esc(short(p))}</text><text x="0" y="${y + 44}">${n} of ${planned} cases</text>`;
+          [['alone', 'alone', false, 0], ['playbook', 'with playbook', true, barH + 10]].forEach(([k, name, filled, dy]) => {
+            const s = solvedN(pairs, k), w = n ? (s / n) * pw : 0;
+            svg += `<rect x="${L}" y="${y + dy}" width="${pw}" height="${barH}" rx="4" fill="#1d1d1d"/>`
+              + `<g><title>${esc(short(p))} ${name}: solved ${s} of ${n}</title><rect x="${L}" y="${y + dy}" width="${pw}" height="${barH}" fill="transparent"/>`
+              + (w > 0 ? `<rect x="${L + 1}" y="${y + dy + 1}" width="${Math.max(2, w - 2)}" height="${barH - 2}" rx="4" fill="${filled ? c : 'none'}" stroke="${c}" stroke-width="2"/>` : '') + '</g>'
+              + `<text class="val" x="${L + pw + 12}" y="${y + dy + 16}">${n ? `${s} of ${n}` : '–'}</text>`;
+          });
+        });
+        $('#test').innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="New cases solved alone and with the playbook">${svg}</svg>`;
+        $('#test-legend').innerHTML = players.map((p) => `<span>${box(colorOf(p), true)}${esc(short(p))}</span>`).join('')
+          + `<span>${box('var(--ink-2)', false)}alone</span><span>${box('var(--ink-2)', true)}with playbook</span>`;
+      }
+      // the headline is decided in story.py, only once the planned test is complete (exact paired sign test)
+      const v = S.verdict || 'Too early';
+      $('#answer').textContent = v;
+      const parts = players.filter((p) => T[p].pairs.length).map((p) => {
+        const pairs = T[p].pairs;
+        return `<strong>${esc(short(p))}</strong> solved ${solvedN(pairs, 'alone')} of ${pairs.length} cases alone and <strong>${solvedN(pairs, 'playbook')} of ${pairs.length}</strong> with the playbook`;
+      });
+      const done = counts.length ? Math.min(...counts) : 0;
+      $('#answer-line').innerHTML = (parts.length ? parts.join('; ') + '. ' : 'The playbook is written. ')
+        + (v === 'Too early' ? `We only answer once each AI has played all ${planned} planned cases (${done} so far).`
+          : v === 'Yes' ? 'For both AIs a gain this big would happen by luck less than once in a hundred tries.'
+          : v === 'A little' ? 'For both AIs the gain is very unlikely to be luck, but small for at least one of them.'
+          : 'For at least one AI the gain could still be luck.');
+      $('#test-take').innerHTML = v === 'Too early' ? 'One lucky case can swing a small test, so we wait for all planned cases before answering.'
+        : `How we decide: for each AI we count the cases solved only with the playbook versus only alone, and check how likely that difference is by pure luck. "Yes" needs both AIs to pass that check with a gain of at least ${Math.round(num(S.big_gain, 0.15) * 100)} percentage points.`;
+    }
+
+    // 04b: descriptive only. Every available teacher uses the same validated seeds within an AI.
+    {
+      const B = S.best_teacher || {}, teachers = S.teachers || {};
+      const available = Array.isArray(B.teachers) ? B.teachers.filter((k) => ['sonnet', 'opus', 'sol', 'placebo'].includes(k)) : [];
+      const groups = ['Claude Haiku 5.5', 'GPT-6-Luna'];
+      const conditions = ['alone', 'placebo', 'sonnet', 'opus', 'sol'];
+      const W = 900, L = 150, R = 130, pw = W - L - R, rowH = 36, groupH = 240;
+      let svg = '';
+      groups.forEach((p, i) => {
+        const group = B.per_ai?.[p] || {}, n = Math.max(0, num(group.n));
+        const top = i * groupH, c = colorOf(p);
+        svg += `<text class="lbl" x="2" y="${top + 20}">${esc(short(p))}</text>`
+          + `<text x="${L}" y="${top + 20}">${n ? `${n} shared cases` : 'Waiting for shared cases'}</text>`;
+        conditions.forEach((key, j) => {
+          const y = top + 36 + j * rowH, active = key === 'alone' ? available.length > 0 : available.includes(key);
+          const s = Math.min(n, Math.max(0, num(group.solved?.[key]))), w = n ? s / n * pw : 0;
+          const label = key === 'alone' ? 'Alone' : key === 'placebo' ? 'Fake playbook' : short(key);
+          const value = !active ? key === 'sol' && !teachers.sol?.frozen ? 'still practising' : 'unavailable' : n ? `${s} of ${n}` : 'no shared cases';
+          const title = `${short(p)}, ${label}: ${value}${active && n ? '; same validated cases as every other available playbook' : ''}`;
+          svg += `<text x="2" y="${y + 16}">${esc(label)}</text>`
+            + `<g><title>${esc(title)}</title><rect x="${L}" y="${y}" width="${pw}" height="22" rx="4" fill="#1d1d1d"/>`
+            + (w > 0 ? `<rect x="${L + 1}" y="${y + 1}" width="${Math.max(2, w - 2)}" height="20" rx="3" fill="${key === 'alone' || key === 'placebo' ? 'none' : c}" stroke="${c}" stroke-width="2"${key === 'placebo' ? ' stroke-dasharray="5 4"' : ''}/>` : '')
+            + '</g>' + `<text x="${L + pw + 12}" y="${y + 16}">${esc(value)}</text>`;
+        });
+      });
+      $('#best-teacher').innerHTML = `<svg viewBox="0 0 ${W} ${groups.length * groupH}" role="img" aria-label="Descriptive comparison of cases solved alone, with a fake playbook, or with Sonnet, Opus and Sol">${svg}</svg>`;
+      $('#best-legend').innerHTML = groups.map((p) => `<span>${box(colorOf(p), true)}${esc(short(p))}</span>`).join('')
+        + `<span>${box('var(--ink-2)', false)}alone</span><span>${box('var(--ink-2)', false)}fake playbook (dashed)</span><span>${box('var(--ink-2)', true)}with a teacher's playbook</span>`;
+    }
+  })();
+  </script>
+</body>
+</html>

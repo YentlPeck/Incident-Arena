@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixelforge · Level 3 · Incident #0414</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- loads without blocking the game; falls back to system fonts when offline -->
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="tb-left">
+        <span class="logo" data-icon="spark"></span>
+        <span class="tb-title">PixelforgeOS</span>
+      </div>
+      <div class="tb-mid" id="tb-task"></div>
+      <div class="tb-right">
+        <span class="tb-clicks" id="tb-clicks">Clicks: 0</span>
+        <span class="tb-clock" id="tb-clock"></span>
+      </div>
+    </header>
+    <main id="desktop">
+      <nav id="icons"></nav>
+      <div id="windows"></div>
+      <div id="toasts"></div>
+    </main>
+  </div>
+  <div id="overlay" hidden></div>
+  <script src="data.js"></script>
+  <script src="data3.js"></script>
+  <script src="game3.js"></script>
+</body>
+</html>

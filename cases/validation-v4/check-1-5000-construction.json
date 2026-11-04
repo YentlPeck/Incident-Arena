@@ -1,0 +1,174 @@
+[
+  {
+    "range": [
+      1,
+      5000
+    ],
+    "training": [
+      100001,
+      104000
+    ],
+    "results": [
+      {
+        "name": "v3 change / early sign-in row",
+        "hits": 0,
+        "n": 5000,
+        "prior": 0.025011111111111012,
+        "accuracy": 0,
+        "limit": 0.12501111111111102
+      },
+      {
+        "name": "v3 payment / early-session change then next",
+        "hits": 0,
+        "n": 5000,
+        "prior": 0.037516666666665026,
+        "accuracy": 0,
+        "limit": 0.13751666666666504
+      },
+      {
+        "name": "v3 change / common sign-in plus 10 or 80",
+        "hits": 6,
+        "n": 5000,
+        "prior": 0.025011111111111012,
+        "accuracy": 0.0012,
+        "limit": 0.12501111111111102
+      },
+      {
+        "name": "v3 payment / common late sign-in minus 5 or 82",
+        "hits": 3,
+        "n": 5000,
+        "prior": 0.037516666666665026,
+        "accuracy": 0.0006,
+        "limit": 0.13751666666666504
+      },
+      {
+        "name": "v3 change / orphan then next",
+        "hits": 0,
+        "n": 5000,
+        "prior": 0.025011111111111012,
+        "accuracy": 0,
+        "limit": 0.12501111111111102
+      },
+      {
+        "name": "v3 layout / singleton current master",
+        "hits": 1639,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3278,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "v3 layout / bank homes threshold",
+        "hits": 1639,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3278,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "v3 layout / bank homes plus singleton",
+        "hits": 1639,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3278,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "v3 layout / exact director-home plus singleton",
+        "hits": 1639,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3278,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "v3 whole / composed shortcuts",
+        "hits": 0,
+        "n": 5000,
+        "prior": 0,
+        "accuracy": 0,
+        "limit": 0.1
+      },
+      {
+        "name": "v3 chat / change plus 7 or 77",
+        "hits": 11,
+        "n": 5000,
+        "prior": 0.025011111111111012,
+        "accuracy": 0.0022,
+        "limit": 0.12501111111111102
+      },
+      {
+        "name": "v3 chat / change then next payment",
+        "hits": 11,
+        "n": 5000,
+        "prior": 0.037516666666665026,
+        "accuracy": 0.0022,
+        "limit": 0.13751666666666504
+      },
+      {
+        "name": "v3 identity / singleton request recipient",
+        "hits": 357,
+        "n": 1639,
+        "prior": 0.22528981086027736,
+        "accuracy": 0.2178157413056742,
+        "limit": 0.32528981086027736
+      },
+      {
+        "name": "v3 identity / orphan trailing sign-in",
+        "hits": 0,
+        "n": 1639,
+        "prior": 0.22528981086027736,
+        "accuracy": 0,
+        "limit": 0.32528981086027736
+      },
+      {
+        "name": "construction depth4-tree / episode (43 features)",
+        "hits": 369,
+        "n": 5000,
+        "prior": 0.07503333333333005,
+        "accuracy": 0.0738,
+        "limit": 0.17503333333333004
+      },
+      {
+        "name": "construction NB / episode (43 features)",
+        "hits": 392,
+        "n": 5000,
+        "prior": 0.07503333333333005,
+        "accuracy": 0.0784,
+        "limit": 0.17503333333333004
+      },
+      {
+        "name": "construction depth4-tree / layout (374 features)",
+        "hits": 1704,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3408,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "construction NB / layout (374 features)",
+        "hits": 1616,
+        "n": 5000,
+        "prior": 0.3333333333333134,
+        "accuracy": 0.3232,
+        "limit": 0.43333333333331336
+      },
+      {
+        "name": "construction depth4-tree / identity (48 features)",
+        "hits": 357,
+        "n": 1639,
+        "prior": 0.22528981086027736,
+        "accuracy": 0.2178157413056742,
+        "limit": 0.32528981086027736
+      },
+      {
+        "name": "construction NB / identity (48 features)",
+        "hits": 357,
+        "n": 1639,
+        "prior": 0.22528981086027736,
+        "accuracy": 0.2178157413056742,
+        "limit": 0.32528981086027736
+      }
+    ]
+  }
+]

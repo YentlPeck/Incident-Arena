@@ -1,0 +1,563 @@
+
+CONTINUED 2026-11-03T19:21:00.328961+00:00
+{"archived_invalid_attempts": 44}
+{"condition": "alone", "versions": {"playbook_sha256": "none", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-79f7540b.md", "versions": {"playbook_sha256": "79f7540bcb709aec9e3854bf8016b1ddcbb07e8480f945444e6ed27cb7729576", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-9693baa4.md", "versions": {"playbook_sha256": "9693baa4f69a435d6481de50def10a4ef8e3856c30cd6b5ae7f23c1cdf868fdd", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-14aa9acc.md", "versions": {"playbook_sha256": "14aa9acca5bee0f1aa4cd7fdd5268243d310889c14ef4031e262583e6ee5d577", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-cc9c908d.md", "versions": {"playbook_sha256": "cc9c908dc8bf9490d8c57deef873ccc8ff5f3ffec52168f88ff51b651a16608d", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"id": "inv-2001-haiku-alone", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2002-haiku-alone", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2003-haiku-alone", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2004-haiku-alone", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2005-haiku-alone", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2006-haiku-alone", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2007-haiku-alone", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2008-haiku-alone", "status": "skipped"}
+{"id": "inv-2009-haiku-alone", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2010-haiku-alone", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2011-haiku-alone", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2012-haiku-alone", "status": "skipped"}
+{"id": "inv-2013-haiku-alone", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2014-haiku-alone", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2015-haiku-alone", "status": "skipped"}
+{"id": "inv-2015-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2015-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2015-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2015-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2016-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2016-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2016-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2016-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2016-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2017-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2017-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2017-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2017-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2018-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2017-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2018-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2018-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2018-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2018-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2019-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2019-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2019-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2019-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2019-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2020-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2020-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2020-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2020-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2020-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2021-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2021-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2021-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2021-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2021-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2022-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2022-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2022-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2022-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2023-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2022-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2023-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2023-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2023-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2023-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2024-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2024-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2024-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2024-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2024-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2025-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2025-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2025-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2025-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2025-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2026-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2026-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2026-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2026-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2026-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2027-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2027-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2027-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2027-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2028-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2027-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2028-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2028-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2028-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2029-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2028-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2029-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2029-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2029-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2029-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2030-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2030-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2030-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2031-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2030-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2030-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2031-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2031-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2031-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2031-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2032-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2032-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2032-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2032-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2032-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2033-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2033-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2033-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2033-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2033-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2034-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2034-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2034-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2034-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2034-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2035-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2035-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2035-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2035-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2035-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2036-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2036-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2036-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2036-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2036-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2037-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2037-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2037-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2037-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2037-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2038-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2038-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+inv-2039-haiku-alone: player/audit failed; see run.json and audit.txt
+{"id": "inv-2038-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2038-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2038-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2039-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2039-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2039-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2039-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2040-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2040-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2040-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2040-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2040-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2041-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2041-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2041-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2041-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2041-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2042-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2042-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2042-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2042-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2043-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2042-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2043-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2043-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2043-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2044-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2043-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2044-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2044-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2044-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2044-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2045-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2045-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2045-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2045-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2046-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2045-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2046-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2046-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2046-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2047-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2046-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2047-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2047-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2047-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2047-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2048-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2048-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2048-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2048-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2048-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2049-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2049-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2049-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2049-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2049-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2050-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2050-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2050-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2050-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2050-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2051-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2051-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2051-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2051-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2052-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2051-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2052-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2052-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2052-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2052-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2053-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2053-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2053-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2053-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2054-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2053-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+{"id": "inv-2054-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2054-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2054-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2055-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2054-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+
+CONTINUED 2026-11-04T09:21:45.238138+00:00
+{"archived_invalid_attempts": 5}
+{"condition": "alone", "versions": {"playbook_sha256": "none", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-79f7540b.md", "versions": {"playbook_sha256": "79f7540bcb709aec9e3854bf8016b1ddcbb07e8480f945444e6ed27cb7729576", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-9693baa4.md", "versions": {"playbook_sha256": "9693baa4f69a435d6481de50def10a4ef8e3856c30cd6b5ae7f23c1cdf868fdd", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-14aa9acc.md", "versions": {"playbook_sha256": "14aa9acca5bee0f1aa4cd7fdd5268243d310889c14ef4031e262583e6ee5d577", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"condition": "playbook:C:\\Users\\yentl\\.t3\\projects\\pixelforge\\arena\\playbook-frozen-cc9c908d.md", "versions": {"playbook_sha256": "cc9c908dc8bf9490d8c57deef873ccc8ff5f3ffec52168f88ff51b651a16608d", "gen2_sha256": "09b01888e94ad1146fed0282851ac6eb2d16cd7088429cee3f6d2d573742f0df", "gameR2_sha256": "72aca8a8f86023351591cd48b21cafcf1f7960e7b0ca18f2306c18a145ffe830", "case2_html_sha256": "a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589", "case2_css_sha256": "8dcadb54999f84bfa98cf19403da3c818d53d87bcf6c50e32ea30b234c448218", "case_css_sha256": "534816ef02055c3869b7911e7ce9d4f35a8aa69d91e6192455d82e9392da8d1a", "icons_sha256": "fbcf93379930dd721d054a9485f9b0bcec2f47d64b07acb6325bda69b733a3a1", "prompts2_sha256": "71a2d0d622208c5edab27874ff475b30dac1febd9d5f4f8eab5eccb006332d34", "server2_sha256": "3df91695e7e93201085a979e62e50c5afc9523dcffa31b2864d6297d2ce88adb", "server_sha256": "c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f", "data_js_sha256": "c5309d76899ddaa8323c6d6ec9427b54f916a49dd511b5a543cf2e254f4db1ef", "style_css_sha256": "3a75a203ccd605caafe1006816a2655dd64f28b131acb8cd08b8c7c0677bc08b", "model": "claude-haiku-5-5", "command_budget": 60, "view": "screen", "family": "invoice"}, "note": "Declare these versions in the case round registry before collecting."}
+{"id": "inv-2001-haiku-alone", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2001-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2002-haiku-alone", "status": "skipped"}
+{"id": "inv-2003-haiku-alone", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2002-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2003-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2004-haiku-alone", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2005-haiku-alone", "status": "skipped"}
+{"id": "inv-2004-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2005-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2006-haiku-alone", "status": "skipped"}
+{"id": "inv-2007-haiku-alone", "status": "skipped"}
+{"id": "inv-2006-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2007-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2008-haiku-alone", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2008-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2009-haiku-alone", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2009-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2010-haiku-alone", "status": "skipped"}
+{"id": "inv-2011-haiku-alone", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2010-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2011-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2012-haiku-alone", "status": "skipped"}
+{"id": "inv-2012-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2013-haiku-alone", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2013-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2014-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2014-haiku-alone", "status": "skipped"}
+{"id": "inv-2015-haiku-alone", "status": "skipped"}
+{"id": "inv-2015-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2015-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2015-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2015-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2016-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2016-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2016-haiku-alone", "status": "skipped"}
+{"id": "inv-2016-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2016-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2017-haiku-alone", "status": "skipped"}
+{"id": "inv-2017-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2017-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2017-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2017-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2018-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2018-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2018-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2018-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2018-haiku-alone", "status": "skipped"}
+{"id": "inv-2019-haiku-alone", "status": "skipped"}
+{"id": "inv-2019-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2019-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2019-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2019-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2020-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2020-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2020-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2020-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2020-haiku-alone", "status": "skipped"}
+{"id": "inv-2021-haiku-alone", "status": "skipped"}
+{"id": "inv-2021-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2021-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2021-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2021-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2022-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2022-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2022-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2022-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2022-haiku-alone", "status": "skipped"}
+{"id": "inv-2023-haiku-alone", "status": "skipped"}
+{"id": "inv-2023-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2023-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2023-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2023-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2024-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2024-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2024-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2024-haiku-alone", "status": "skipped"}
+{"id": "inv-2024-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2025-haiku-alone", "status": "skipped"}
+{"id": "inv-2025-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2025-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2025-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2025-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2026-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2026-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2026-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2026-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2026-haiku-alone", "status": "skipped"}
+{"id": "inv-2027-haiku-alone", "status": "skipped"}
+{"id": "inv-2027-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2027-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2027-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2027-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2028-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2028-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2028-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2028-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2029-haiku-alone", "status": "skipped"}
+{"id": "inv-2028-haiku-alone", "status": "skipped"}
+{"id": "inv-2029-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2029-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2029-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2029-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2030-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2030-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2030-haiku-alone", "status": "skipped"}
+{"id": "inv-2030-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2030-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2031-haiku-alone", "status": "skipped"}
+{"id": "inv-2031-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2031-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2031-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2031-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2032-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2032-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2032-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2032-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2032-haiku-alone", "status": "skipped"}
+{"id": "inv-2033-haiku-alone", "status": "skipped"}
+{"id": "inv-2033-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2033-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2033-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2033-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2034-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2034-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2034-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2034-haiku-alone", "status": "skipped"}
+{"id": "inv-2035-haiku-alone", "status": "skipped"}
+{"id": "inv-2034-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2035-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2035-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2035-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2035-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2036-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2036-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2036-haiku-alone", "status": "skipped"}
+{"id": "inv-2036-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2036-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2037-haiku-alone", "status": "skipped"}
+{"id": "inv-2037-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2037-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2037-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2037-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2038-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2038-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2038-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2038-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2038-haiku-alone", "status": "skipped"}
+{"id": "inv-2039-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2039-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2039-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2039-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2040-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2040-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2040-haiku-alone", "status": "skipped"}
+{"id": "inv-2040-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2040-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2041-haiku-alone", "status": "skipped"}
+{"id": "inv-2041-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2041-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2041-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2041-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2042-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2042-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2042-haiku-alone", "status": "skipped"}
+{"id": "inv-2042-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2042-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2043-haiku-alone", "status": "skipped"}
+{"id": "inv-2043-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2043-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2043-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2043-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2044-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2044-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2044-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2044-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2044-haiku-alone", "status": "skipped"}
+{"id": "inv-2045-haiku-alone", "status": "skipped"}
+{"id": "inv-2045-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2045-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2045-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2045-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2046-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2046-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2046-haiku-alone", "status": "skipped"}
+{"id": "inv-2046-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2047-haiku-alone", "status": "skipped"}
+{"id": "inv-2046-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2047-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2047-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2047-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2047-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2048-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2048-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2048-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2048-haiku-alone", "status": "skipped"}
+{"id": "inv-2048-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2049-haiku-alone", "status": "skipped"}
+{"id": "inv-2049-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2049-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2049-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2049-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2050-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2050-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2050-haiku-alone", "status": "skipped"}
+{"id": "inv-2050-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2050-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2051-haiku-alone", "status": "skipped"}
+{"id": "inv-2051-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2051-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2051-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2051-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2052-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2052-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2052-haiku-alone", "status": "skipped"}
+{"id": "inv-2052-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2052-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2053-haiku-alone", "status": "skipped"}
+{"id": "inv-2053-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2053-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2053-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2053-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2054-haiku-playbook-563e1207cf", "status": "skipped"}
+{"id": "inv-2054-haiku-playbook-ab9b1b19a6", "status": "skipped"}
+{"id": "inv-2054-haiku-alone", "status": "skipped"}
+{"id": "inv-2054-haiku-playbook-2fe9f39cef", "status": "skipped"}
+{"id": "inv-2054-haiku-playbook-2920b69258", "status": "skipped"}
+{"id": "inv-2055-haiku-alone", "status": "skipped"}
+{"id": "inv-2055-haiku-playbook-2fe9f39cef", "status": "completed", "audit_ok": true}
+{"id": "inv-2055-haiku-playbook-2920b69258", "status": "completed", "audit_ok": true}
+{"id": "inv-2055-haiku-playbook-ab9b1b19a6", "status": "completed", "audit_ok": true}
+{"id": "inv-2039-haiku-alone", "status": "completed", "audit_ok": true}
+{"id": "inv-2055-haiku-playbook-563e1207cf", "status": "completed", "audit_ok": true}
+EXIT 0 2026-11-04T09:29:52.649050+00:00
