@@ -1,6 +1,7 @@
 /* Family 3 engine, "The missing prototype". Same desktop look and click semantics as gameG.js.
-   Flags give immediate feedback (max 2 wrong flags per log). The report is filed once and is final;
-   the hidden answer is only exposed through window.pixelforgeScore() after filing. */
+   Flags are part of the report: setting one gives no feedback, and nothing on screen or in
+   window.pixelforgeScore() says whether a flag, a pin or an answer is right until the report is filed.
+   The report is filed once and is final. The hidden answer (C.secret) is read only inside fileReport(). */
 (() => {
   'use strict';
   const url = new URL(location.href);
@@ -10,8 +11,7 @@
   const G = window.PFCase3;
   const C = G.generate(seed);
   const V = G.views(C);
-  const X = C.secret;
-  const $ = (s, el = document) => el.querySelector(s);
+  const $= (s, el = document) => el.querySelector(s);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const fmtTime = (sec) => { const s = Math.round(sec); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
 
@@ -30,19 +30,19 @@
   // every record by id, with the log it lives in
   const REC = {};
   for (const [log, tb] of Object.entries(V)) if (tb && tb.rows) tb.rows.forEach((r) => { REC[r.id] = { log, cells: r.cells }; });
-  const FLAG_LOGS = { door: 'Door badges', courier: 'Courier log', visitors: 'Visitor log' };
   const flagKind = (id) => { const r = REC[id]; if (r.log === 'door') return r.cells[1] === G.HW ? 'room' : r.cells[1] === 'Main exit' ? 'building' : null; return r.log === 'courier' || r.log === 'visitors' ? 'building' : null; };
+  const FLAG_LABEL = { room: 'the moment it left the Hardware room', building: 'how it left the building' };
   const DISC = [
-    ['left-room', 'Flag the record of the moment the prototype left the Hardware room'],
-    ['left-building', 'Flag the record of how it left the building'],
-    ['who', 'Name who took it (report)'],
-    ['how', 'Say how it left the building (report)'],
-    ['evidence', 'Pick the two records that prove it (report)'],
+    ['left-room', 'Flag: the moment the prototype left the Hardware room'],
+    ['left-building', 'Flag: the record of how it left the building'],
+    ['who', 'Who carried it out of the building'],
+    ['how', 'How it left the building'],
+    ['evidence', 'Two records that prove it'],
   ];
 
   const S = {
     started: false, done: false, player: '', clicks: 0, startedAt: 0, seconds: 0,
-    found: new Set(), flagged: {}, wrong: { door: 0, courier: 0, visitors: 0 }, pins: [],
+    found: new Set(), flags: { room: null, building: null }, pins: [],
     report: { who: null, how: null, ev: [] }, result: null,
     doorF: 'All', doorP: 'All', calP: 'All', hwTab: 'tickets', mailSel: null,
   };
@@ -91,12 +91,11 @@
   function rowTools(id) {
     const pinned = S.pins.includes(id);
     let flag = '';
-    const fk = flagKind(id), log = REC[id].log;
-    if (fk && !S.done) {
-      const disc = fk === 'room' ? 'left-room' : 'left-building';
-      if (S.flagged[id]) flag = `<span class="c3-flagged ${S.flagged[id] === 'ok' ? 'ok' : 'bad'}">${S.flagged[id] === 'ok' ? '⚑ correct' : '⚑ wrong'}</span>`;
-      else if (!S.found.has(disc)) flag = `<button class="btn small c3-flag" data-act="flag" data-id="${id}" ${S.wrong[log] >= 2 ? 'aria-disabled="true"' : ''} title="${fk === 'room' ? 'Flag: the moment it left the Hardware room' : 'Flag: how it left the building'}">Flag</button>`;
-    } else if (fk && S.flagged[id]) flag = `<span class="c3-flagged ${S.flagged[id] === 'ok' ? 'ok' : 'bad'}">⚑</span>`;
+    const fk = flagKind(id);
+    if (fk) {
+      const on = S.flags[fk] === id;
+      flag = `<button class="btn small c3-flag ${on ? 'on' : ''}" data-act="flag" data-id="${id}" ${S.done ? 'aria-disabled="true"' : ''} title="Flag: ${FLAG_LABEL[fk]}">${on ? '⚑ Flagged' : 'Flag'}</button>`;
+    }
     return `<td class="c3-tools">${flag}<button class="btn small c3-pin ${pinned ? 'on' : ''}" data-act="pin" data-id="${id}" ${S.done ? 'aria-disabled="true"' : ''}>${pinned ? 'Pinned' : 'Pin'}</button></td>`;
   }
   function table(tb, rows, opts = {}) {
@@ -106,7 +105,7 @@
   }
   const tabs = (act, list, cur) => `<div class="tabs">${list.map(([id, label]) => `<button class="tab ${cur === id ? 'sel' : ''}" data-act="${act}" data-id="${esc(id)}">${esc(label)}</button>`).join('')}</div>`;
   const people = () => C.staff.map((s) => s.name);
-  const flagNote = (log) => `<p class="muted small c3-note">Wrong flags in this log: ${S.wrong[log]} of 2.</p>`;
+  const flagNote = () => '<p class="muted small c3-note">Flags go into your report. You can move them until you file; nothing is checked before that.</p>';
 
   function renderDoor() {
     const doors = ['All', G.HW, 'Main entrance', 'Main exit', 'Other doors'];
@@ -116,7 +115,7 @@
   }
   function renderCalendar() {
     const rows = V.calendar.rows.filter((r) => S.calP === 'All' || r.cells[3].split(', ').includes(S.calP));
-    return `<div class="pad c3-app"><p class="muted small">All bookings and meetings on ${esc(C.dates.fri)}. Hardware-room tests must be booked here.</p>${tabs('calP', [['All', 'Everyone'], ...people().map((n) => [n, n.split(' ')[0]])], S.calP)}${calTable(rows)}</div>`;
+    return `<div class="pad c3-app"><p class="muted small">All bookings and meetings on ${esc(C.dates.fri)}. Every Hardware-room entry needs a booking here of the person who badges in (a test, or packing a repair unit). One Hardware-room booking per person per day; nobody is double-booked. Cancelled bookings stay listed (people cancel in chat).</p>${tabs('calP', [['All', 'Everyone'], ...people().map((n) => [n, n.split(' ')[0]])], S.calP)}${calTable(rows)}</div>`;
   }
   function calTable(rows) {
     const body = rows.map((r) => `<tr class="${S.pins.includes(r.id) ? 'c3-pinned' : ''}"><td>${esc(r.cells[0])}</td><td class="c3-wrap"><b>${esc(r.cells[1])}</b>${r.cells[4] ? `<div class="c3-route">Route: ${esc(r.cells[4])}</div>` : ''}</td><td>${esc(r.cells[2])}</td><td class="c3-wrap c3-people">${esc(r.cells[3])}</td>${rowTools(r.id)}</tr>`).join('');
@@ -145,49 +144,57 @@
     const groups = ['Staff', 'Visitors', 'Couriers'].map((g) => `<div class="rq">${g}</div><div class="ropts">${C.whoOptions.filter((o) => o.group === g).map((o) => `<button class="ropt ${R.who === o.id ? 'on' : ''}" data-act="who" data-id="${esc(o.id)}" ${dis}>${esc(o.label)}</button>`).join('')}</div>`).join('');
     const how = C.howOptions.map((o) => `<button class="ropt ${R.how === o.id ? 'on' : ''}" data-act="how" data-id="${o.id}" ${dis}>${esc(o.label)}</button>`).join('');
     const ev = S.pins.length ? S.pins.map((id) => `<button class="ropt ${R.ev.includes(id) ? 'on' : ''}" data-act="ev" data-id="${id}" ${dis}>${esc(short(id))}</button>`).join('') : '<p class="muted small">Pin records in the apps (Pin button on each row) to use them here.</p>';
-    const ready = R.who && R.how && R.ev.length === 2 && !S.done;
+    const fl = (fk) => (S.flags[fk] ? `<p class="c3-flagline">⚑ ${esc(short(S.flags[fk]))}</p>` : `<p class="muted small">Not flagged yet: use the Flag button on a row in ${fk === 'room' ? 'Door badges (a Hardware-room row)' : 'Door badges (a Main-exit row), the Courier log or the Visitor log'}.</p>`);
+    const ready = S.flags.room && S.flags.building && R.who && R.how && R.ev.length === 2 && !S.done;
     return `<div class="cf"><div class="cf-head">${px('casefile', 3)}<div><div class="cf-kicker">Case file · ${esc(C.dates.mon)}</div><div class="cf-name">${esc(C.title)}</div></div></div>
-      <div class="cf-task"><p>The <b>${G.PROTO}</b> was on its shelf on Friday morning and is gone on Monday. Find out who took it and how it left the building.</p></div>
+      <div class="cf-task"><p>The <b>${G.PROTO}</b> was on its shelf on Friday morning and is gone on Monday. Find out who carried it out of the building and how. Nothing is checked until you file the report.</p></div>
+      <h3>Studio rules</h3><ol class="c3-rules">${C.rules.map((r) => `<li><b>${esc(r.title)}.</b> ${esc(r.text)}</li>`).join('')}</ol>
       <h3>Discoveries</h3><ul class="disc">${disc}</ul>
       <h3>Report (final, one try)</h3><div class="report">
-      <div class="rq">1. Who took it?</div>${groups}
-      <div class="rq">2. How did it leave the building?</div><div class="ropts col">${how}</div>
-      <div class="rq">3. Which two records prove it? (pick 2 pinned records, ${R.ev.length}/2)</div><div class="ropts col">${ev}</div>
+      <div class="rq">1. The moment it left the Hardware room (flag)</div>${fl('room')}
+      <div class="rq">2. The record of how it left the building (flag)</div>${fl('building')}
+      <div class="rq">3. Who carried it out of the building?</div>${groups}
+      <div class="rq">4. How did it leave the building?</div><div class="ropts col">${how}</div>
+      <div class="rq">5. Which two records prove it? (pick 2 pinned records, ${R.ev.length}/2)</div><div class="ropts col">${ev}</div>
       <button class="btn primary" id="file-report" data-act="file" ${ready ? '' : 'aria-disabled="true"'}>${S.done ? 'Report filed' : 'File report'}</button></div></div>`;
   }
 
   /* ---------- flags, report, end ---------- */
+  // setting a flag is part of filling in the report: no feedback, freely movable until filing
   function flag(id) {
-    if (S.done || !S.started || S.flagged[id]) return;
-    const fk = flagKind(id), log = REC[id].log; if (!fk) return;
-    const disc = fk === 'room' ? 'left-room' : 'left-building';
-    if (S.found.has(disc) || S.wrong[log] >= 2) return;
-    const ok = id === (fk === 'room' ? X.flag1 : X.flag2);
-    S.flagged[id] = ok ? 'ok' : 'bad';
-    if (ok) { S.found.add(disc); toast(fk === 'room' ? 'Found: the moment it left the Hardware room.' : 'Found: how it left the building.', 'good'); }
-    else { S.wrong[log]++; toast(`Not that one. Wrong flags in ${FLAG_LOGS[log]}: ${S.wrong[log]} of 2.`, 'bad'); }
+    if (S.done || !S.started) return;
+    const fk = flagKind(id); if (!fk) return;
+    S.flags[fk] = S.flags[fk] === id ? null : id;
+    toast(S.flags[fk] ? `Flag set: ${FLAG_LABEL[fk]}. It goes into your report.` : 'Flag removed.');
     renderAll();
   }
   function score() {
     if (!S.result) return { filed: false };
-    return { ...S.result };
+    const { layout, ...rest } = S.result;
+    return rest;
   }
   function fileReport() {
     const R = S.report;
-    if (S.done || !S.started || !(R.who && R.how && R.ev.length === 2)) return;
+    if (S.done || !S.started || !(S.flags.room && S.flags.building && R.who && R.how && R.ev.length === 2)) return;
+    const X = C.secret;
     const pair = R.ev.slice().sort().join('|');
+    const flag1_ok = S.flags.room === X.flag1, flag2_ok = S.flags.building === X.flag2;
     const who_ok = R.who === X.who, how_ok = R.how === X.how, evidence_ok = X.pairs.some((p) => p.join('|') === pair);
-    S.result = { filed: true, who_ok, how_ok, evidence_ok, correct: who_ok && how_ok && evidence_ok };
+    S.result = { filed: true, flag1_ok, flag2_ok, who_ok, how_ok, evidence_ok, correct: who_ok && how_ok && evidence_ok, layout: X.layout };
+    if (flag1_ok) S.found.add('left-room'); if (flag2_ok) S.found.add('left-building');
     if (who_ok) S.found.add('who'); if (how_ok) S.found.add('how'); if (evidence_ok) S.found.add('evidence');
     S.done = true; S.seconds = Math.round((Date.now() - S.startedAt) / 1000);
     window.pixelforgeLastResult = { ...window.pixelforgeScore(), seconds: S.seconds };
     renderAll();
     const res = S.result;
     const howLabel = C.howOptions.find((o) => o.id === X.how).label;
+    const why = !evidence_ok && (X.rejected.find((r) => r.pair.join('|') === pair) || {}).reason;
     const rows = [
-      ['Who', R.who, X.who, who_ok],
+      ['Flag: left the room', short(S.flags.room), short(X.flag1), flag1_ok],
+      ['Flag: left the building', short(S.flags.building), short(X.flag2), flag2_ok],
+      ['Who carried it out', R.who, X.who, who_ok],
       ['How', C.howOptions.find((o) => o.id === R.how).label, howLabel, how_ok],
-      ['Evidence', R.ev.map(short).join(' + '), X.pairs.map((p) => p.map(short).join(' + ')).join('  OR  '), evidence_ok],
+      ['Evidence', R.ev.map(short).join(' + ') + (why ? ` (Why not: ${why})` : ''), X.pairs.map((p) => p.map(short).join(' + ')).join('  OR  '), evidence_ok],
     ].map(([k, you, truth, ok]) => `<tr><td>${k}</td><td>${esc(you)}</td><td>${esc(truth)}</td><td class="${ok ? 'res-ok' : 'res-fail'}">${ok ? '✓' : '✗'}</td></tr>`).join('');
     const disc = DISC.map(([id, label]) => `<li class="${S.found.has(id) ? 'got' : ''}"><span class="mk">${S.found.has(id) ? '✓' : '✗'}</span>${esc(label)}</li>`).join('');
     modal(`<div class="modal-kicker">Report filed · ${esc(C.title)}</div><h2>${res.correct ? 'Case solved ✓' : 'Not quite ✗'}</h2>
@@ -227,7 +234,7 @@
   window.pixelforgeScore = () => ({
     player: S.player, game: 'case3', seed, tasks: 1, level: 1, done: S.done, clicks: [S.clicks],
     progress: S.found.size, progressMax: 5, found: DISC.map(([id]) => id).filter((id) => S.found.has(id)), trapped: [], trapsMax: 0,
-    report: score(), layout: S.done ? X.layout : null, twists: [],
+    report: score(), layout: S.result ? S.result.layout : null, twists: [],
   });
   function boot() {
     document.title = `Pixelforge · ${C.title}`;

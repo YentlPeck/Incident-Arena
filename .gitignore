@@ -5,3 +5,6 @@ node_modules/
 .env.*
 .DS_Store
 Thumbs.db
+
+# Run logs (results live in the DESIGN notes and results/)
+arena/*.log

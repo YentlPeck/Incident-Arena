@@ -50,11 +50,30 @@ GUARD_VERSION_FILES = {
 # Guard duty seeds (DESIGN-guard.md): test 7001-7099, pilot 7901-7999; practice 7501-7599 only via condition 'practice'.
 GUARD_SEEDS = (7001, 7999)
 GUARD_PRACTICE = (7501, 7599)
+PROTO_VERSION_FILES = {
+    'gen3_sha256': 'cases/gen3.js', 'gameR3_sha256': 'cases/gameR3.js',
+    'case3_html_sha256': 'case3.html', 'case3_css_sha256': 'cases/case3.css', 'guard_css_sha256': 'cases/guard.css',
+    'case2_css_sha256': 'cases/case2.css', 'case_css_sha256': 'cases/case.css', 'icons_sha256': 'cases/icons.js',
+    'prompts3_sha256': 'arena/prompts3.py', 'prompts_sha256': 'arena/prompts.py', 'server3_sha256': 'arena/server3.py',
+    'server_sha256': 'arena/server.py', 'data_js_sha256': 'data.js', 'style_css_sha256': 'style.css',
+}
+# Missing prototype seeds (DESIGN-exp3.md): test 6001-6055, pilot 6901-6999. Test games only, never practice.
+PROTO_SEEDS = (6001, 6999)
+# Specialised-book follow-up (2026-11-05): teacher practice on 6501-6599 only, never test or pilot seeds.
+PROTO_PRACTICE = (6501, 6599)
+# Experiment 3 mixed practice uses fresh invoice seeds 2501-2599 (never test seeds 2001-2055).
+INVOICE_PRACTICE = (2501, 2599)
 
 
 def prompt_module(family):
     if family == 'leak':
         return prompts
+    if family == 'proto':
+        try:
+            from . import prompts3
+        except ImportError:
+            import prompts3
+        return prompts3
     if family == 'guard':
         try:
             from . import prompts_guard
@@ -75,6 +94,14 @@ def validate_family_seeds(seeds, family, *, check_practice=True):
         for seed in seeds:
             if type(seed) is not int or not 2001 <= seed <= 2999:
                 raise ValueError(f'Seed {seed!r} is outside the invoice test range 2001..2999')
+            if INVOICE_PRACTICE[0] <= seed <= INVOICE_PRACTICE[1]:
+                raise ValueError(f'Seed {seed!r} is reserved for invoice practice')
+    elif family == 'proto':
+        for seed in seeds:
+            if type(seed) is not int or not PROTO_SEEDS[0] <= seed <= PROTO_SEEDS[1]:
+                raise ValueError(f'Seed {seed!r} is outside the prototype range {PROTO_SEEDS[0]}..{PROTO_SEEDS[1]}')
+            if PROTO_PRACTICE[0] <= seed <= PROTO_PRACTICE[1]:
+                raise ValueError(f'Seed {seed!r} is reserved for prototype practice')
     elif family == 'leak':
         (validate_test_seeds if check_practice else lambda s: validate_seeds(s, 'test'))(seeds)
     elif family == 'guard':
@@ -137,16 +164,34 @@ def frozen_playbook(path):
     return text
 
 
-def build_manifest(book, model, family='leak'):
-    files = {'leak': VERSION_FILES, 'invoice': INVOICE_VERSION_FILES, 'guard': GUARD_VERSION_FILES}[family]
+def build_manifest(book, model, family='leak', variant=None):
+    files = {'leak': VERSION_FILES, 'invoice': INVOICE_VERSION_FILES, 'guard': GUARD_VERSION_FILES,
+             'proto': PROTO_VERSION_FILES}[family]
     module = prompt_module(family)
     manifest = {'playbook_sha256': text_sha(book) if book is not None else 'none',
             **{key: hashlib.sha256((HERE.parent / name).read_bytes()).hexdigest()
                for key, name in files.items()},
             'model': model, 'command_budget': module.COMMANDS, 'view': 'screen'}
-    if family in ('invoice', 'guard'):
+    if family in ('invoice', 'guard', 'proto'):
         manifest['family'] = family
+    if variant == 'neutral':
+        manifest['prompt_variant'] = 'neutral'
+        manifest['prompts_neutral_sha256'] = hashlib.sha256((HERE / 'prompts_neutral.py').read_bytes()).hexdigest()
+    elif variant is not None:
+        raise ValueError(f'Unknown prompt variant: {variant}')
     return manifest
+
+
+def condition_book(condition):
+    """The frozen book path of a 'playbook:' or 'neutral:' condition, else None."""
+    for prefix in ('playbook:', 'neutral:'):
+        if condition.startswith(prefix) and condition[len(prefix):]:
+            return condition[len(prefix):]
+    return None
+
+
+def condition_variant(condition):
+    return 'neutral' if condition.startswith('neutral:') or condition == 'neutral-alone' else None
 
 
 def check_resume(directory, manifest, allow_version_mismatch=False):
@@ -265,13 +310,24 @@ class GuardJob(Job):
         return f'grd-{self.seed}-{self.player}-{condition_id(self.condition)}'
 
 
+@dataclass(frozen=True)
+class ProtoJob(Job):
+    family = 'proto'
+
+    @property
+    def gid(self):
+        return f'prt-{self.seed}-{self.player}-{condition_id(self.condition)}'
+
+
 def condition_id(condition):
-    if condition in ('alone', 'practice'):
+    if condition in ('alone', 'practice', 'neutral-alone'):
         return condition
-    if not condition.startswith('playbook:') or not condition[9:]:
-        raise ValueError('Condition must be alone or playbook:<path>')
-    path = str(pathlib.Path(condition[9:]).resolve())
-    return 'playbook-' + hashlib.sha256(os.path.normcase(path).encode()).hexdigest()[:10]
+    book = condition_book(condition)
+    if book is None:
+        raise ValueError('Condition must be alone, playbook:<path> or neutral:<path>')
+    path = str(pathlib.Path(book).resolve())
+    prefix = 'neutral-' if condition_variant(condition) else 'playbook-'
+    return prefix + hashlib.sha256(os.path.normcase(path).encode()).hexdigest()[:10]
 
 
 def parse_seeds(values):
@@ -292,9 +348,9 @@ def parse_seeds(values):
 
 
 def plan_jobs(seeds, player, conditions, family='leak'):
-    if family not in ('leak', 'invoice', 'guard'):
+    if family not in ('leak', 'invoice', 'guard', 'proto'):
         raise ValueError(f'Unknown case family: {family}')
-    job_type = {'invoice': InvoiceJob, 'guard': GuardJob}.get(family, Job)
+    job_type = {'invoice': InvoiceJob, 'guard': GuardJob, 'proto': ProtoJob}.get(family, Job)
     for condition in conditions:
         condition_id(condition)
     jobs = []
@@ -385,7 +441,7 @@ def run_audit(gid, arena, directory):
 
 def describe(job, arena=ARENA, model=None):
     directory = pathlib.Path(arena) / 'games' / job.gid
-    server_file = {'invoice': 'server2.py', 'guard': 'server_guard.py'}.get(job.family, 'server.py')
+    server_file = {'invoice': 'server2.py', 'guard': 'server_guard.py', 'proto': 'server3.py'}.get(job.family, 'server.py')
     server = [sys.executable, str(HERE / server_file), job.gid, '--case', str(job.seed),
               '--view', 'screen', '--commands', str(prompt_module(job.family).COMMANDS), '--arena-dir', str(arena)]
     return {'id': job.gid, 'seed': job.seed, 'condition': job.condition, 'server': server,
@@ -400,32 +456,48 @@ def run_game(job, arena=ARENA, timeout=1800, model=None, playbook=None, *,
     arena = pathlib.Path(arena).resolve()
     directory = arena / 'games' / job.gid
     prompt_builder = prompt_module(job.family)
+    variant = condition_variant(job.condition)
+    if variant == 'neutral':
+        if job.family not in ('leak', 'invoice', 'proto'):
+            raise ValueError('The neutral prompt exists only for the three case families')
+        try:
+            from . import prompts_neutral
+        except ImportError:
+            import prompts_neutral
+        prompt_builder = prompts_neutral.Builder(prompt_builder)
     if job.condition == 'practice':
         if job.family == 'guard':
             if type(job.seed) is not int or not GUARD_PRACTICE[0] <= job.seed <= GUARD_PRACTICE[1]:
                 raise ValueError(f'Guard practice seed {job.seed!r} is outside {GUARD_PRACTICE[0]}..{GUARD_PRACTICE[1]}')
+        elif job.family == 'invoice':
+            if type(job.seed) is not int or not INVOICE_PRACTICE[0] <= job.seed <= INVOICE_PRACTICE[1]:
+                raise ValueError(f'Invoice practice seed {job.seed!r} is outside {INVOICE_PRACTICE[0]}..{INVOICE_PRACTICE[1]}')
+        elif job.family == 'proto':
+            if type(job.seed) is not int or not PROTO_PRACTICE[0] <= job.seed <= PROTO_PRACTICE[1]:
+                raise ValueError(f'Prototype practice seed {job.seed!r} is outside {PROTO_PRACTICE[0]}..{PROTO_PRACTICE[1]}')
         elif job.family != 'leak':
-            raise ValueError('Invoice cases are test games only')
+            raise ValueError(f'{job.family} cases are test games only')
         else:
             validate_seeds([job.seed], 'practice')
     else:
         validate_family_seeds([job.seed], job.family)
     if manifest is None:
-        if job.condition.startswith('playbook:'):
-            book_text = frozen_playbook(job.condition[9:])
+        if condition_book(job.condition):
+            book_text = frozen_playbook(condition_book(job.condition))
         elif playbook is not None:
             if job.condition != 'practice':
                 raise ValueError('Only practice can use a mutable playbook')
             book_text = pathlib.Path(playbook).read_bytes().decode('utf-8')
-        manifest = build_manifest(book_text, model or MODELS[job.player], job.family)
+        manifest = build_manifest(book_text, model or MODELS[job.player], job.family, variant)
     if check_resume(directory, manifest, allow_version_mismatch):
         # Recover an audit interrupted after result.json was saved.
         if not (directory / 'audit.json').exists():
             run_audit(job.gid, arena, directory)
         return {'id': job.gid, 'status': 'skipped'}
-    if build_manifest(book_text, model or MODELS[job.player], job.family) != manifest:
+    if build_manifest(book_text, model or MODELS[job.player], job.family, variant) != manifest:
         raise ValueError(f'{job.gid}: source versions changed since batch planning; start a new batch')
-    page, generator = {'invoice': ('case2.html', 'gen2.js'), 'guard': ('case-guard.html', 'gen-guard.js')}.get(job.family, ('case.html', 'gen.js'))
+    page, generator = {'invoice': ('case2.html', 'gen2.js'), 'guard': ('case-guard.html', 'gen-guard.js'),
+                       'proto': ('case3.html', 'gen3.js')}.get(job.family, ('case.html', 'gen.js'))
     if not (HERE.parent / page).exists() or not (HERE.parent / 'cases' / generator).exists():
         raise RuntimeError(f'{page} and cases/{generator} must exist before running players')
     if not (arena / 'play.py').exists():
@@ -480,7 +552,7 @@ def run_game(job, arena=ARENA, timeout=1800, model=None, playbook=None, *,
         prompt.unlink(missing_ok=True)
         prompt.parent.rmdir()
     try:
-        if build_manifest(book_text, model or MODELS[job.player], job.family) != manifest:
+        if build_manifest(book_text, model or MODELS[job.player], job.family, variant) != manifest:
             error = error or 'Source versions changed during the game; result is invalid'
     except OSError as exc:
         error = error or f'Cannot verify source versions after game: {exc}'
@@ -504,10 +576,10 @@ def run_game(job, arena=ARENA, timeout=1800, model=None, playbook=None, *,
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--family', choices=['leak', 'invoice', 'guard'], default='leak')
+    ap.add_argument('--family', choices=['leak', 'invoice', 'guard', 'proto'], default='leak')
     ap.add_argument('--seeds', nargs='+', required=True, help='integers, comma lists, or inclusive A..B')
     ap.add_argument('--player', choices=['haiku', 'luna'], required=True)
-    ap.add_argument('--condition', action='append', help='alone or playbook:<path>; repeat for both')
+    ap.add_argument('--condition', action='append', help='alone, playbook:<path> or neutral:<path>; repeatable')
     ap.add_argument('--parallel', type=int, default=2)
     ap.add_argument('--timeout', type=float, default=1800)
     ap.add_argument('--arena-dir', type=pathlib.Path, default=ARENA)
@@ -538,8 +610,8 @@ def main(argv=None):
     try:
         validate_family_seeds(seeds, a.family)
         for condition in conditions:
-            book = frozen_playbook(condition[9:]) if condition.startswith('playbook:') else None
-            manifest = build_manifest(book, MODELS[a.player], a.family)
+            book = frozen_playbook(condition_book(condition)) if condition_book(condition) else None
+            manifest = build_manifest(book, MODELS[a.player], a.family, condition_variant(condition))
             snapshots[condition] = (book, manifest)
         for job in jobs:
             check_resume(a.arena_dir / 'games' / job.gid, snapshots[job.condition][1], a.allow_version_mismatch)

@@ -22,7 +22,7 @@ def controller_ok(cmd, gid):
     if FORBIDDEN.search(cmd):
         return False
     ops = (r'look', r'enter', r'click \d+( \d+)?', r'scroll \d+ \d+ (up|down)', r'type( .*)?', r'ask( .*)?')
-    if gid.startswith(('case-', 'inv-')):
+    if gid.startswith(('case-', 'inv-', 'grd-', 'prt-')):
         ops = (r'look', r'enter', r'click \d+ \d+', r'scroll \d+ \d+ (up|down)', r'type( .*)?')
     return re.fullmatch(rf'python play\.py {re.escape(gid)} ({"|".join(ops)})', cmd.strip()) is not None
 
@@ -88,7 +88,7 @@ def audit_events(raw, gid, arena=ARENA):
             elif it.get('type') not in ('reasoning',):
                 odd.append((it.get('type'), str(it)[:160]))
     injections = raw.count('claude-mem-retrieved-data')
-    if gid.startswith(('case-', 'inv-')) and injections:
+    if gid.startswith(('case-', 'inv-', 'grd-', 'prt-')) and injections:
         odd.append(('MEMORY', f'{injections} memory injection markers'))
     if not events:
         odd.append(('TRANSCRIPT', 'No JSON events'))

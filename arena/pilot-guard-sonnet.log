@@ -1,4 +1,0 @@
-{"id": "grd-7901-sonnet-alone", "layout": "scams-1", "report": {"filed": true, "decided": 8, "scams": 1, "stopped": 1, "missed": 0, "falseStops": 1, "work": 6, "correct": true}, "commands": 40, "clicks": 39, "seconds": 191}
-{"id": "grd-7902-sonnet-alone", "layout": "scams-0", "report": {"filed": true, "decided": 8, "scams": 0, "stopped": 0, "missed": 0, "falseStops": 2, "work": 6, "correct": false}, "commands": 31, "clicks": 29, "seconds": 109}
-{"id": "grd-7903-sonnet-alone", "layout": "scams-0", "report": {"filed": true, "decided": 8, "scams": 0, "stopped": 0, "missed": 0, "falseStops": 0, "work": 8, "correct": true}, "commands": 34, "clicks": 33, "seconds": 86}
-{"id": "grd-7904-sonnet-alone", "layout": "scams-5", "report": {"filed": true, "decided": 8, "scams": 5, "stopped": 5, "missed": 0, "falseStops": 0, "work": 3, "correct": true}, "commands": 35, "clicks": 34, "seconds": 109}

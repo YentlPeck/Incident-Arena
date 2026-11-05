@@ -1,0 +1,20 @@
+{
+  "experiment": "exp3 v2",
+  "family": "proto",
+  "seeds": [
+    6001,
+    6055
+  ],
+  "players": [
+    "haiku",
+    "luna"
+  ],
+  "books": {
+    "book": "playbook-frozen-704ccb8f.md",
+    "fake": "playbook-frozen-a22a2587.md"
+  },
+  "book_chars": 5924,
+  "fake_chars": 5923,
+  "verdict": "book beats alone AND fake for both players, exact one-sided paired sign test p <= 0.025; \"Yes\" also needs >= 9 net extra solves vs each control; otherwise \"A little\"; else \"Not yet\"",
+  "frozen_at": "2026-11-04T21:40:27"
+}

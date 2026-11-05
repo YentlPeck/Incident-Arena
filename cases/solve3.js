@@ -1,6 +1,6 @@
 /* Family 3 reference solver. It reads ONLY what the apps show: the tables returned by
    PFCase3.views(C) (cell strings), never C.secret or generator fields.
-   Studio rules (shown in the intro and the calendar app): every Hardware-room entry needs a booking of
+   Studio rules (Rules 1-6, shown in the intro and the Case File): every Hardware-room entry needs a booking of
    the badge holder; one Hardware-room booking per person per day; nobody is double-booked.
    Method: every Hardware-room door row on Friday after the morning shelf check is a moment the
    prototype could have left the room. Each one is explained by a second record or it is not:

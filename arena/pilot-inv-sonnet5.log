@@ -1,7 +1,0 @@
-{"id": "inv-2931-sonnet-alone", "layout": "mfa", "report": {"filed": true, "who_ok": true, "how_ok": true, "evidence_ok": false, "correct": false}, "found": ["payment", "change", "who", "how"], "commands": 58}
-{"id": "inv-2932-sonnet-alone", "layout": "lookalike", "report": {"filed": true, "who_ok": false, "how_ok": true, "evidence_ok": false, "correct": false}, "found": ["change", "payment", "how"], "commands": 56}
-{"id": "inv-2933-sonnet-alone", "layout": "lookalike", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 60}
-{"id": "inv-2934-sonnet-alone", "error": "inv-2934-sonnet-alone: player/audit failed; see run.json and audit.txt"}
-{"id": "inv-2935-sonnet-alone", "layout": "lookalike", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 46}
-{"id": "inv-2936-sonnet-alone", "layout": "mfa", "report": {"filed": true, "who_ok": false, "how_ok": false, "evidence_ok": false, "correct": false}, "found": [], "commands": 55}
-exit 0

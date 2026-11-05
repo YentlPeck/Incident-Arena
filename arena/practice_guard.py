@@ -128,7 +128,10 @@ def freeze(path):
     if errors:
         raise ValueError('Cannot freeze playbook: ' + '; '.join(errors))
     sha = hashlib.sha256(content).hexdigest()
-    frozen = path.with_name(f'playbook-guard-frozen-{sha[:8]}.md')
+    # Own folder: story.py/story2.py glob arena/playbook-frozen-*.md and must not pick up guard books.
+    # The filename keeps the run_batch.frozen_playbook() convention (content sha8 in the name).
+    frozen = HERE / 'guard-books' / f'playbook-frozen-{sha[:8]}.md'
+    frozen.parent.mkdir(exist_ok=True)
     if frozen.exists() and frozen.read_bytes() != content:
         raise ValueError(f'Frozen filename collision: {frozen}')
     frozen.write_bytes(content)

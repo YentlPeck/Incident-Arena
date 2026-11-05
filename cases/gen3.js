@@ -61,7 +61,18 @@
   const STOPS = ['Art floor', 'Sound booth', 'Motion-capture corner', 'Playtest lounge', 'Kitchen', 'Roof terrace', 'Level design pit'];
   const HEADING = ['Heading into {t} ({a}–{b}) now.', 'Off to {t} in {r}, {a}–{b}.', 'Joining {t} ({a}–{b}), back after.'];
   const CANCEL = ['Cancelled my {t} at {a}, the rig is not ready.', 'Moving my {a} {t} to Monday, sorry.', 'No {t} for me today, the {a} Hardware slot is free again.'];
-  const AT_HW = ['Showing {v} the Hardware room corridor now.', 'At the Hardware room corridor with {v}.', '{v} and I are passing the Hardware room now.'];
+  const AT_HW = ['Showing {v} the Hardware room corridor now.', 'At the Hardware room corridor with {v}.', '{v} and I are passing the Hardware room corridor now.'];
+  // The studio rules, shown to the player in the intro and the Case File (review round 2, point 3).
+  // Every accepted evidence pair is sufficient under these rules alone (check3.js derives it from them).
+  const RULES = [
+    ['Rule 1', 'Last seen', 'The prototype was on its shelf at the Friday morning shelf check.'],
+    ['Rule 2', 'Bookings', 'Every Hardware-room entry needs a calendar booking of the person who badges in: a test, or a "Pack repair unit for courier" slot. Each person has at most one Hardware-room booking on Friday (cancelled ones stay listed and still count). Nobody is double-booked, and a chat message announcing a meeting with its times (like "Heading into … (HH:MM–HH:MM)") is the sender\'s own calendar entry.'],
+    ['Rule 3', 'What a booking allows', 'A booked test takes nothing out of the room. A packing slot takes out one unit for a repair courier: the unit of the ticket that the courier pickup quotes first (a ticket listed "also" is only for reference). A ticket with a Closed date is finished: nothing may be collected for it.'],
+    ['Rule 4', 'Visitors', 'Visitors have no badge. If a studio tour is at the Hardware room corridor (in its calendar route or in the host\'s chat) within 5 minutes of a Hardware-room door opening, the visitor slipped into the room behind the staff member.'],
+    ['Rule 5', 'One thing went wrong', 'Exactly one thing broke these rules on Friday, and that is how the prototype left: a staff entry that no booking of theirs covers (they carried it out in their own bag), a visitor slipping in (they carried it out when they signed out), or a courier pickup that quotes first a closed ticket (that courier carried it out). Everything else was authorised and took nothing.'],
+    ['Rule 6', 'Names', 'First names are unique, so a first name in chat points to one person.'],
+  ];
+  const rulesHtml = () => `<ol class="c3-rules">${RULES.map(([, h, t]) => `<li><b>${h}.</b> ${t.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</li>`).join('')}</ol>`;
   const CHATTER = ['Who finished the oat milk? Asking for a friend.', 'Build {b} is green, nice work everyone.', 'Pizza is here, kitchen table!', 'Reminder: playtest feedback forms by Monday.', 'Anyone seen the blue HDMI cable?', 'The coffee machine is making the noise again.', 'New boss sprites are in the art folder.', 'Can someone water the plant by reception?', 'Lovely weather on the roof terrace today.', 'Merged the save-file fix, please pull.', 'Thanks for the cake, it was great.', 'Printer on the art floor is out of paper.', 'Who booked Meeting room 2 for the whole afternoon?', 'The Hardware room door beeps if you hold it open too long, just so you know.', 'Weekend plans? I am finally finishing that puzzle game.', 'Lost a grey hoodie, probably in the sofa corner.'];
   const FILLER_MAIL = [
     ['Facilities', 'facilities', 'Wi-Fi maintenance on Saturday', 'The studio Wi-Fi will be down on Saturday morning for maintenance. Nothing to do on your side.'],
@@ -84,7 +95,7 @@
 
   /* ---------- 1) everything shown, from P only ---------- */
   function build(P) {
-    const k = P.int(2, 3), n = 3 * k, nStaff = n + P.int(5, 7);
+    const k = P.int(2, 3), n = 3 * k, nStaff = n + P.int(7, 9);
     const firsts = P.take(FIRST, nStaff + 1);
     const staff = firsts.slice(0, nStaff).map((f) => ({ name: `${f} ${P.pick(LAST)}`, role: P.pick(ROLES) }));
     const me = `${firsts[nStaff]} ${P.pick(LAST)}`;
@@ -205,7 +216,7 @@
     // filler Hardware bookings by staff with no Hardware-room event: some cancelled in chat, some no-shows.
     // Every case has both kinds, so an unused booking on its own says nothing (review round 1, point 3a).
     const owners = P.shuffle(nonEvent);
-    const nCancel = P.int(1, 2), nNoShow = Math.min(P.int(1, 4), owners.length - nCancel);
+    const nCancel = P.int(1, 2), nNoShow = Math.min(P.int(1, 5), owners.length - nCancel);
     const fillBook = [];
     for (let i = 0; i < nCancel + nNoShow; i++) {
       const owner = owners[i].name;
@@ -336,7 +347,7 @@
         const hwBook = cal(e.book.start, e.book.end, PACK, HW, [e.person]);
         const tk = isTrue ? e.ticketOld : e.ticketOpen, twin = isTrue ? e.ticketOpen : e.ticketOld;
         const pick = { time: e.pickup, type: 'Pickup', company: e.company, ref: tk.ref, contents: '1 parcel for repair', staff: e.person, ref2: twin.ref };
-        const req = { day: e.mailDay, time: e.mailAt, fromName: `${B.partner.contact} (${B.partner.name})`, from: B.partner.email, to: 'Reception', subject: `Courier pickup on Friday: ${e.company}`, body: `Hi! Our courier ${e.company} will collect the unit for repair ticket ${tk.ref} (also on file: ${twin.ref}) on Friday afternoon. Please have it packed at reception. Thanks, ${first(B.partner.contact)}, ${B.partner.name}` };
+        const req = { day: e.mailDay, time: e.mailAt, fromName: `${B.partner.contact} (${B.partner.name})`, from: B.partner.email, to: 'Reception', subject: `Courier pickup on Friday: ${e.company}`, body: `Hi! Our courier ${e.company} will collect the unit for repair ticket ${tk.ref} (also on file: ${twin.ref}) on Friday ${e.pickup < 720 ? 'morning' : 'afternoon'}. Please have it packed at reception. Thanks, ${first(B.partner.contact)}, ${B.partner.name}` };
         courier.push(pick); mail.push(req);
         Object.assign(e.rec, { hwBook, pick, req, ticket: tk, twin });
       } else {
@@ -421,7 +432,8 @@
     ];
     return {
       family: 'case3', seed, title: `The missing prototype · Case #${seed}`, me: B.me, dates: B.dates,
-      intro: `<p>Friday morning the studio's only <b>${PROTO}</b> (a handheld test unit) was on its shelf in the locked Hardware room. On Monday morning it is gone. Every staff badge opens the Hardware room; visitors and couriers have no badge for it.</p><p>Studio rules: every Hardware-room entry needs a calendar booking of the person who badges in (a test, or packing a unit for a repair courier). One Hardware-room booking per person per day, and nobody is double-booked. A repair courier takes the unit of the ticket it quotes first; a closed ticket is finished.</p><p>You are <b>${B.me}</b>, office manager. Read the studio's records and file <b>one report</b>: the record of the moment it left the Hardware room, the record of how it left the building, <b>who carried it out of the building</b>, <b>how</b>, and the <b>two records</b> that prove it. Nothing is checked until you file.</p>`,
+      intro: `<p>Friday morning the studio's only <b>${PROTO}</b> (a handheld test unit) was on its shelf in the locked Hardware room. On Monday morning it is gone. Every staff badge opens the Hardware room; visitors and couriers have no badge for it.</p><p><b>Studio rules</b> (also in your Case file):</p>${rulesHtml()}<p>You are <b>${B.me}</b>, office manager. Read the studio's records and file <b>one report</b>: the record of the moment it left the Hardware room, the record of how it left the building, <b>who carried it out of the building</b>, <b>how</b>, and the <b>two records</b> that prove it. Nothing is checked until you file.</p>`,
+      rules: RULES.map(([id, title, text]) => ({ id, title, text })),
       staff: B.staff, partner: B.partner, couriers: B.couriers, door, calendar, chat, mail, courier, visitors: vlog, tickets, assets, checks,
       whoOptions, howOptions: LAYOUTS.map((l) => ({ id: l, label: HOW[l] })), secret,
     };
@@ -447,7 +459,7 @@
     };
   }
   const LOG_NAMES = { directory: 'Directory', door: 'Door badges', visitors: 'Visitor log', courier: 'Courier log', calendar: 'Calendar', chat: 'Chat', mail: 'Mail', assets: 'Hardware items', checks: 'Shelf checks', tickets: 'Repair tickets' };
-  const api = { generate, views, rng, LAYOUTS, HOW, GROUP_HOW, PROTO, HW, HW_STOP, PACK, LOG_NAMES, hm };
+  const api = { generate, views, rng, LAYOUTS, HOW, GROUP_HOW, PROTO, HW, HW_STOP, PACK, LOG_NAMES, RULES, hm };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.PFCase3 = api;
 })(typeof window !== 'undefined' ? window : globalThis);

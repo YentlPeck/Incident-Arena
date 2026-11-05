@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixelforge Arena · All games</title>
+  <title>Incident Arena · All games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Inter:wght@400;500;600&family=Silkscreen&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -130,18 +130,18 @@
 </head>
 <body>
   <nav><div class="wrap">
-    <a class="brand" href="index.html">PIXELFORGE <span>ARENA</span></a>
+    <a class="brand" href="index.html">INCIDENT <span>ARENA</span></a>
     <div class="links"><a href="index.html">← Overview</a><a href="#round">Results</a><a href="#cost">Cost</a><a href="#games">Every game</a><a href="#next">Next</a></div>
   </div></nav>
 
   <header class="hero" id="top"><div class="wrap">
     <div>
       <span class="chip" id="hero-chip">AI Hacker Coach</span>
-      <h1 id="hero-title">Pixelforge Arena</h1>
+      <h1 id="hero-title">Incident Arena</h1>
       <p class="sub" id="hero-sub">A click-only hacking game. AIs and humans solve the same case; fewer clicks is better.</p>
     </div>
     <figure class="framed shot" style="margin:0">
-      <img src="assets/game.png" alt="The Pixelforge game: a dark desktop with a mail window and a case file">
+      <img src="assets/game.png" alt="The Incident Arena game: a dark desktop with a mail window and a case file">
       <figcaption>Pixelforge · Incident #0412 · the game every player solves</figcaption>
     </figure>
   </div></header>
@@ -221,7 +221,7 @@
     if (ai.length && humans.length) {
       $('#hero-title').textContent = `An AI solved it in ${ai[0].total} clicks. A human needed ${humans[0].total}.`;
     }
-    $('#hero-sub').textContent = 'Pixelforge is a click-only hacking game. AIs and humans solve the same case, and fewer clicks is better.';
+    $('#hero-sub').textContent = 'Incident Arena is a click-only hacking game. AIs and humans solve the same case, and fewer clicks is better.';
     $('#round-label').textContent = `${round.name} · case ${round.case} · ${round.tasks.length} tasks · ${round.date}`;
     $('#round-note').textContent = round.note;
     $('#updated').textContent = `Data updated ${D.updated}`;
