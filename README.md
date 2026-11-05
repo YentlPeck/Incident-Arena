@@ -61,11 +61,11 @@ days, against 43 alone. Luna was already safe on 51 days alone, so the pre-regis
 
 - **Results website:** open [`results/index.html`](results/index.html). It is the whole story with charts. All games
   are in `results/games.html` and the technical details in `results/details.html`.
-- **Play it yourself:** open [`index.html`](index.html) for the hand-made levels, or `case.html`, `case2.html`,
-  `case3.html` and `case-guard.html` for random cases. Everything runs in the browser, with no install.
-- **Every decision and every result, with p-values:** [`DESIGN-exp3.md`](DESIGN-exp3.md),
-  [`cases/DESIGN-family2.md`](cases/DESIGN-family2.md), [`cases/DESIGN-family3.md`](cases/DESIGN-family3.md) and
-  [`cases/DESIGN-guard.md`](cases/DESIGN-guard.md).
+- **Play it yourself:** open [`game/index.html`](game/index.html) for the hand-made levels, or `case.html`, `case2.html`,
+  `case3.html` and `case-guard.html` in the same folder for random cases. Everything runs in the browser, with no install.
+- **Every decision and every result, with p-values:** [`docs/DESIGN-exp3.md`](docs/DESIGN-exp3.md),
+  [`docs/DESIGN-family2.md`](docs/DESIGN-family2.md), [`docs/DESIGN-family3.md`](docs/DESIGN-family3.md) and
+  [`docs/DESIGN-guard.md`](docs/DESIGN-guard.md).
 - **The playbooks themselves:**
   - `arena/playbook-frozen-*.md` (crime 1, one per teacher)
   - `arena/invoice-books/`, `arena/proto-books/` and `arena/guard-books/` (specialised books)
@@ -74,7 +74,7 @@ days, against 43 alone. Luna was already safe on 51 days alone, so the pre-regis
 
 ## How a test works
 
-1. **Fair cases.** Each crime has a seeded generator (`cases/gen*.js`), a reference solver and a fairness checker. The
+1. **Fair cases.** Each crime has a seeded generator (`game/cases/gen*.js`), a reference solver and a fairness checker. The
    checker makes sure the answer cannot be guessed from surface clues such as wording, length, position or timing.
    An outside model (GPT-6.1-Sol) reviewed the generators for leaks.
 2. **Practice.** The teacher (Opus) plays 20 practice cases. After each one, a separate call with no tools rewrites the

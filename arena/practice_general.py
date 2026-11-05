@@ -23,7 +23,7 @@ except ImportError:
     import run_batch
 
 HERE = pathlib.Path(__file__).resolve().parent
-CASES = HERE.parent / 'cases'
+CASES = HERE.parent / 'game' / 'cases'
 SOURCES = [HERE / 'playbook-frozen-9693baa4.md', HERE / 'playbook-frozen-79f7540b.md', HERE / 'playbook-frozen-14aa9acc.md']
 LEAK_SEEDS = list(range(21, 31))
 INVOICE_SEEDS = list(range(2501, 2511))

@@ -210,7 +210,7 @@ class VersionTests(unittest.TestCase):
         self.scripts.mkdir()
         for key, name in run_batch.VERSION_FILES.items():
             path = self.root / name
-            path.parent.mkdir(exist_ok=True)
+            path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(f'Synthetic {key}', encoding='utf-8')
         patch = mock.patch.object(run_batch, 'HERE', self.scripts)
         patch.start()
@@ -281,7 +281,7 @@ class VersionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'does not match'):
             run_batch.frozen_playbook(book)
         manifest = run_batch.build_manifest(None, run_batch.MODELS['haiku'])
-        (self.root / 'cases' / 'gen.js').write_text('Changed source')
+        (self.root / 'game' / 'cases' / 'gen.js').write_text('Changed source')
         with mock.patch.object(run_batch, 'start_process', side_effect=AssertionError('must not launch')):
             with self.assertRaisesRegex(ValueError, 'source versions changed'):
                 run_batch.run_game(run_batch.Job(1001, 'haiku', 'alone'), self.root, manifest=manifest)
@@ -704,12 +704,13 @@ class BrowserIntegrationTests(unittest.TestCase):
         self.client = self.root / 'client'
         self.client.mkdir()
         (self.client / 'play.py').write_text('# synthetic controller placeholder', encoding='utf-8')
-        (self.root / 'case.html').write_text(STUB_PAGE, encoding='utf-8')
-        (self.root / 'cases').mkdir()
-        (self.root / 'cases' / 'gen.js').write_text('module.exports={generate:seed=>({seed})}', encoding='utf-8')
-        (self.root / 'cases' / 'gameR.js').write_text('// synthetic engine', encoding='utf-8')
+        self.game = self.root / 'game'  # the copied server.py serves <root>/game
+        (self.game / 'cases').mkdir(parents=True)
+        (self.game / 'case.html').write_text(STUB_PAGE, encoding='utf-8')
+        (self.game / 'cases' / 'gen.js').write_text('module.exports={generate:seed=>({seed})}', encoding='utf-8')
+        (self.game / 'cases' / 'gameR.js').write_text('// synthetic engine', encoding='utf-8')
         for name in ('cases/case.css', 'cases/icons.js', 'data.js', 'style.css'):
-            (self.root / name).write_text('/* synthetic */', encoding='utf-8')
+            (self.game / name).write_text('/* synthetic */', encoding='utf-8')
         self.scripts = self.root / 'arena'
         self.scripts.mkdir()
         for name in ('server.py', 'audit.py', 'prompts.py'):
@@ -721,7 +722,7 @@ class BrowserIntegrationTests(unittest.TestCase):
         self.temp.cleanup()
 
     def test_case_url_report_result_and_idempotent_finalization(self):
-        with mock.patch.object(server, 'ROOT', self.root):
+        with mock.patch.object(server, 'ROOT', self.game):
             game = server.Game('case-1001-stub-alone', 60, view='screen', seed=1001, arena=self.client)
         try:
             self.assertTrue(game.page.url.endswith('case.html?seed=1001'))

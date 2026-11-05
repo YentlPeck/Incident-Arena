@@ -45,13 +45,13 @@ Status: plan v2, after review by GPT-6.1-Sol on 2026-11-04 (verdict "Ready after
 
 ## What we know so far
 
-- **Leak case (family 1, `cases/gen.js`).** Frozen playbooks from three teachers, each after the same 20 practice cases. Small AIs, 55 paired test cases (seeds 1001–1055), solved out of 55:
+- **Leak case (family 1, `game/cases/gen.js`).** Frozen playbooks from three teachers, each after the same 20 practice cases. Small AIs, 55 paired test cases (seeds 1001–1055), solved out of 55:
   | | alone | fake playbook | Sol | Sonnet | Opus |
   |---|---|---|---|---|---|
   | Haiku 5.5 | 8 | 12 | 11 | 19 | 40 |
   | GPT-6-Luna | 5 | 3 | 13 | 27 | 29 |
   The main pre-registered test (Sonnet book) passed for both AIs.
-- **Fake invoice (family 2, `cases/gen2.js`), same frozen books, seeds 2001–2055:** Haiku 15 → 16, Luna 12 → 16 with Sonnet's book. Every book, including the fake one, moved results by a few cases. Verdict "Not yet", meaning no transfer.
+- **Fake invoice (family 2, `game/cases/gen2.js`), same frozen books, seeds 2001–2055:** Haiku 15 → 16, Luna 12 → 16 with Sonnet's book. Every book, including the fake one, moved results by a few cases. Verdict "Not yet", meaning no transfer.
 - So the lessons are specific to one case type.
 
 ## Question
@@ -222,3 +222,10 @@ Rule selection must use evidence that is **not** a test set:
   - Haiku: alone 13, library 51 (+38/−0).
   - Luna: alone 9, library 38 (+30/−1).
   - Both p < 0.0001.
+
+## Repository layout change (2026-11-05, after all tests)
+- The browser game moved into `game/`, and the design notes into `docs/`. File contents did not change, so the recorded hashes still apply.
+- Two exceptions are documented in `arena/run_batch.py` (`LEGACY_SHA`):
+  - `arena/server.py`: only its ROOT line changed, to point at `game/`.
+  - The four case pages: only their `<title>` changed, to "Incident Arena". `case2.html` keeps its CRLF line endings.
+- For exactly those file versions, the manifest reports the pre-change hash. Every analysis script was re-run afterwards with identical verdicts, and all 70 unit tests pass.

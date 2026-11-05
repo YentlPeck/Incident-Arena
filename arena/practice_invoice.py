@@ -18,7 +18,7 @@ except ImportError:
     import run_batch
 
 HERE = pathlib.Path(__file__).resolve().parent
-GEN = HERE.parent / 'cases' / 'gen2.js'
+GEN = HERE.parent / 'game' / 'cases' / 'gen2.js'
 SEEDS = list(range(2511, 2531))
 CHAR_CAP, LINE_CAP = practice_general.CHAR_CAP, practice_general.LINE_CAP
 BOOK = HERE / 'playbook-invoice.md'

@@ -1,6 +1,6 @@
 window.PF_STORY2 = {
  "family": "invoice",
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "planned_seeds": [
   2001,
   2002,

@@ -147,6 +147,29 @@
     .lessons { margin: 40px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .lessons li { border-left: 2px solid var(--accent); padding: 4px 0 4px 16px; font-size: 16px; line-height: 1.45; }
 
+    /* incidents */
+    .inc .card { display: flex; flex-direction: column; }
+    .inc .what { font-size: 15px; line-height: 1.5; color: var(--ink-2); margin: 0 0 20px; }
+    .flow { list-style: none; margin: 0; padding: 0; }
+    .flow li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; align-items: center; padding: 8px 0; position: relative; }
+    .flow li + li::before { content: ""; position: absolute; left: 17px; top: -12px; height: 16px; border-left: 1px solid var(--hair-2); }
+    .flow .ic { width: 36px; height: 36px; border: 1px solid var(--hair-2); border-radius: 8px; display: grid; place-items: center; background: var(--panel-2); }
+    .flow .ic svg { width: 18px; height: 18px; stroke: var(--ink-2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .flow li.bad .ic { border-color: var(--accent); background: transparent; }
+    .flow li.bad .ic svg { stroke: var(--accent); }
+    .flow .lb { font-size: 15px; line-height: 1.4; }
+    .flow li.bad .lb { font-weight: 500; }
+    .hows { margin: 20px 0 0; padding-top: 16px; border-top: 1px dashed var(--hair-2); }
+    .hows .which { font: 500 12px/1.5 var(--mono); color: var(--ink-3); margin: 0 0 6px; }
+    .hows ol { list-style: none; margin: 0; padding: 0; }
+    .hows li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 8px; padding: 5px 0; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+    .hows .n { font: 500 12px/1.6 var(--mono); color: var(--accent-ink); }
+    .lessons-cap { margin: 40px 0 0; }
+    .lessons-cap + .lessons { margin-top: 16px; }
+    .trow.c5 { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)); }
+    .trow .val b.down { color: var(--accent-ink); }
+    .ends.one { grid-template-columns: 1fr; }
+    .ends.one .end p { max-width: 72ch; }
     /* results: evidence board + table */
     .ai { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 24px; }
     .ai + .ai { margin-top: 16px; }
@@ -231,7 +254,7 @@
       .numbers { gap: 20px; }
       .card { padding: 20px; } .ai { padding: 20px; }
       .trow { grid-template-columns: 96px minmax(0, 1fr) minmax(0, 1fr); column-gap: 10px; } .trow .val, .bar-cell .num { font-size: 14px; }
-      .trow.c4 { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); } .trow.c6 { grid-template-columns: minmax(0, 1.4fr) repeat(5, minmax(0, 1fr)); column-gap: 6px; } .trow.c6.head { font-size: 10px; }
+      .trow.c4 { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); } .trow.c5 { grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr)); column-gap: 6px; } .trow.c5.head { font-size: 10px; } .trow.c6 { grid-template-columns: minmax(0, 1.4fr) repeat(5, minmax(0, 1fr)); column-gap: 6px; } .trow.c6.head { font-size: 10px; }
       #cchart { height: 280px; } #pchart { height: 340px; } .chart { padding: 16px 12px 12px; }
       .end { padding: 20px; }
       .log li { grid-template-columns: 1fr; gap: 4px; } .log .d { padding: 0; }
@@ -242,7 +265,7 @@
   <header class="top" id="nav"><div class="wrap">
     <a class="brand" href="#top"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h7l2 2h9v12H3z"/></svg>Incident Arena</a>
     <div class="nav-end">
-      <nav aria-label="Main navigation"><a href="#danger">The danger</a><a href="#game">The game</a><a href="#results">The results</a><a href="#goals">The end</a></nav>
+      <nav aria-label="Main navigation"><a href="#danger">The danger</a><a href="#game">The game</a><a href="#incidents">The incidents</a><a href="#results">The results</a><a href="#goals">The end</a></nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to night mode">
         <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
@@ -290,155 +313,117 @@
     </div></section>
 
     <section class="section" id="sentence" aria-label="AI can help"><div class="wrap">
-      <h2><span class="line enter">AI helps the hackers. It can help the defenders too.</span><span class="line enter" style="--delay:120ms">Small AIs with our playbook: <strong>5× more cases solved</strong></span></h2>
+      <h2><span class="line enter">AI helps the hackers. It can help the defenders too.</span><span class="line enter" style="--delay:120ms">Small AIs with our playbook: <strong>4× more cases solved</strong></span></h2>
     </div></section>
 
     <section class="section" id="game" aria-labelledby="game-heading"><div class="wrap">
       <p class="tag">Case 03<span>Our project</span></p>
       <h2 class="h2" id="game-heading">We built a hacking case for AIs to solve</h2>
-      <p class="lead">A fake game studio on a fake computer. Something leaked. The AI must find <b>who, how, and the two clues that prove it</b>, with screenshots, a mouse and 60 clicks.</p>
+      <p class="lead">A fake game studio on a fake computer. A crime happened. The AI must find <b>who, how, and the two clues that prove it</b>, with screenshots, a mouse and 60 clicks.</p>
       <div class="game-body">
         <div class="window"><div class="bar"><span>Case 777 · The leaked beta</span><span>Clicks 2 of 60</span></div><img src="assets/case-mail.png" alt="The game: a fake computer with mail, chat, a security center, files and a browser. The inbox shows a suspicious 'Your mailbox is full: verify now' email."></div>
         <ol class="steps">
           <li><span class="n">01</span><span><span class="nm">A big AI practises</span><span class="tm">Opus, Sonnet and Sol each play 20 practice cases.</span></span></li>
           <li><span class="n">02</span><span><span class="nm">It writes a playbook</span><span class="tm">General lessons only. No names, no answers.</span></span></li>
-          <li><span class="n">03</span><span><span class="nm">Small AIs get the playbook</span><span class="tm">Haiku and Luna play 55 new cases, alone and with it.</span></span></li>
+          <li><span class="n">03</span><span><span class="nm">Small AIs get the playbook and play</span><span class="tm">Haiku and Luna play 55 new cases, alone and with it.</span></span></li>
           <li><span class="n">04</span><span><span class="nm">Every game is checked</span><span class="tm">Only the game's own clicks count.</span></span></li>
         </ol>
       </div>
+      <p class="cap lessons-cap">Three lessons from <a href="../arena/playbook-frozen-9693baa4.md">Opus' playbook</a>.</p>
       <ul class="lessons">
         <li>Follow the leaked copy's watermark back to the exact download.</li>
         <li>Put every clock in one time zone before comparing times.</li>
         <li>A fake login page alone doesn't prove phishing: check that a password was sent.</li>
       </ul>
-      <p class="cap">Three lessons from <a href="../arena/playbook-frozen-9693baa4.md">Opus' playbook</a>.</p>
+    </div></section>
+
+    <section class="section" id="incidents" aria-labelledby="inc-heading"><div class="wrap">
+      <p class="tag">Case 04<span>The incidents</span></p>
+      <h2 class="h2" id="inc-heading">Three crimes at the studio</h2>
+      <p class="lead">Each one can happen three ways. The AI must find who did it, how, and the two records that prove it.</p>
+      <div class="cards inc">
+        <article class="card enter">
+          <p class="meta">Crime 1 · The leaked beta</p>
+          <p class="what">An unreleased build of the game is downloaded with a stolen login and shows up on a forum.</p>
+          <ol class="flow">
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m10.5 12.5 9-9M15 7l2 2M18 4l2 2"/></svg></span><span class="lb">A stolen login</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 21h16"/></svg></span><span class="lb">The beta is downloaded</span></li>
+            <li class="bad"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span class="lb">It appears on a forum</span></li>
+          </ol>
+          <div class="hows"><p class="which">Three ways it can happen</p><ol><li><span class="n">1</span><span>A colleague's written-down password</span></li><li><span class="n">2</span><span>A fake email that asks for the password</span></li><li><span class="n">3</span><span>A password reused from an old breach</span></li></ol></div>
+        </article>
+        <article class="card enter" style="--delay:80ms">
+          <p class="meta">Crime 2 · The fake invoice</p>
+          <p class="what">The supplier's bank account is swapped for a thief's. The next invoice is paid to the wrong account.</p>
+          <ol class="flow">
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="lb">"Please update our bank details"</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-6 9 6M5 10v10M19 10v10M9 20v-6M15 20v-6M3 20h18"/></svg></span><span class="lb">The account is changed</span></li>
+            <li class="bad"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></span><span class="lb">The invoice is paid to a thief</span></li>
+          </ol>
+          <div class="hows"><p class="which">Three ways it can happen</p><ol><li><span class="n">1</span><span>An insider in finance</span></li><li><span class="n">2</span><span>A look-alike supplier address</span></li><li><span class="n">3</span><span>Login prompts spammed at night until one is approved</span></li></ol></div>
+        </article>
+        <article class="card enter" style="--delay:160ms">
+          <p class="meta">Crime 3 · The missing prototype</p>
+          <p class="what">The only handheld prototype is on its shelf on Friday and gone on Monday. Door badges and logs tell how it left.</p>
+          <ol class="flow">
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><span class="lb">Locked hardware room</span></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V3h10v18M14 3l6 2v16l-6-2M11 12h.01"/></svg></span><span class="lb">Someone opens the door</span></li>
+            <li class="bad"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg></span><span class="lb">The unit leaves the building</span></li>
+          </ol>
+          <div class="hows"><p class="which">Three ways it can happen</p><ol><li><span class="n">1</span><span>In an employee's bag</span></li><li><span class="n">2</span><span>Handed to a courier after a fake pickup request</span></li><li><span class="n">3</span><span>A visitor who walked in behind staff</span></li></ol></div>
+        </article>
+      </div>
     </div></section>
 
     <section class="section" id="results" aria-labelledby="results-heading"><div class="wrap">
-      <p class="tag">Case 04<span>The results</span></p>
+      <p class="tag">Case 05<span>The results</span></p>
       <h2 class="h2" id="results-heading">With the playbook, both small AIs solved far more cases</h2>
-      <p class="lead">55 new cases each, alone and with Opus' playbook.</p>
+      <p class="lead">55 new cases, mixed from the three crimes. The playbook is one book with a chapter per crime. The AI is told only "an incident at Pixelforge" and must <b>pick the right chapter itself</b>.</p>
       <article class="ai" data-ai="haiku">
-        <div class="ai-head"><h3>Claude Haiku 5.5</h3><span class="meta">Anthropic · 55 cases</span></div>
+        <div class="ai-head"><h3>Claude Haiku 5.5</h3><span class="meta">Anthropic · 55 mixed cases</span></div>
         <div class="ai-body">
-          <svg class="board" viewBox="0 0 520 176" role="img" aria-label="Haiku: 8 of 55 cases solved alone, 40 of 55 with the playbook" data-alone="8" data-with="40"></svg>
-          <div class="table" role="table" aria-label="Haiku 5.5: with the playbook and alone">
-            <div class="trow head" role="row"><span role="columnheader"><span class="sr">Criterion</span></span><span class="with" role="columnheader">With our playbook</span><span role="columnheader">Alone</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Cases solved</span><div class="bar-cell with" role="cell"><span class="num">40 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="40"><i data-w="72.7"></i></div></div><div class="bar-cell" role="cell"><span class="num">8 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="8"><i data-w="14.5"></i></div></div></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Per game</span><span class="val" role="cell">$0.133 · 4.1 min</span><span class="val" role="cell">$0.074 · 3.5 min</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Per solved case</span><span class="val" role="cell">$0.18</span><span class="val" role="cell">$0.51</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Clicks used</span><span class="val" role="cell">57 of 60</span><span class="val" role="cell">52 of 60</span></div>
+          <svg class="board" viewBox="0 0 520 176" role="img" aria-label="Claude Haiku 5.5: 13 of 55 cases solved alone, 51 of 55 with the playbook" data-alone="13" data-with="51"></svg>
+          <div class="table" role="table" aria-label="Claude Haiku 5.5: with the playbook and alone">
+            <div class="trow head" role="row"><span role="columnheader"><span class="sr">Criterion</span></span><span class="with" role="columnheader">With the playbook</span><span role="columnheader">Alone</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Cases solved</span><div class="bar-cell with" role="cell"><span class="num">51 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="51"><i data-w="92.7"></i></div></div><div class="bar-cell" role="cell"><span class="num">13 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="13"><i data-w="23.6"></i></div></div></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Per game</span><span class="val" role="cell">$0.093 · 3.6 min</span><span class="val" role="cell">$0.085 · 3.8 min</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Per solved case</span><span class="val" role="cell">$0.10</span><span class="val" role="cell">$0.36</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Clicks per game</span><span class="val" role="cell">35</span><span class="val" role="cell">37</span></div>
           </div>
         </div>
       </article>
       <article class="ai" data-ai="luna">
-        <div class="ai-head"><h3>GPT-6-Luna</h3><span class="meta">OpenAI · 55 cases</span></div>
+        <div class="ai-head"><h3>GPT-6-Luna</h3><span class="meta">OpenAI · 55 mixed cases</span></div>
         <div class="ai-body">
-          <svg class="board" viewBox="0 0 520 176" role="img" aria-label="Luna: 5 of 55 cases solved alone, 29 of 55 with the playbook" data-alone="5" data-with="29"></svg>
+          <svg class="board" viewBox="0 0 520 176" role="img" aria-label="GPT-6-Luna: 9 of 55 cases solved alone, 38 of 55 with the playbook" data-alone="9" data-with="38"></svg>
           <div class="table" role="table" aria-label="GPT-6-Luna: with the playbook and alone">
-            <div class="trow head" role="row"><span role="columnheader"><span class="sr">Criterion</span></span><span class="with" role="columnheader">With our playbook</span><span role="columnheader">Alone</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Cases solved</span><div class="bar-cell with" role="cell"><span class="num">29 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="29"><i data-w="52.7"></i></div></div><div class="bar-cell" role="cell"><span class="num">5 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="5"><i data-w="9.1"></i></div></div></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Per game</span><span class="val" role="cell">$0.065 · 5.5 min</span><span class="val" role="cell">$0.055 · 4.9 min</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Per solved case</span><span class="val" role="cell">$0.12</span><span class="val" role="cell">$0.61</span></div>
-            <div class="trow" role="row"><span class="lbl" role="rowheader">Clicks used</span><span class="val" role="cell">56 of 60</span><span class="val" role="cell">52 of 60</span></div>
+            <div class="trow head" role="row"><span role="columnheader"><span class="sr">Criterion</span></span><span class="with" role="columnheader">With the playbook</span><span role="columnheader">Alone</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Cases solved</span><div class="bar-cell with" role="cell"><span class="num">38 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="38"><i data-w="69.1"></i></div></div><div class="bar-cell" role="cell"><span class="num">9 of 55</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="9"><i data-w="16.4"></i></div></div></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Per game</span><span class="val" role="cell">$0.050 · 4.8 min</span><span class="val" role="cell">$0.049 · 4.5 min</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Per solved case</span><span class="val" role="cell">$0.07</span><span class="val" role="cell">$0.30</span></div>
+            <div class="trow" role="row"><span class="lbl" role="rowheader">Clicks per game</span><span class="val" role="cell">38</span><span class="val" role="cell">41</span></div>
           </div>
         </div>
       </article>
-      <p class="fine">API costs are estimates; we played on subscriptions. Statistics and the planned test in <a href="details.html">the details</a>.</p>
-    </div></section>
-
-    <section class="section" id="cost" aria-labelledby="cost-heading"><div class="wrap">
-      <p class="tag">Case 05<span>Cases vs cost</span></p>
-      <h2 class="h2" id="cost-heading">Cases solved against cost, per playbook</h2>
-      <p class="lead">Right is more solved, lower is cheaper. One dot per playbook.</p>
-      <div class="chart" role="region" aria-label="Cases solved against API cost per game, one dot per playbook">
-        <svg class="chart-svg" id="cchart" aria-hidden="true"></svg>
-        <div class="tip" id="ctip" aria-live="polite"></div>
-        <p class="legend"><span><i class="a"></i>Haiku 5.5</span><span><i class="o"></i>GPT-6-Luna</span></p>
-      </div>
-      <p class="cap">Per solved case, both get 60 to 80% cheaper.</p>
-    </div></section>
-
-    <section class="section" id="playbooks" aria-labelledby="pb-heading"><div class="wrap">
-      <p class="tag">Case 06<span>Playbook by playbook</span></p>
-      <h2 class="h2" id="pb-heading">Better lessons, more cases solved</h2>
-      <p class="lead">Every playbook, plus a <b>fake one</b> with no lessons. The fake one barely helped.</p>
-      <div class="chart" role="region" aria-label="Cases solved by Haiku and Luna with each playbook">
-        <p class="title">Cases solved out of <b>55</b>, from no playbook to the best playbook</p>
-        <svg class="chart-svg" id="pchart" aria-hidden="true"></svg>
-        <div class="tip" id="ptip" aria-live="polite"></div>
-        <p class="legend"><span><i class="a"></i>Haiku 5.5</span><span><i class="o"></i>GPT-6-Luna</span></p>
-      </div>
-      <p class="cap">The best player was not the best teacher: Sol solved 20 of 20 itself, but its playbook helped the least.</p>
-    </div></section>
-
-    <section class="section" id="more" aria-labelledby="more-heading"><div class="wrap">
-      <p class="tag">Case 07<span>Does the playbook travel?</span></p>
-      <h2 class="h2" id="more-heading">A playbook for its own crime works every time. A borrowed or general one doesn't</h2>
-      <p class="lead">Same method each time: 55 new cases, alone and with a playbook. Cases solved, alone → with the playbook.</p>
-      <div class="cards crimes">
-        <article class="card enter">
-          <p class="meta">Crime 1 · The leaked beta</p>
-          <div class="grp">
-            <p class="which">Its own playbook</p>
-            <div class="cmp"><span>Haiku</span><b class="num">8 → 40</b></div>
-            <div class="cmp"><span>Luna</span><b class="num">5 → 29</b></div>
-            <span class="stamp">Works</span>
-          </div>
-        </article>
-        <article class="card enter" style="--delay:80ms">
-          <p class="meta">Crime 2 · The fake invoice</p>
-          <div class="grp">
-            <p class="which">Its own playbook</p>
-            <div class="cmp"><span>Haiku</span><b class="num">15 → 55</b></div>
-            <div class="cmp"><span>Luna</span><b class="num">12 → 49</b></div>
-            <span class="stamp">Works</span>
-          </div>
-          <div class="grp dim">
-            <p class="which">Crime 1's playbook, reused</p>
-            <div class="cmp"><span>Haiku</span><b class="num">15 → 16</b></div>
-            <div class="cmp"><span>Luna</span><b class="num">12 → 16</b></div>
-            <span class="stamp open">No effect</span>
-          </div>
-        </article>
-        <article class="card enter" style="--delay:160ms">
-          <p class="meta">Crime 3 · The missing prototype</p>
-          <div class="grp">
-            <p class="which">Its own playbook</p>
-            <div class="cmp"><span>Haiku</span><b class="num">26 → 39</b></div>
-            <div class="cmp"><span>Luna</span><b class="num">14 → 48</b></div>
-            <span class="stamp">Works</span>
-          </div>
-          <div class="grp dim">
-            <p class="which">One general playbook, from crimes 1 and 2</p>
-            <div class="cmp"><span>Haiku</span><b class="num down">26 → 11</b></div>
-            <div class="cmp"><span>Luna</span><b class="num">14 → 20</b></div>
-            <span class="stamp open">Hurts Haiku</span>
-          </div>
-        </article>
-      </div>
-      <p class="cap">A fake playbook with no lessons was always tested too; only the crime's own playbook clearly beat it. One caveat: each playbook teaches that game's three ways the crime can happen and the proof for each. Real crimes vary more than one game does.</p>
-    </div></section>
-    <section class="section" id="library" aria-labelledby="library-heading"><div class="wrap">
-      <p class="tag">Case 08<span>The library</span></p>
-      <h2 class="h2" id="library-heading">One book, three chapters, and the AI picks the chapter itself. It works</h2>
-      <p class="lead">The AI is told only "an incident at Pixelforge", not which crime. It must read the case and find the right chapter. Cases solved of 55.</p>
       <article class="ai">
-        <div class="table" role="table" aria-label="Library test: cases solved out of 55">
-          <div class="trow c4 head" role="row"><span role="columnheader">Solved of 55</span><span role="columnheader">Alone</span><span role="columnheader">Own book</span><span class="with" role="columnheader">Library</span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Leak</span><span class="val" role="cell">8</span><span class="val" role="cell">40</span><span class="val" role="cell"><b>45</b></span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Invoice</span><span class="val" role="cell">15</span><span class="val" role="cell">55</span><span class="val" role="cell"><b>51</b></span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Prototype</span><span class="val" role="cell">26</span><span class="val" role="cell">39</span><span class="val" role="cell"><b>54</b></span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Leak</span><span class="val" role="cell">5</span><span class="val" role="cell">29</span><span class="val" role="cell"><b>28</b></span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Invoice</span><span class="val" role="cell">12</span><span class="val" role="cell">49</span><span class="val" role="cell"><b>48</b></span></div>
-          <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Prototype</span><span class="val" role="cell">14</span><span class="val" role="cell">48</span><span class="val" role="cell"><b>50</b></span></div>
+        <div class="ai-head"><h3>Crime by crime</h3><span class="meta">55 cases per crime · cases solved</span></div>
+        <div class="table" role="table" aria-label="Cases solved per crime, alone, with its own playbook and with the library">
+          <div class="trow c4 head" role="row"><span role="columnheader">Solved of 55</span><span role="columnheader">Alone</span><span role="columnheader">Own playbook</span><span class="with" role="columnheader">Library</span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Leak</span><span class="val" role="cell">8</span><span class="val" role="cell">40</span><span class="val" role="cell"><b>45</b></span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Invoice</span><span class="val" role="cell">15</span><span class="val" role="cell">55</span><span class="val" role="cell"><b>51</b></span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Prototype</span><span class="val" role="cell">26</span><span class="val" role="cell">39</span><span class="val" role="cell"><b>54</b></span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Leak</span><span class="val" role="cell">5</span><span class="val" role="cell">29</span><span class="val" role="cell"><b>28</b></span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Invoice</span><span class="val" role="cell">12</span><span class="val" role="cell">49</span><span class="val" role="cell"><b>48</b></span></div>
+            <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Prototype</span><span class="val" role="cell">14</span><span class="val" role="cell">48</span><span class="val" role="cell"><b>50</b></span></div>
         </div>
-        <p class="note">The library is about as good as each crime's own book, even though the AI has to work out the crime first. A single merged "general" book did not do this.</p>
-        <p class="fine">Fair check, same wording, 55 cases mixed from all three crimes: Haiku <b>13 → 51</b>, Luna <b>9 → 38</b>. Verdict by the rule set before the test: <b>yes</b>. Haiku's prototype score with the library is higher than with its own book; that is unexplained and not a claim.</p>
+        <p class="note">A playbook for its own crime works every time. The library of three chapters works about as well as each crime's own book.</p>
+        <p class="fine">A fake playbook with no lessons was always tested too; it barely helped. Haiku's prototype score with the library is higher than with its own book; that is unexplained and not a claim.</p>
       </article>
+      <p class="fine">API costs are estimates; we played on subscriptions. Statistics and the planned tests in <a href="details.html">the details</a>.</p>
     </div></section>
+
     <section class="section" id="guard" aria-labelledby="guard-heading"><div class="wrap">
-      <p class="tag">Case 09<span>Guard duty</span></p>
+      <p class="tag">Case 06<span>Guard duty</span></p>
       <h2 class="h2" id="guard-heading">Can a playbook stop scams before they happen?</h2>
       <p class="lead">A new game. 8 requests arrive each day, some are scams. Stop every scam without blocking real work. A day is <b>safe</b> if all 8 are right.</p>
       <article class="ai">
@@ -453,27 +438,21 @@
     </div></section>
 
     <section class="section" id="goals" aria-labelledby="goals-title"><div class="wrap">
-      <p class="tag" id="goals-title">Case 10<span>How it ends</span></p>
-      <div class="ends">
+      <p class="tag" id="goals-title">Case 07<span>Case closed</span></p>
+      <div class="ends one">
         <article class="end enter">
           <span class="stamp">Closed</span>
-          <h3>The library case is solved</h3>
-          <p>A playbook for its own crime works every time. One library with a chapter per crime works about as well, even when the AI must <b>work out the crime itself</b>: Haiku <b>13 → 51</b>, Luna <b>9 → 38</b> on mixed cases.</p>
+          <h3>A big AI can teach small AIs to catch hackers</h3>
+          <p>A playbook for its own crime works every time. One library with a chapter per crime works about as well, even when the AI must <b>work out the crime itself</b>: Haiku <b>13 → 51</b>, Luna <b>9 → 38</b> on mixed cases. On guard duty Haiku reached <b>55 safe days of 55</b>. Still open: each chapter teaches one game's three ways a crime can happen, and real incidents vary more.</p>
           <ul class="chips"><li>Leak</li><li>Invoice</li><li>Prototype</li><li>Library</li><li>Guard duty</li></ul>
-        </article>
-        <article class="end enter" style="--delay:120ms">
-          <span class="stamp open">Open</span>
-          <h3>Does it hold outside the game?</h3>
-          <p>Each chapter teaches one game's three ways a crime can happen. Real incidents vary more than that, and a merged general book already failed. That is the open question.</p>
-          <ul class="chips"><li>Own playbooks · done</li><li>General book · done</li><li>Library · done</li><li class="next">Real incidents</li></ul>
-          <a class="btn" href="details.html">Every number and test <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="btns"><a class="btn fill" href="https://github.com/YentlPeck">The project on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="details.html">Every number and test</a></div>
         </article>
       </div>
     </div></section>
   </main>
 
   <footer><div class="wrap">
-    <span>Made by Yentl Peck</span><span>Results of 4 Nov 2026</span><span>Built by Claude, reviewed by Codex</span><span><a href="details.html">All details</a></span>
+    <span>Made by Yentl Peck</span><span>Results of 5 Nov 2026</span><span>Built by Claude, reviewed by Codex</span><span><a href="details.html">All details</a></span>
     <p class="legal">News: <a href="https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/" target="_blank" rel="noopener">BleepingComputer</a>, <a href="https://therecord.media/california-warns-all-public-school-students-of-data-breach" target="_blank" rel="noopener">The Record</a>, <a href="https://decrypt.co/381862/south-korea-arrests-seven-first-big-ai-hacking-case" target="_blank" rel="noopener">Decrypt</a>, <a href="https://blog.checkpoint.com/research/september-2026-cyber-threat-landscape-global-attacks-jump-48-as-phishing-and-genai-data-exposure-rise/" target="_blank" rel="noopener">Check Point Research</a>, <a href="https://www.semperis.com/press-release/semperis-2026-ransomware-report-reveals-increases-in-ai-driven-attacks-and-a-rise-in-physical-threats-against-executives-and-their-families/" target="_blank" rel="noopener">Semperis</a>. The studio and every case are made up; no real system was touched.</p>
   </div></footer>
 
@@ -518,56 +497,6 @@
       svg.appendChild(el('text', { x: 200, y: ly }, `${w - a} more with the playbook`));
     });
 
-    // charts
-    const H = [{ k: 'alone', s: 8, c: .0741, dx: -10, dy: 4, an: 'end' }, { k: 'fake', s: 12, c: .0868, dx: 0, dy: -10, an: 'middle' }, { k: 'Sol', s: 11, c: .1483, dx: -10, dy: 4, an: 'end' }, { k: 'Sonnet', s: 19, c: .1469, dx: 10, dy: 4, an: 'start' }, { k: 'Opus', s: 40, c: .1333, dx: 0, dy: -10, an: 'middle' }];
-    const L = [{ k: 'alone', s: 5, c: .0552, dx: 10, dy: 4, an: 'start' }, { k: 'fake', s: 3, c: .0554, dx: -10, dy: 4, an: 'end' }, { k: 'Sol', s: 13, c: .069, dx: 10, dy: 4, an: 'start' }, { k: 'Sonnet', s: 27, c: .0624, dx: 0, dy: 18, an: 'middle' }, { k: 'Opus', s: 29, c: .0646, dx: 0, dy: -10, an: 'middle' }];
-    const name = (k) => k === 'alone' ? 'alone' : k === 'fake' ? 'fake playbook' : k === 'Opus' ? "Opus' playbook" : `${k}'s playbook`;
-    const tipFor = (box, tip) => { const on = (e, html) => { tip.innerHTML = html; tip.style.display = 'block'; const r = box.getBoundingClientRect(); tip.style.left = Math.min(r.width - 270, e.clientX - r.left + 14) + 'px'; tip.style.top = (e.clientY - r.top + 14) + 'px'; }; const off = () => tip.style.display = 'none'; return { on, off }; };
-    const scatter = () => {
-      const svg = $('#cchart'), box = svg.parentElement, tip = $('#ctip'); svg.innerHTML = '';
-      const W = svg.clientWidth || 1080, Hh = svg.clientHeight || 360, m = { l: 56, r: 24, t: 24, b: 44 };
-      svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`);
-      const x = (s) => m.l + s / 45 * (W - m.l - m.r), y = (c) => Hh - m.b - (c - .04) / (.16 - .04) * (Hh - m.t - m.b);
-      for (let c = .04; c <= .161; c += .04) { svg.appendChild(el('line', { class: 'lv-grid', x1: m.l, x2: W - m.r, y1: y(c), y2: y(c) })); svg.appendChild(el('text', { class: 'lv-tick', x: m.l - 8, y: y(c) + 4, 'text-anchor': 'end' }, '$' + c.toFixed(2))); }
-      for (let s = 0; s <= 45; s += 10) { svg.appendChild(el('text', { class: 'lv-tick', x: x(s), y: Hh - m.b + 18, 'text-anchor': 'middle' }, s)); }
-      svg.appendChild(el('text', { class: 'lv-axis', x: (m.l + W - m.r) / 2, y: Hh - 6, 'text-anchor': 'middle' }, 'Cases solved, of 55'));
-      svg.appendChild(el('text', { class: 'lv-axis', x: m.l, y: 12 }, 'API cost per game'));
-      const T = tipFor(box, tip);
-      [[H, 'a', 'Haiku 5.5'], [L, 'o', 'GPT-6-Luna']].forEach(([D, cls, who]) => {
-        svg.appendChild(el('polyline', { class: `lv-line ${cls}`, 'stroke-dasharray': '2 5', 'stroke-opacity': '.5', points: D.map((p) => `${x(p.s)},${y(p.c)}`).join(' ') }));
-        D.forEach((p) => {
-          const dot = el('circle', { class: `lv-pt ${cls}`, cx: x(p.s), cy: y(p.c), r: 5 });
-          dot.addEventListener('mousemove', (e) => { dot.classList.add('on'); T.on(e, `<b>${who}, ${name(p.k)}</b><br>${p.s} of 55 solved · $${p.c.toFixed(3)} per game`); });
-          dot.addEventListener('mouseleave', () => { dot.classList.remove('on'); T.off(); });
-          svg.appendChild(dot);
-          svg.appendChild(el('text', { class: 'lv-lab', x: x(p.s) + p.dx, y: y(p.c) + p.dy, 'text-anchor': p.an }, p.k));
-        });
-        const last = D[D.length - 1]; svg.appendChild(el('text', { class: `lv-end ${cls}`, x: x(last.s) + 14, y: y(last.c) + 4 }, who));
-      });
-    };
-    const lines = () => {
-      const svg = $('#pchart'), box = svg.parentElement, tip = $('#ptip'); svg.innerHTML = '';
-      const W = svg.clientWidth || 1080, Hh = svg.clientHeight || 440, m = { l: 40, r: W > 760 ? 160 : 80, t: 20, b: 56 };
-      svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`);
-      const cats = [['alone', 'no playbook'], ['fake playbook', 'no lessons'], ["Sol's", 'practice 20 of 20'], ["Sonnet's", 'practice 9 of 20'], ["Opus'", 'practice 19 of 20']];
-      const x = (i) => m.l + (i + .5) / cats.length * (W - m.l - m.r), y = (s) => Hh - m.b - s / 45 * (Hh - m.t - m.b);
-      for (let s = 0; s <= 45; s += 10) { svg.appendChild(el('line', { class: 'lv-grid', x1: m.l, x2: W - m.r, y1: y(s), y2: y(s) })); svg.appendChild(el('text', { class: 'lv-tick', x: m.l - 8, y: y(s) + 4, 'text-anchor': 'end' }, s)); }
-      cats.forEach(([c, sub], i) => { svg.appendChild(el('text', { class: 'lv-axis', x: x(i), y: Hh - m.b + 22, 'text-anchor': 'middle' }, c)); svg.appendChild(el('text', { class: 'lv-lab', x: x(i), y: Hh - m.b + 40, 'text-anchor': 'middle' }, sub)); });
-      const T = tipFor(box, tip);
-      [[H, 'a', 'Haiku 5.5'], [L, 'o', 'GPT-6-Luna']].forEach(([D, cls, who]) => {
-        svg.appendChild(el('polyline', { class: `lv-line ${cls}`, points: D.map((p, i) => `${x(i)},${y(p.s)}`).join(' ') }));
-        D.forEach((p, i) => {
-          const dot = el('circle', { class: `lv-pt ${cls}`, cx: x(i), cy: y(p.s), r: 5 });
-          dot.addEventListener('mousemove', (e) => { dot.classList.add('on'); T.on(e, `<b>${who} with ${cats[i][0]}</b><br>${p.s} of 55 cases solved`); });
-          dot.addEventListener('mouseleave', () => { dot.classList.remove('on'); T.off(); });
-          svg.appendChild(dot);
-          const other = (cls === 'a' ? L : H)[i].s, above = p.s >= other;
-          svg.appendChild(el('text', { class: `lv-end ${cls}`, x: x(i), y: y(p.s) + (above ? -12 : 22), 'text-anchor': 'middle' }, p.s));
-        });
-        svg.appendChild(el('text', { class: `lv-end ${cls}`, x: x(4) + 16, y: y(D[4].s) + 4 }, who));
-      });
-    };
-    const draw = () => { scatter(); lines(); }; draw(); addEventListener('resize', draw);
   })();
   </script>
 </body>

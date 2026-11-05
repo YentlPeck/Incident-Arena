@@ -18,7 +18,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 from playwright.sync_api import sync_playwright
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+ROOT = pathlib.Path(__file__).resolve().parent.parent / 'game'
 LEVEL_PAGES = {1: ROOT / 'index.html', 2: ROOT / 'level2.html', 3: ROOT / 'level3.html', 4: ROOT / 'level4.html'}
 ARENA = pathlib.Path(r'C:\Users\yentl\pixelforge-arena')
 CHROME = r'C:\Users\yentl\AppData\Local\ms-playwright\chromium-1243\chrome-win64\chrome.exe'

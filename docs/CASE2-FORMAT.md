@@ -1,9 +1,9 @@
 # Family 2 "The fake invoice": CASE2 format (contract between gen2.js, gameR2.js, solve2.js, arena)
 
-Read cases/DESIGN-family2.md first; this file supersedes it where they differ (it includes the review changes).
-`cases/gen2.js` exposes `PFCase2.generate(seed) -> CASE2` (browser `window.PFCase2`, Node `require`), plus `POOLS2`.
-Page: `case2.html?seed=N`. Engine: `cases/gameR2.js` (forked from cases/gameR.js; same window/click engine,
-same look: loads cases/case.css + cases/icons.js unchanged, extra styles only in new `cases/case2.css`).
+Read docs/DESIGN-family2.md first; this file supersedes it where they differ (it includes the review changes).
+`game/cases/gen2.js` exposes `PFCase2.generate(seed) -> CASE2` (browser `window.PFCase2`, Node `require`), plus `POOLS2`.
+Page: `case2.html?seed=N`. Engine: `game/cases/gameR2.js` (forked from cases/gameR.js; same window/click engine,
+same look: loads cases/case.css + cases/icons.js unchanged, extra styles only in new `game/cases/case2.css`).
 
 ## Story and layouts (equal probability; hidden)
 A supplier mails: "invoice INV-#### is still unpaid". The bank export shows that invoice's payment was executed

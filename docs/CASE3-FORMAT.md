@@ -1,7 +1,7 @@
 # Family 3 "The missing prototype": data contract
 
-Files: `cases/gen3.js` (generator), `cases/gameR3.js` + `case3.html` + `cases/case3.css` (game),
-`cases/solve3.js` (reference solver), `cases/check3.js` (fairness checker).
+Files: `game/cases/gen3.js` (generator), `game/cases/gameR3.js` + `case3.html` + `game/cases/case3.css` (game),
+`game/cases/solve3.js` (reference solver), `game/cases/check3.js` (fairness checker).
 
 ## API
 

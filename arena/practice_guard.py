@@ -16,7 +16,7 @@ except ImportError:
     import run_batch
 
 HERE = pathlib.Path(__file__).resolve().parent
-GEN = HERE.parent / 'cases' / 'gen-guard.js'
+GEN = HERE.parent / 'game' / 'cases' / 'gen-guard.js'
 KIND = {'link': 'sign-in request', 'file': 'shared file', 'payment': 'invoice payment', 'update': 'software update', 'access': 'access request'}
 
 

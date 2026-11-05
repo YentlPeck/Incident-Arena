@@ -29,33 +29,33 @@ MODELS = {'haiku': 'claude-haiku-5-5', 'luna': 'gpt-6-luna', 'sonnet': 'claude-s
 SEED_SPLIT = {'practice': (1, 999), 'test': (1001, None)}
 PRACTICE_RECORD = HERE / 'playbook-history' / 'practice-seeds.json'
 _record_lock = threading.Lock()
-VERSION_FILES = {'gen_sha256': 'cases/gen.js', 'gameR_sha256': 'cases/gameR.js',
-                 'case_html_sha256': 'case.html', 'prompts_sha256': 'arena/prompts.py',
-                 'server_sha256': 'arena/server.py', 'case_css_sha256': 'cases/case.css',
-                 'icons_sha256': 'cases/icons.js', 'data_js_sha256': 'data.js', 'style_css_sha256': 'style.css'}
+VERSION_FILES = {'gen_sha256': 'game/cases/gen.js', 'gameR_sha256': 'game/cases/gameR.js',
+                 'case_html_sha256': 'game/case.html', 'prompts_sha256': 'arena/prompts.py',
+                 'server_sha256': 'arena/server.py', 'case_css_sha256': 'game/cases/case.css',
+                 'icons_sha256': 'game/cases/icons.js', 'data_js_sha256': 'game/data.js', 'style_css_sha256': 'game/style.css'}
 INVOICE_VERSION_FILES = {
-    'gen2_sha256': 'cases/gen2.js', 'gameR2_sha256': 'cases/gameR2.js',
-    'case2_html_sha256': 'case2.html', 'case2_css_sha256': 'cases/case2.css',
-    'case_css_sha256': 'cases/case.css', 'icons_sha256': 'cases/icons.js',
+    'gen2_sha256': 'game/cases/gen2.js', 'gameR2_sha256': 'game/cases/gameR2.js',
+    'case2_html_sha256': 'game/case2.html', 'case2_css_sha256': 'game/cases/case2.css',
+    'case_css_sha256': 'game/cases/case.css', 'icons_sha256': 'game/cases/icons.js',
     'prompts2_sha256': 'arena/prompts2.py', 'server2_sha256': 'arena/server2.py',
-    'server_sha256': 'arena/server.py', 'data_js_sha256': 'data.js', 'style_css_sha256': 'style.css',
+    'server_sha256': 'arena/server.py', 'data_js_sha256': 'game/data.js', 'style_css_sha256': 'game/style.css',
 }
 GUARD_VERSION_FILES = {
-    'gen_guard_sha256': 'cases/gen-guard.js', 'gameG_sha256': 'cases/gameG.js',
-    'case_guard_html_sha256': 'case-guard.html', 'guard_css_sha256': 'cases/guard.css',
-    'case2_css_sha256': 'cases/case2.css', 'case_css_sha256': 'cases/case.css', 'icons_sha256': 'cases/icons.js',
+    'gen_guard_sha256': 'game/cases/gen-guard.js', 'gameG_sha256': 'game/cases/gameG.js',
+    'case_guard_html_sha256': 'game/case-guard.html', 'guard_css_sha256': 'game/cases/guard.css',
+    'case2_css_sha256': 'game/cases/case2.css', 'case_css_sha256': 'game/cases/case.css', 'icons_sha256': 'game/cases/icons.js',
     'prompts_guard_sha256': 'arena/prompts_guard.py', 'server_guard_sha256': 'arena/server_guard.py',
-    'server_sha256': 'arena/server.py', 'data_js_sha256': 'data.js', 'style_css_sha256': 'style.css',
+    'server_sha256': 'arena/server.py', 'data_js_sha256': 'game/data.js', 'style_css_sha256': 'game/style.css',
 }
 # Guard duty seeds (DESIGN-guard.md): test 7001-7099, pilot 7901-7999; practice 7501-7599 only via condition 'practice'.
 GUARD_SEEDS = (7001, 7999)
 GUARD_PRACTICE = (7501, 7599)
 PROTO_VERSION_FILES = {
-    'gen3_sha256': 'cases/gen3.js', 'gameR3_sha256': 'cases/gameR3.js',
-    'case3_html_sha256': 'case3.html', 'case3_css_sha256': 'cases/case3.css', 'guard_css_sha256': 'cases/guard.css',
-    'case2_css_sha256': 'cases/case2.css', 'case_css_sha256': 'cases/case.css', 'icons_sha256': 'cases/icons.js',
+    'gen3_sha256': 'game/cases/gen3.js', 'gameR3_sha256': 'game/cases/gameR3.js',
+    'case3_html_sha256': 'game/case3.html', 'case3_css_sha256': 'game/cases/case3.css', 'guard_css_sha256': 'game/cases/guard.css',
+    'case2_css_sha256': 'game/cases/case2.css', 'case_css_sha256': 'game/cases/case.css', 'icons_sha256': 'game/cases/icons.js',
     'prompts3_sha256': 'arena/prompts3.py', 'prompts_sha256': 'arena/prompts.py', 'server3_sha256': 'arena/server3.py',
-    'server_sha256': 'arena/server.py', 'data_js_sha256': 'data.js', 'style_css_sha256': 'style.css',
+    'server_sha256': 'arena/server.py', 'data_js_sha256': 'game/data.js', 'style_css_sha256': 'game/style.css',
 }
 # Missing prototype seeds (DESIGN-exp3.md): test 6001-6055, pilot 6901-6999. Test games only, never practice.
 PROTO_SEEDS = (6001, 6999)
@@ -63,6 +63,23 @@ PROTO_SEEDS = (6001, 6999)
 PROTO_PRACTICE = (6501, 6599)
 # Experiment 3 mixed practice uses fresh invoice seeds 2501-2599 (never test seeds 2001-2055).
 INVOICE_PRACTICE = (2501, 2599)
+
+
+GAME = 'game'  # the browser game (pages, generators, styles) lives in <project>/game since 2026-11-05
+# Files changed after the tests only cosmetically (2026-11-05): server.py's ROOT line when the game moved into
+# game/, and the case pages' <title> rename to Incident Arena. Results recorded before carry the earlier hash;
+# report that hash for these exact files so earlier games still verify. Any other edit gives a new hash.
+LEGACY_SHA = {
+    'arena/server.py': {'9973d8119660110fd03c15fa020fe1d3454275812b16fbf0c1f214a095743f49': 'c19c62d4d700cb75bc7f7ac0b1f7dc7c25507612d70a874d2ce922ad56e5710f'},
+    'game/case.html': {'fc6238fec5e942ab0cf67e000c3afefd02257c5365b10b64f435cec7531336bc': 'a1c96bb1529238693f23e47411333fab252c4771edc8abf4fa7744cfcc3cfb92'},
+    'game/case2.html': {'8e924ca07f75f31938ad826b8c75b33a93f8078c2d2c27019514ada84c218bd8': 'a382c1de9819056183e50a7c6c48014e6aec44e541b648c6d3a359c73272c589'},
+    'game/case3.html': {'dba73df1e84a476a6ae8cb8cd7be0863a4ff40384ab6b6ba14435ddcf1aee5b6': '3e1450323bdafe39cf302e893a8c8c07a790bffb2488f3f4a12d506b8e93a322'},
+    'game/case-guard.html': {'8c28454753dfff615996a776c0550409c3144d6b2af42571799c17df2f1a0013': '6373aa1ac1acd409c78e05d2cd623b019afa43791cf23aa3fae5b54e515298ce'},
+}
+
+
+def game_dir():
+    return HERE.parent / GAME
 
 
 def prompt_module(family):
@@ -164,13 +181,17 @@ def frozen_playbook(path):
     return text
 
 
+def file_sha(name):
+    sha = hashlib.sha256((HERE.parent / name).read_bytes()).hexdigest()
+    return LEGACY_SHA.get(name, {}).get(sha, sha)
+
+
 def build_manifest(book, model, family='leak', variant=None):
     files = {'leak': VERSION_FILES, 'invoice': INVOICE_VERSION_FILES, 'guard': GUARD_VERSION_FILES,
              'proto': PROTO_VERSION_FILES}[family]
     module = prompt_module(family)
     manifest = {'playbook_sha256': text_sha(book) if book is not None else 'none',
-            **{key: hashlib.sha256((HERE.parent / name).read_bytes()).hexdigest()
-               for key, name in files.items()},
+            **{key: file_sha(name) for key, name in files.items()},
             'model': model, 'command_budget': module.COMMANDS, 'view': 'screen'}
     if family in ('invoice', 'guard', 'proto'):
         manifest['family'] = family
@@ -498,8 +519,8 @@ def run_game(job, arena=ARENA, timeout=1800, model=None, playbook=None, *,
         raise ValueError(f'{job.gid}: source versions changed since batch planning; start a new batch')
     page, generator = {'invoice': ('case2.html', 'gen2.js'), 'guard': ('case-guard.html', 'gen-guard.js'),
                        'proto': ('case3.html', 'gen3.js')}.get(job.family, ('case.html', 'gen.js'))
-    if not (HERE.parent / page).exists() or not (HERE.parent / 'cases' / generator).exists():
-        raise RuntimeError(f'{page} and cases/{generator} must exist before running players')
+    if not (game_dir() / page).exists() or not (game_dir() / 'cases' / generator).exists():
+        raise RuntimeError(f'game/{page} and game/cases/{generator} must exist before running players')
     if not (arena / 'play.py').exists():
         raise RuntimeError(f'Missing controller: {arena / "play.py"}')
     command = executable_command(player_command(job.gid, job.player, arena, model))

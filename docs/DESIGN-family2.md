@@ -259,7 +259,7 @@ replays are not model/player runs or measurements of careful-player click budget
 
 Artifacts, full per-metric numbers, replay scripts and logs:
 `C:/Users/yentl/AppData/Local/Temp/pf-case2-shots/v6/`.
-Changed only `cases/gen2.js`, `cases/solve2.js`, `cases/check2.js` and this design
+Changed only `game/cases/gen2.js`, `game/cases/solve2.js`, `game/cases/check2.js` and this design
 document. `gameR2.js` is unchanged. No pinned family-1 or arena files were edited;
 no prohibited files were read; no AI model calls or commits were made.
 

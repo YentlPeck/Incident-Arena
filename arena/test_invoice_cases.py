@@ -85,7 +85,7 @@ class Family1CompatibilityTests(unittest.TestCase):
         baseline = json.loads((ROOT / 'arena/family1_baseline.json').read_text(encoding='utf-8'))
         for name, sha in baseline['pinned'].items():
             with self.subTest(path=name):
-                self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), sha)
+                self.assertEqual(run_batch.file_sha(name), sha)
 
     def test_default_and_explicit_leak_dry_runs_match_original_rows(self):
         args = ['--seeds', '2001', '--player', 'luna', '--condition', 'alone',
@@ -135,8 +135,9 @@ class InvoicePlanningTests(unittest.TestCase):
         run_batch.validate_family_seeds([1001, 3000, 100000], 'leak', check_practice=False)
 
     def test_invoice_manifest_covers_exactly_its_sources_and_resume_is_strict(self):
-        expected_paths = {'cases/gen2.js', 'cases/gameR2.js', 'case2.html', 'cases/case2.css', 'cases/case.css',
-                          'cases/icons.js', 'arena/prompts2.py', 'arena/server2.py', 'arena/server.py', 'data.js', 'style.css'}
+        expected_paths = {'game/cases/gen2.js', 'game/cases/gameR2.js', 'game/case2.html', 'game/cases/case2.css',
+                          'game/cases/case.css', 'game/cases/icons.js', 'arena/prompts2.py', 'arena/server2.py',
+                          'arena/server.py', 'game/data.js', 'game/style.css'}
         self.assertEqual(set(run_batch.INVOICE_VERSION_FILES.values()), expected_paths)
         with tempfile.TemporaryDirectory(prefix='pf-invoice-versions-') as temp:
             root = pathlib.Path(temp)
@@ -240,7 +241,7 @@ class InvoicePlanningTests(unittest.TestCase):
                     path.write_text('/* synthetic */', encoding='utf-8')
             for name in ('audit.py', 'prompts.py'):
                 shutil.copyfile(ROOT / 'arena' / name, scripts / name)
-            (root / 'case2.html').write_text(page, encoding='utf-8')
+            (root / 'game' / 'case2.html').write_text(page, encoding='utf-8')
             client = root / 'client'
             client.mkdir()
             (client / 'play.py').write_text('# synthetic controller placeholder', encoding='utf-8')

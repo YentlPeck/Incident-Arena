@@ -38,7 +38,7 @@ def text_only(value):
 
 def load_case(seed, generator=None):
     """Post-game only. No answer or generator data enters the gameplay prompt."""
-    generator = generator or HERE.parent / 'cases' / 'gen.js'
+    generator = generator or HERE.parent / 'game' / 'cases' / 'gen.js'
     script = "const g=require(process.argv[1]); const api=g.PFCase||g; process.stdout.write(JSON.stringify(api.generate(Number(process.argv[2]))));"
     result = subprocess.run(run_batch.executable_command(['node', '-e', script, str(generator), str(seed)]),
                             capture_output=True, text=True, encoding='utf-8', check=True, timeout=30)
@@ -47,7 +47,7 @@ def load_case(seed, generator=None):
 
 def load_pools(generator=None):
     """Read only the exported vocabulary, never generate an unseen case."""
-    generator = generator or HERE.parent / 'cases' / 'gen.js'
+    generator = generator or HERE.parent / 'game' / 'cases' / 'gen.js'
     script = "const p=require(process.argv[1]).POOLS; if(!p) throw Error('Generator must export POOLS'); process.stdout.write(JSON.stringify(p));"
     result = subprocess.run(run_batch.executable_command(['node', '-e', script, str(generator)]),
                             capture_output=True, text=True, encoding='utf-8', check=True, timeout=30)

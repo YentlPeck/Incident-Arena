@@ -1,7 +1,7 @@
 # Random case format (contract between generator, game screen and arena)
 
-`cases/gen.js` exposes `PFCase.generate(seed) -> CASE` (works in the browser as `window.PFCase` and in Node via `require`).
-`cases/solve.js` (generator side) checks every case is solvable from visible data only.
+`game/cases/gen.js` exposes `PFCase.generate(seed) -> CASE` (works in the browser as `window.PFCase` and in Node via `require`).
+`game/cases/solve.js` (generator side) checks every case is solvable from visible data only.
 The game page is `case.html?seed=N` (no seed: a random one, shown on the start screen so a human can replay it).
 
 Story of every case: an unreleased build of a Pixelforge game was posted on a leak forum tonight. The player finds who leaked it, how, and files one report.
@@ -77,7 +77,7 @@ All times are already formatted strings (e.g. `"21:47"`). Each log says which cl
 ```
 
 ## Engine rules (gameR.js)
-- Same window/click engine as Level 4 (`cases/engine-base.js` is a spoiler-free copy): every click in #app counts, `data-nocount` for buttons outside the game, `aria-disabled` for locked buttons.
+- Same window/click engine as Level 4 (`game/cases/engine-base.js` is a spoiler-free copy): every click in #app counts, `data-nocount` for buttons outside the game, `aria-disabled` for locked buttons.
 - Apps: Case File, Mail (admin view of all mailboxes: show From and To), Chat, Security (tabs: Sign-ins, Door badges, Accounts), Files (open + Activity per file), Browser (bookmarks + address bar).
 - Discoveries: 'download' (correct flag in the build's activity), 'signin' (correct sign-in flag), 'who', 'how', 'evidence' (report).
 - Report: one person, one way, exactly 2 evidence; filed once. Then end screen shows `secret.story`, which report answers were right, discoveries, traps fallen for (only if traps.count > 0), clicks and time.
