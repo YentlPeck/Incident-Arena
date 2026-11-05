@@ -31,18 +31,18 @@
     }
     * { box-sizing: border-box; }
     html { background: var(--page); scroll-behavior: smooth; }
-    body { margin: 0; background: var(--page); color: var(--ink); font: 400 17px/1.55 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background-color .2s var(--ease), color .2s var(--ease); }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 400 19px/1.55 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background-color .2s var(--ease), color .2s var(--ease); }
     h1, h2, h3 { margin: 0; font-weight: 500; }
     p { margin: 0; }
     a { color: inherit; }
     :focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 4px; border-radius: 4px; }
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; width: 100%; }
     .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
     .num { font-variant-numeric: tabular-nums; }
 
     /* signature: case tag */
-    .tag { display: flex; align-items: center; gap: 12px; font: 500 13px/1 var(--mono); color: var(--accent-ink); letter-spacing: 0; margin: 0 0 24px; }
+    .tag { display: flex; align-items: center; gap: 12px; font: 500 15px/1 var(--mono); color: var(--accent-ink); letter-spacing: 0; margin: 0 0 24px; }
     .tag::after { content: ""; flex: 0 0 40px; height: 1px; background: var(--accent-ink); opacity: .5; }
     .tag span { color: var(--ink-3); }
 
@@ -53,7 +53,7 @@
     .brand { font: 500 16px/1 var(--sans); color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
     .brand .mark { width: 18px; height: 18px; display: block; fill: var(--accent); }
     .nav-end { display: flex; gap: 24px; align-items: center; }
-    .top nav { display: flex; gap: 24px; font: 500 14px/1 var(--sans); }
+    .top nav { display: flex; gap: 28px; font: 500 16px/1 var(--sans); }
     .top nav a { text-decoration: none; color: var(--ink-2); transition: color .15s var(--ease); }
     .top nav a:hover { color: var(--ink); }
     .theme-toggle { width: 36px; height: 36px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid var(--hair-2); border-radius: 8px; background: transparent; color: var(--ink-2); cursor: pointer; padding: 0; transition: color .15s var(--ease), background-color .15s var(--ease); }
@@ -65,10 +65,10 @@
     /* hero */
     .hero { min-height: calc(100svh - 64px); display: flex; align-items: center; padding: 48px 0 64px; }
     .hero-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
-    .hero h1 { font-size: clamp(40px, 5vw, 64px); line-height: 1.02; letter-spacing: -.02em; max-width: 15ch; text-wrap: balance; margin: 0 0 20px; }
-    .hero .sub { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5; color: var(--ink-2); margin: 0 0 32px; max-width: 44ch; }
+    .hero h1 { font-size: clamp(44px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -.02em; max-width: 15ch; text-wrap: balance; margin: 0 0 20px; }
+    .hero .sub { font-size: clamp(19px, 1.8vw, 23px); line-height: 1.5; color: var(--ink-2); margin: 0 0 32px; max-width: 44ch; }
     .btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; font: 500 15px/1 var(--sans); text-decoration: none; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--hair-2); color: var(--ink); background: transparent; transition: background-color .15s var(--ease), border-color .15s var(--ease), color .15s var(--ease); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; font: 500 17px/1 var(--sans); text-decoration: none; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--hair-2); color: var(--ink); background: transparent; transition: background-color .15s var(--ease), border-color .15s var(--ease), color .15s var(--ease); }
     .btn:hover { background: var(--panel); }
     .btn.fill { background: var(--ink); color: var(--page); border-color: var(--ink); }
     .btn.fill:hover { background: var(--ink-2); border-color: var(--ink-2); }
@@ -82,18 +82,18 @@
     .log { list-style: none; margin: 0; padding: 4px 0; }
     .log li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 16px; padding: 14px 16px; border-bottom: 1px solid var(--hair); }
     .log li:last-child { border-bottom: 0; }
-    .log .d { font: 400 12px/1.5 var(--mono); color: var(--ink-3); padding-top: 3px; }
+    .log .d { font: 400 13px/1.5 var(--mono); color: var(--ink-3); padding-top: 3px; }
     .log .who { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-    .log .who b { font-weight: 500; font-size: 15px; }
-    .log .who span { font: 500 13px/1.5 var(--mono); color: var(--accent-ink); white-space: nowrap; }
-    .log p { font-size: 14px; line-height: 1.45; color: var(--ink-2); margin-top: 2px; }
+    .log .who b { font-weight: 500; font-size: 17px; }
+    .log .who span { font: 500 14px/1.5 var(--mono); color: var(--accent-ink); white-space: nowrap; }
+    .log p { font-size: 16px; line-height: 1.45; color: var(--ink-2); margin-top: 2px; }
     .file-foot { padding: 10px 16px; border-top: 1px solid var(--hair); font: 400 12px/1.5 var(--mono); color: var(--ink-3); display: flex; justify-content: space-between; }
 
     /* sections */
     #danger, #sentence, #game, #results, #cost, #playbooks, #more, #guard, #goals { scroll-margin-top: 80px; }
     .section { border-top: 1px solid var(--hair); padding: 96px 0; }
-    .h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; max-width: 24ch; }
-    .lead { font-size: 18px; line-height: 1.5; color: var(--ink-2); margin: 16px 0 40px; max-width: 64ch; }
+    .h2 { font-size: clamp(34px, 4vw, 52px); line-height: 1.1; letter-spacing: -.015em; text-wrap: balance; max-width: 24ch; }
+    .lead { font-size: 21px; line-height: 1.5; color: var(--ink-2); margin: 16px 0 40px; max-width: 64ch; }
     .lead b { color: var(--ink); font-weight: 500; }
     .lead a, .cap a, .card p a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
     .enter { opacity: 0; transform: translateY(8px); transition: opacity .5s var(--ease), transform .5s var(--ease); transition-delay: var(--delay, 0ms); }
@@ -102,10 +102,10 @@
     /* danger */
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .card { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 24px; min-width: 0; }
-    .card .meta { font: 500 12px/1.5 var(--mono); color: var(--ink-3); margin: 0 0 20px; }
+    .card .meta { font: 500 14px/1.5 var(--mono); color: var(--ink-3); margin: 0 0 20px; }
     .card .fig { font-size: clamp(36px, 3.4vw, 48px); line-height: 1; letter-spacing: -.02em; font-weight: 500; }
-    .card .unit { display: block; font-size: 14px; color: var(--ink-2); margin: 8px 0 16px; }
-    .card p { font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+    .card .unit { display: block; font-size: 16px; color: var(--ink-2); margin: 8px 0 16px; }
+    .card p { font-size: 17px; line-height: 1.5; color: var(--ink-2); }
     .crimes .card { display: flex; flex-direction: column; gap: 0; }
     .crimes .which { font-size: 14px; color: var(--ink-2); margin: 0 0 12px; }
     .grp + .grp { margin-top: 28px; padding-top: 20px; border-top: 1px dashed var(--hair-2); }
@@ -122,7 +122,7 @@
     .numbers small { display: block; font: 400 12px/1.5 var(--mono); color: var(--ink-3); margin-top: 8px; }
 
     /* sentence */
-    #sentence h2 { font-weight: 400; font-size: clamp(32px, 4.8vw, 68px); line-height: 1.12; letter-spacing: -.02em; max-width: 22ch; text-wrap: balance; }
+    #sentence h2 { font-weight: 400; font-size: clamp(36px, 5.2vw, 76px); line-height: 1.12; letter-spacing: -.02em; max-width: 22ch; text-wrap: balance; }
     #sentence h2 strong { font-weight: 500; color: var(--accent-ink); }
     #sentence .line { display: block; }
     #sentence .line + .line { margin-top: 16px; }
@@ -136,20 +136,20 @@
     .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
     .steps li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-top: 1px solid var(--hair); }
     .steps li:first-child { border-top: 0; padding-top: 0; }
-    .steps .n { font: 500 13px/1.6 var(--mono); color: var(--accent-ink); }
-    .steps .nm { display: block; font-size: 18px; font-weight: 500; line-height: 1.3; }
-    .steps .tm { display: block; font-size: 15px; line-height: 1.45; color: var(--ink-2); margin-top: 4px; }
+    .steps .n { font: 500 15px/1.6 var(--mono); color: var(--accent-ink); }
+    .steps .nm { display: block; font-size: 21px; font-weight: 500; line-height: 1.3; }
+    .steps .tm { display: block; font-size: 17px; line-height: 1.45; color: var(--ink-2); margin-top: 4px; }
     .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
     .ways .card { padding: 20px; }
     .ways .card .meta { margin-bottom: 8px; }
-    .ways .card span { font-size: 15px; line-height: 1.45; color: var(--ink); display: block; }
-    .cap { margin-top: 24px; font-size: 15px; line-height: 1.5; color: var(--ink-2); max-width: 64ch; }
+    .ways .card span { font-size: 17px; line-height: 1.45; color: var(--ink); display: block; }
+    .cap { margin-top: 24px; font-size: 17px; line-height: 1.5; color: var(--ink-2); max-width: 64ch; }
     .lessons { margin: 40px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .lessons li { border-left: 2px solid var(--accent); padding: 4px 0 4px 16px; font-size: 16px; line-height: 1.45; }
+    .lessons li { border-left: 2px solid var(--accent); padding: 4px 0 4px 16px; font-size: 18px; line-height: 1.45; }
 
     /* incidents */
     .inc .card { display: flex; flex-direction: column; }
-    .inc .what { font-size: 15px; line-height: 1.5; color: var(--ink-2); margin: 0 0 20px; }
+    .inc .what { font-size: 17px; line-height: 1.5; color: var(--ink-2); margin: 0 0 20px; }
     .flow { list-style: none; margin: 0; padding: 0; }
     .flow li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; align-items: center; padding: 8px 0; position: relative; }
     .flow li + li::before { content: ""; position: absolute; left: 17px; top: -12px; height: 16px; border-left: 1px solid var(--hair-2); }
@@ -157,12 +157,12 @@
     .flow .ic svg { width: 18px; height: 18px; stroke: var(--ink-2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
     .flow li.bad .ic { border-color: var(--accent); background: transparent; }
     .flow li.bad .ic svg { stroke: var(--accent); }
-    .flow .lb { font-size: 15px; line-height: 1.4; }
+    .flow .lb { font-size: 17px; line-height: 1.4; }
     .flow li.bad .lb { font-weight: 500; }
     .hows { margin: 20px 0 0; padding-top: 16px; border-top: 1px dashed var(--hair-2); }
-    .hows .which { font: 500 12px/1.5 var(--mono); color: var(--ink-3); margin: 0 0 6px; }
+    .hows .which { font: 500 14px/1.5 var(--mono); color: var(--ink-3); margin: 0 0 6px; }
     .hows ol { list-style: none; margin: 0; padding: 0; }
-    .hows li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 8px; padding: 5px 0; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+    .hows li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 8px; padding: 5px 0; font-size: 16px; line-height: 1.4; color: var(--ink-2); }
     .hows .n { font: 500 12px/1.6 var(--mono); color: var(--accent-ink); }
     .lessons-cap { margin: 40px 0 0; }
     .lessons-cap + .lessons { margin-top: 16px; }
@@ -174,11 +174,11 @@
     .ai { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 24px; }
     .ai + .ai { margin-top: 16px; }
     .ai-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; }
-    .ai-head h3 { font-size: 20px; font-weight: 500; }
-    .ai-head .meta { font: 400 12px/1.5 var(--mono); color: var(--ink-3); }
+    .ai-head h3 { font-size: 24px; font-weight: 500; }
+    .ai-head .meta { font: 400 14px/1.5 var(--mono); color: var(--ink-3); }
     .ai-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
     .board { width: 100%; height: auto; display: block; }
-    .board text { font: 400 11px var(--mono); fill: var(--ink-2); }
+    .board text { font: 400 12px var(--mono); fill: var(--ink-2); }
     .board .solved { fill: var(--accent); }
     .board .alone { fill: var(--alone); }
     .board .none { fill: none; stroke: var(--hair-2); }
@@ -187,17 +187,17 @@
     .trow.c4 { grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); }
     .trow.c6 { grid-template-columns: minmax(0, 1.6fr) repeat(5, minmax(0, 1fr)); }
     .trow .val b { font-weight: 500; color: var(--accent-ink); }
-    .trow.head { border-top: 0; padding: 0 0 8px; font: 500 12px/1.5 var(--mono); color: var(--ink-3); }
+    .trow.head { border-top: 0; padding: 0 0 8px; font: 500 14px/1.5 var(--mono); color: var(--ink-3); }
     .trow.head .with { color: var(--accent-ink); }
-    .trow .lbl { font-size: 14px; color: var(--ink-2); }
-    .trow .val { font-size: 16px; font-variant-numeric: tabular-nums; }
+    .trow .lbl { font-size: 17px; color: var(--ink-2); }
+    .trow .val { font-size: 19px; font-variant-numeric: tabular-nums; }
     .bar-cell { display: grid; gap: 6px; }
-    .bar-cell .num { font-size: 16px; }
+    .bar-cell .num { font-size: 19px; }
     .bar { height: 6px; border-radius: 3px; background: var(--panel-2); overflow: hidden; }
     .bar i { display: block; height: 100%; width: 0; background: var(--alone); border-radius: 3px; transition: width .9s var(--ease); }
     .with .bar i { background: var(--accent); }
-    .note { margin-top: 24px; font-size: 16px; line-height: 1.5; max-width: 72ch; }
-    .fine { margin-top: 8px; font-size: 14px; line-height: 1.5; color: var(--ink-2); max-width: 90ch; }
+    .note { margin-top: 24px; font-size: 19px; line-height: 1.5; max-width: 72ch; }
+    .fine { margin-top: 8px; font-size: 16px; line-height: 1.5; color: var(--ink-2); max-width: 90ch; }
 
     /* charts */
     .chart { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 20px 20px 16px; position: relative; }
@@ -226,17 +226,17 @@
     /* ending */
     .ends { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .end { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 20px; }
-    .end h3 { font-size: clamp(26px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -.015em; font-weight: 500; }
-    .end p { font-size: 16px; line-height: 1.5; color: var(--ink-2); }
+    .end h3 { font-size: clamp(28px, 3vw, 38px); line-height: 1.15; letter-spacing: -.015em; font-weight: 500; }
+    .end p { font-size: 19px; line-height: 1.5; color: var(--ink-2); }
     .end p b { color: var(--ink); font-weight: 500; }
-    .stamp { align-self: flex-start; font: 500 12px/1 var(--mono); padding: 6px 8px; border-radius: 4px; border: 1px solid currentColor; color: var(--accent-ink); }
+    .stamp { align-self: flex-start; font: 500 14px/1 var(--mono); padding: 6px 8px; border-radius: 4px; border: 1px solid currentColor; color: var(--accent-ink); }
     .stamp.open { color: var(--ink-3); border-style: dashed; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: auto 0 0; padding: 0; }
-    .chips li { font: 400 12px/1 var(--mono); color: var(--ink-2); padding: 6px 8px; border-radius: 4px; background: var(--panel-2); }
+    .chips li { font: 400 14px/1 var(--mono); color: var(--ink-2); padding: 6px 8px; border-radius: 4px; background: var(--panel-2); }
     .chips li.next { background: transparent; border: 1px dashed var(--hair-2); color: var(--ink-3); }
     .end .btn { align-self: flex-start; }
 
-    footer { padding: 40px 0 48px; font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--hair); }
+    footer { padding: 40px 0 48px; font-size: 15px; color: var(--ink-2); border-top: 1px solid var(--hair); }
     footer .wrap { display: flex; gap: 24px; flex-wrap: wrap; }
     footer .legal { flex-basis: 100%; color: var(--ink-3); line-height: 1.5; }
 
@@ -324,12 +324,12 @@
         <div class="window"><div class="bar"><span>Case 777 · The leaked beta</span><span>Clicks 2 of 60</span></div><img src="assets/case-mail.png" alt="The game: a fake computer with mail, chat, a security center, files and a browser. The inbox shows a suspicious 'Your mailbox is full: verify now' email."></div>
         <ol class="steps">
           <li><span class="n">01</span><span><span class="nm">A big AI practises</span><span class="tm">Opus, Sonnet and Sol each play 20 practice cases.</span></span></li>
-          <li><span class="n">02</span><span><span class="nm">It writes a playbook</span><span class="tm">General lessons only. No names, no answers.</span></span></li>
+          <li><span class="n">02</span><span><span class="nm">It writes the playbook</span><span class="tm">One chapter per crime. General lessons only, no names, no answers.</span></span></li>
           <li><span class="n">03</span><span><span class="nm">Small AIs get the playbook and play</span><span class="tm">Haiku and Luna play 55 new cases, alone and with it.</span></span></li>
           <li><span class="n">04</span><span><span class="nm">Every game is checked</span><span class="tm">Only the game's own clicks count.</span></span></li>
         </ol>
       </div>
-      <p class="cap lessons-cap">Three lessons from <a href="../arena/playbook-frozen-9693baa4.md">Opus' playbook</a>.</p>
+      <p class="cap lessons-cap">Three lessons from the playbook's <a href="../arena/playbook-frozen-9693baa4.md">leak chapter</a>.</p>
       <ul class="lessons">
         <li>Follow the leaked copy's watermark back to the exact download.</li>
         <li>Put every clock in one time zone before comparing times.</li>
@@ -378,7 +378,7 @@
     <section class="section" id="results" aria-labelledby="results-heading"><div class="wrap">
       <p class="tag">Case 05<span>The results</span></p>
       <h2 class="h2" id="results-heading">With the playbook, both small AIs solved far more cases</h2>
-      <p class="lead">55 new cases, mixed from the three crimes. The playbook is one book with a chapter per crime. The AI is told only "an incident at Pixelforge" and must <b>pick the right chapter itself</b>.</p>
+      <p class="lead">55 new cases, mixed from the three crimes. The playbook has a chapter per crime. The AI is told only "an incident at Pixelforge" and must <b>pick the right chapter itself</b>.</p>
       <article class="ai" data-ai="haiku">
         <div class="ai-head"><h3>Claude Haiku 5.5</h3><span class="meta">Anthropic · 55 mixed cases</span></div>
         <div class="ai-body">
@@ -406,9 +406,9 @@
         </div>
       </article>
       <article class="ai">
-        <div class="ai-head"><h3>Crime by crime</h3><span class="meta">55 cases per crime · cases solved</span></div>
-        <div class="table" role="table" aria-label="Cases solved per crime, alone, with its own playbook and with the library">
-          <div class="trow c4 head" role="row"><span role="columnheader">Solved of 55</span><span role="columnheader">Alone</span><span role="columnheader">Own playbook</span><span class="with" role="columnheader">Library</span></div>
+        <div class="ai-head"><h3>Crime by crime</h3><span class="meta">55 cases per crime · told the crime, or not</span></div>
+        <div class="table" role="table" aria-label="Cases solved per crime: alone, with its chapter only, and with the whole playbook">
+          <div class="trow c4 head" role="row"><span role="columnheader">Solved of 55</span><span role="columnheader">Alone</span><span role="columnheader">Its chapter only</span><span class="with" role="columnheader">Whole playbook</span></div>
             <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Leak</span><span class="val" role="cell">8</span><span class="val" role="cell">40</span><span class="val" role="cell"><b>45</b></span></div>
             <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Invoice</span><span class="val" role="cell">15</span><span class="val" role="cell">55</span><span class="val" role="cell"><b>51</b></span></div>
             <div class="trow c4" role="row"><span class="lbl" role="rowheader">Haiku · Prototype</span><span class="val" role="cell">26</span><span class="val" role="cell">39</span><span class="val" role="cell"><b>54</b></span></div>
@@ -416,16 +416,16 @@
             <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Invoice</span><span class="val" role="cell">12</span><span class="val" role="cell">49</span><span class="val" role="cell"><b>48</b></span></div>
             <div class="trow c4" role="row"><span class="lbl" role="rowheader">Luna · Prototype</span><span class="val" role="cell">14</span><span class="val" role="cell">48</span><span class="val" role="cell"><b>50</b></span></div>
         </div>
-        <p class="note">A playbook for its own crime works every time. The library of three chapters works about as well as each crime's own book.</p>
-        <p class="fine">A fake playbook with no lessons was always tested too; it barely helped. Haiku's prototype score with the library is higher than with its own book; that is unexplained and not a claim.</p>
+        <p class="note">Given just its crime's chapter, and told the crime, the AI improves every time. Given the whole playbook and not told the crime, it does about as well.</p>
+        <p class="fine">A fake playbook with no lessons was always tested too; it barely helped. Haiku's prototype score with the whole playbook is higher than with its chapter alone; that is unexplained and not a claim.</p>
       </article>
       <p class="fine">API costs are estimates; we played on subscriptions. Statistics and the planned tests in <a href="details.html">the details</a>.</p>
     </div></section>
 
     <section class="section" id="guard" aria-labelledby="guard-heading"><div class="wrap">
-      <p class="tag">Case 06<span>Guard duty</span></p>
+      <p class="tag">Case 06<span>Guard duty · a side test</span></p>
       <h2 class="h2" id="guard-heading">Can a playbook stop scams before they happen?</h2>
-      <p class="lead">A new game. 8 requests arrive each day, some are scams. Stop every scam without blocking real work. A day is <b>safe</b> if all 8 are right.</p>
+      <p class="lead">A small extra test on top of the main one. A new game: 8 requests arrive each day, some are scams. Stop every scam without blocking real work. A day is <b>safe</b> if all 8 are right. The playbook here is a short one written for this game.</p>
       <article class="ai">
         <div class="table" role="table" aria-label="Guard duty: safe days out of 55">
           <div class="trow c4 head" role="row"><span role="columnheader">Safe days of 55</span><span role="columnheader">Alone</span><span class="with" role="columnheader">Playbook</span><span role="columnheader">Fake book</span></div>
@@ -443,8 +443,8 @@
         <article class="end enter">
           <span class="stamp">Closed</span>
           <h3>A big AI can teach small AIs to catch hackers</h3>
-          <p>A playbook for its own crime works every time. One library with a chapter per crime works about as well, even when the AI must <b>work out the crime itself</b>: Haiku <b>13 → 51</b>, Luna <b>9 → 38</b> on mixed cases. On guard duty Haiku reached <b>55 safe days of 55</b>. Still open: each chapter teaches one game's three ways a crime can happen, and real incidents vary more.</p>
-          <ul class="chips"><li>Leak</li><li>Invoice</li><li>Prototype</li><li>Library</li><li>Guard duty</li></ul>
+          <p>Given the chapter for its crime, a small AI improves every time. Given the whole playbook, it does about as well, even though it must <b>work out the crime itself</b>: Haiku <b>13 → 51</b>, Luna <b>9 → 38</b> on mixed cases. On guard duty Haiku reached <b>55 safe days of 55</b>. Still open: each chapter teaches one game's three ways a crime can happen, and real incidents vary more.</p>
+          <ul class="chips"><li>Leak</li><li>Invoice</li><li>Prototype</li><li>Whole playbook</li><li>Guard duty</li></ul>
           <div class="btns"><a class="btn fill" href="https://github.com/YentlPeck">The project on GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="details.html">Every number and test</a></div>
         </article>
       </div>

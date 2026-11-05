@@ -1,95 +1,137 @@
 # Incident Arena
 
-**Can a big AI write a playbook that makes small, cheap AIs better at security investigations?**
+**Hackers hit someone new every day. Now they use AI. Can AI fight back?**
 
-Incident Arena is a browser game set at *Pixelforge*, a fictional game studio. Something has gone wrong: a game build
-leaked, a supplier payment went to the wrong bank account, a prototype disappeared from a locked room. The player
-reads mail, chat, logs and badge records on a fake office computer and files a report: **who did it, how, and two
-pieces of evidence that prove it.**
+We built a hacking case for AIs to solve. A big AI practises on it and writes a playbook, and then two small, cheap
+AIs use that playbook to solve cases they have never seen.
 
-The same game is played by AI models, using screenshots only. A big model (Claude Opus) practises and writes a
-playbook. Then two small models, **Claude Haiku 5.5** and **GPT-6-Luna**, play 55 fresh cases each, with and without
-that playbook.
+![Incident Arena](results/assets/site-hero.png)
 
-![A case on the fake office computer](results/assets/case-mail.png)
+## The danger
+
+October 2026 alone: 11 million Burger King Japan customer records, 495 organisations taken down at once through IDCF
+Cloud, 5.7 million California schoolchildren, and one hacker in South Korea who used AI tools to break into 60
+organisations in 44 days. Attacks per organisation rose 48% in a year (Check Point Research), and 84% of surveyed
+ransomware victims were hit by attackers who used AI (Semperis).
+
+AI helps the hackers. It can help the defenders too.
+
+## Our project
+
+A fake game studio, *Pixelforge*, on a fake computer. A crime has happened. The AI must find **who did it, how, and the
+two records that prove it**, using only screenshots, a mouse and 60 clicks.
+
+1. **A big AI practises.** Opus, Sonnet and Sol each play 20 practice cases.
+2. **It writes the playbook.** One chapter per crime, general lessons only: no names and no answers.
+3. **Small AIs get the playbook and play.** Claude Haiku 5.5 and GPT-6-Luna play 55 new cases, alone and with the
+   playbook.
+4. **Every game is checked.** Only the game's own clicks count. A game that breaks the rules is replayed, never counted.
+
+## The incidents
+
+Three crimes at the studio. Each one can happen three ways.
+
+![Three crimes at the studio](results/assets/site-incidents.png)
+
+| Crime | What happens | Three ways it can happen |
+|---|---|---|
+| **1 · The leaked beta** | An unreleased build is downloaded with a stolen login and shows up on a forum. | a colleague's written-down password · a fake email that asks for the password · a password reused from an old breach |
+| **2 · The fake invoice** | The supplier's bank account is swapped for a thief's, and the next invoice is paid to the wrong account. | an insider in finance · a look-alike supplier address · login prompts spammed at night until one is approved |
+| **3 · The missing prototype** | The only handheld prototype is on its shelf on Friday and gone on Monday. | in an employee's bag · handed to a courier after a fake pickup request · a visitor who walked in behind staff |
 
 ## The results
 
-Every number below is *cases solved out of 55*. Each test compares paired cases (the same case with and without the
-book). It always includes a **fake playbook** of the same length with no useful lessons, and the verdict rule was fixed
-before the first test game.
+**With the playbook, both small AIs solved far more cases.** The test used 55 new cases, mixed from the three crimes.
+The playbook has a chapter per crime. The AI is told only "an incident at Pixelforge" and must pick the right chapter
+itself.
 
-| | Alone | Fake book | **Book for this crime** | Book from another crime, or one "general" book |
-|---|---|---|---|---|
-| Crime 1 · The leaked beta | Haiku 8 · Luna 5 | 12 · 3 | **40 · 29** | — |
-| Crime 2 · The fake invoice | 15 · 12 | 16 · 16 | **55 · 49** | crime 1's book: 16 · 16 |
-| Crime 3 · The missing prototype | 26 · 14 | 26 · 14 | **39 · 48** | general book: **11** · 20 |
+| 55 mixed cases | With the playbook | Alone |
+|---|---|---|
+| **Claude Haiku 5.5** · cases solved | **51 of 55** | 13 of 55 |
+| per game | $0.093 · 3.6 min | $0.085 · 3.8 min |
+| per solved case | **$0.10** | $0.36 |
+| **GPT-6-Luna** · cases solved | **38 of 55** | 9 of 55 |
+| per game | $0.050 · 4.8 min | $0.049 · 4.5 min |
+| per solved case | **$0.07** | $0.30 |
 
-**The library.** One book with a chapter per crime. The AI is *not told* which crime it is: the prompt only says
-"You are investigating an incident at Pixelforge", so it has to read the case and pick the right chapter itself.
+**Crime by crime**, 55 cases per crime:
 
-| | Alone | Own book | **Library** |
+| Solved of 55 | Alone | Its chapter only (told the crime) | Whole playbook (not told) |
 |---|---|---|---|
-| Haiku · leak / invoice / prototype | 8 / 15 / 26 | 40 / 55 / 39 | **45 / 51 / 54** |
-| Luna · leak / invoice / prototype | 5 / 12 / 14 | 29 / 49 / 48 | **28 / 48 / 50** |
+| Haiku · Leak | 8 | 40 | **45** |
+| Haiku · Invoice | 15 | 55 | **51** |
+| Haiku · Prototype | 26 | 39 | **54** |
+| Luna · Leak | 5 | 29 | **28** |
+| Luna · Invoice | 12 | 49 | **48** |
+| Luna · Prototype | 14 | 48 | **50** |
 
-On 55 cases mixed across the three crimes, with the same neutral prompt: Haiku went from 13 to **51** and Luna from 9
-to **38**.
+![The results](results/assets/site-results.png)
 
-### What we learned
+Given just its crime's chapter, and told the crime, the AI improves every time. Given the whole playbook and not told the
+crime, it does about as well.
 
-1. **A playbook written for one kind of crime works**, often dramatically. Crime 2 went from 15 to 55 for Haiku.
-2. **Lessons do not travel.** A book reused on another crime did no better than the fake one, and one merged
-   "general" book made Haiku *worse* (26 → 11). It still found the right person, but it chose the wrong proof.
-3. **A library of specialised chapters works about as well as separate books**, even when the AI has to work out the
-   crime itself.
-4. **It is cheaper too.** On crime 1 the cost per solved case dropped from $0.51 to $0.18 (Haiku) and from $0.61 to
-   $0.12 (Luna).
+- **The fake playbook:** one of the same length but with no useful lessons was always tested too, and it barely helped.
+- **Lessons do not travel:** a chapter reused on a different crime, or one merged "general" book, did not help. The
+  general book even made Haiku worse on the prototype (26 → 11).
+- **An unexplained result:** Haiku scored higher on the prototype with the whole playbook than with its chapter alone.
+  We cannot explain that, so it is not a claim.
 
-**Guard duty**, a prevention mode in which the player stops scams *before* clicking: the book gave Haiku 55 of 55 safe
-days, against 43 alone. Luna was already safe on 51 days alone, so the pre-registered verdict is "Not yet".
+## Guard duty · a side test
 
-### Honest limits
+Can a playbook stop scams *before* they happen? Each day, 8 requests arrive and some are scams. The player must stop
+every scam without blocking real work. A day is safe only if all 8 decisions are right.
 
-- Each crime comes from one case generator. The playbooks learn how *this game's* crimes work, and real incidents vary
-  far more.
-- Two small models, 55 cases per test. The effects are large, but this is not proof about AI in general.
-- In the library test, Haiku did better on crime 3 with the library (54) than with its own book (39). We cannot
-  explain that, so it is not a claim.
+| Safe days of 55 | Alone | Playbook | Fake book |
+|---|---|---|---|
+| Haiku 5.5 | 43 | **55** | 39 |
+| GPT-6-Luna | 51 | 54 | 49 |
 
-## Look around
+- **Haiku: a clear win.** Alone, it kept blocking real work. With the playbook, it was safe on every day.
+- **Luna** was already safe alone, so there was little left to gain.
 
-- **Results website:** open [`results/index.html`](results/index.html). It is the whole story with charts. All games
-  are in `results/games.html` and the technical details in `results/details.html`.
-- **Play it yourself:** open [`game/index.html`](game/index.html) for the hand-made levels, or `case.html`, `case2.html`,
-  `case3.html` and `case-guard.html` in the same folder for random cases. Everything runs in the browser, with no install.
-- **Every decision and every result, with p-values:** [`docs/DESIGN-exp3.md`](docs/DESIGN-exp3.md),
-  [`docs/DESIGN-family2.md`](docs/DESIGN-family2.md), [`docs/DESIGN-family3.md`](docs/DESIGN-family3.md) and
-  [`docs/DESIGN-guard.md`](docs/DESIGN-guard.md).
-- **The playbooks themselves:**
-  - `arena/playbook-frozen-*.md` (crime 1, one per teacher)
-  - `arena/invoice-books/`, `arena/proto-books/` and `arena/guard-books/` (specialised books)
-  - `arena/general-books/` (the general book and its fake)
-  - `arena/library-books/` (the library)
+By the rule set before the test, the verdict is "half": Haiku passed, but Luna's gain is too small to count.
 
-## How a test works
+## Case closed
 
-1. **Fair cases.** Each crime has a seeded generator (`game/cases/gen*.js`), a reference solver and a fairness checker. The
-   checker makes sure the answer cannot be guessed from surface clues such as wording, length, position or timing.
-   An outside model (GPT-6.1-Sol) reviewed the generators for leaks.
-2. **Practice.** The teacher (Opus) plays 20 practice cases. After each one, a separate call with no tools rewrites the
-   playbook from a short debrief. A filter rejects any book that contains names, addresses, times or answers. Then the
-   book is frozen, and its hash is in its filename.
-3. **Test.** Haiku and Luna play the 55 test cases in a headless browser (`arena/server*.py`). They may only run
-   `look`, `click`, `type` and `scroll` commands through a controller, with a budget of 60 commands. Every transcript
-   is audited (`arena/audit.py`), and a game that breaks the rules is replayed, never counted.
-4. **Verdict.** An exact one-sided paired sign test. The book must beat both "alone" and the fake book for **both**
-   models at p ≤ 0.025, and a "Yes" also needs at least 9 extra solved cases.
+**A big AI can teach small AIs to catch hackers.** On mixed cases Haiku went from 13 to 51 solved and Luna from 9 to
+38. On guard duty Haiku reached 55 safe days out of 55.
 
-The models ran through ordinary subscriptions (Claude Code and Codex CLIs), not the API. Game transcripts live outside
-this repository.
+**Still open:** each chapter teaches one game's three ways a crime can happen, and real incidents vary far more. The
+test used two small models and 55 cases per test. The effects are large, but they are not proof about AI in general.
 
 ---
 
-Built in November 2026 by Yentl, directing AI agents: Claude Opus and Fable built the game, the tests and the website,
-and GPT-6.1-Sol reviewed them.
+## Look around
+
+- **The website:** [`results/index.html`](results/index.html) is the story above with charts. Every game is listed in
+  `results/games.html`, and the statistics are in `results/details.html`.
+- **Play it yourself:** [`game/index.html`](game/index.html) has the hand-made levels. `game/case.html`,
+  `case2.html`, `case3.html` and `case-guard.html` give random cases. Everything runs in the browser, with no install.
+- **The playbooks:**
+  - `arena/playbook-frozen-*.md`: crime 1, one per teacher
+  - `arena/invoice-books/`, `arena/proto-books/`, `arena/guard-books/`: the other chapters and books
+  - `arena/library-books/`: the whole playbook
+  - `arena/general-books/`: the general book and its fake
+- **Every decision and every result, with p-values:** [`docs/`](docs/). Start with
+  [`docs/DESIGN-exp3.md`](docs/DESIGN-exp3.md).
+
+## How a test works
+
+1. **Fair cases.** Each crime has a seeded generator (`game/cases/gen*.js`), a reference solver and a fairness checker.
+   The checker makes sure the answer cannot be guessed from surface clues such as wording, length, position or timing.
+   An outside model (GPT-6.1-Sol) reviewed the generators for leaks.
+2. **Practice.** The teacher plays 20 practice cases. After each one, a separate call with no tools rewrites the
+   playbook from a short debrief. A filter rejects any book that contains names, addresses, times or answers. The book
+   is then frozen, with its content hash in the filename.
+3. **Test.** Haiku and Luna play in a headless browser (`arena/server*.py`), using only `look`, `click`, `type` and
+   `scroll` through a controller. Every transcript is audited (`arena/audit.py`).
+4. **Verdict.** An exact one-sided paired sign test. The playbook must beat both "alone" and the fake book for **both**
+   models at p ≤ 0.025, and a "Yes" also needs at least 9 extra solved cases.
+
+The models ran through ordinary subscriptions (the Claude Code and Codex CLIs). API costs are estimates. Game
+transcripts are kept outside this repository. The studio and every case are made up; no real system was touched.
+
+---
+
+Made by Yentl Peck, directing AI agents: Claude Opus and Fable built the game, the tests and the website, and
+GPT-6.1-Sol reviewed them.
