@@ -1,10 +1,13 @@
+# Python and Node build files
 __pycache__/
 *.pyc
 node_modules/
+
+# Secrets and system files
 .env
 .env.*
 .DS_Store
 Thumbs.db
 
-# Run logs (results live in the DESIGN notes and results/)
+# Run logs (the results live in docs/ and results/)
 arena/*.log
