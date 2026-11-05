@@ -1,17 +1,6 @@
 # Written by Yentl
 
-After my Pokémon Red teacher, I wanted to see whether the same idea works for cyber security. I built a fake game
-studio with crimes to investigate: a leaked game build, a fake invoice, a prototype that disappeared. A big AI
-practises on these cases and writes a playbook, and small, cheap AIs then use that playbook on cases they have never
-seen.
-
-The main finding: **a playbook per kind of crime works very well, but lessons do not travel.** A book from one crime
-did nothing for another, and one merged "general" book even made Haiku worse. A playbook with one chapter per crime
-worked best, and the AI still found the right chapter when nobody told it which crime it was.
-
-The website with the whole story is in [`results/`](results/index.html).
-
-<img alt="The results" src="results/assets/site-results.png" width="900">
+*To be written.*
 
 # Written by Claude
 
