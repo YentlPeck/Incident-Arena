@@ -103,6 +103,13 @@ test used two small models and 55 cases per test. The effects are large, but the
 
 ## Look around
 
+| Folder | Contents |
+|---|---|
+| [`game/`](game/) | the browser game: levels, random cases, case generators |
+| [`arena/`](arena/) | the scripts that make AIs play and measure them, plus the playbooks |
+| [`results/`](results/) | the website |
+| [`docs/`](docs/) | the design notes, with every result and its statistics |
+
 - **The website:** [`results/index.html`](results/index.html) is the story above with charts. Every game is listed in
   `results/games.html`, and the statistics are in `results/details.html`.
 - **Play it yourself:** [`game/index.html`](game/index.html) has the hand-made levels. `game/case.html`,
