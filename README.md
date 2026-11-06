@@ -1,6 +1,8 @@
 # Written by Yentl
 
-*To be written.*
+The news is nowadays full of cybersecurity incidents, strongly caused by the increased capabilities of AI Agents. As such it is important to educate ourselves on how these things are done and how we can prevent them. With Incident Arena I created a small game to find out to what degree AI models can solve typical cyberincidents like pishing and leaked information. Stronger models are already quite capable at solving these but smaller ones tend to perform better when presented with a knowledge book. Overall I was able to increase the capabilties of smaller models while keeping the cost per solved case quite low.
+
+One important side node: these incidents are quite simple and harmless (given they are just a game). The rabbit hole of cybersecurity goes a lot deeper and in my opinion it is much easier nowadays to cause harm than prevent it. Because of this ease I believe frontier labs should lower their barriers on cybersecurity flags and make it easier to create more protective tools. Just my opinion though.
 
 # Written by Claude
 
