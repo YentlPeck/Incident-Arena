@@ -11,3 +11,6 @@ Thumbs.db
 
 # Run logs (the results live in docs/ and results/)
 arena/*.log
+
+# Run-time lock file
+arena/*.lock
